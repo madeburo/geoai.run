@@ -1,8 +1,4 @@
 <p align="center">
-  <img src="public/geo-ai.svg" alt="GEO AI" width="280" />
-</p>
-
-<p align="center">
   Open-Source AI Search Optimization
 </p>
 
@@ -95,7 +91,7 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## License
 
-GPL-2.0 — see [LICENSE](LICENSE) for details.
+MIT — see [LICENSE](LICENSE) for details.
 
 ---
 
