@@ -1,0 +1,108 @@
+{
+  "nav": {
+    "analyzer": "Analisador",
+    "github": "GitHub",
+    "documentation": "Documentação",
+    "specification": "Especificação",
+    "skipToContent": "Ir para o conteúdo",
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu",
+    "changeLanguage": "Alterar idioma",
+    "switchToLight": "Mudar para modo claro",
+    "switchToDark": "Mudar para modo escuro"
+  },
+  "hero": {
+    "title": "GEO AI",
+    "subtitle": "Otimização de busca IA de código aberto",
+    "description": "Gere llms.txt, regras de rastreamento IA e metadados para tornar seu site visível nos mecanismos de busca IA.",
+    "placeholder": "Digite a URL do seu site",
+    "analyze": "Analisar site",
+    "viewOnGithub": "Ver no GitHub"
+  },
+  "howItWorks": {
+    "title": "Como funciona",
+    "step": "Passo {number}",
+    "steps": {
+      "generate": {
+        "title": "Gerar llms.txt",
+        "description": "Crie um arquivo estruturado que descreve o conteúdo e as capacidades do seu site para sistemas de IA."
+      },
+      "crawler": {
+        "title": "Configurar regras de rastreamento IA",
+        "description": "Defina como os rastreadores IA devem interagir com seu site e qual conteúdo indexar."
+      },
+      "metadata": {
+        "title": "Adicionar metadados IA",
+        "description": "Enriqueça suas páginas com metadados que os mecanismos de busca IA entendem e priorizam."
+      },
+      "signals": {
+        "title": "Fornecer sinais estruturados",
+        "description": "Envie sinais claros aos sistemas IA para que exibam seu conteúdo com precisão."
+      }
+    }
+  },
+  "quickstart": {
+    "title": "Início rápido",
+    "description": "Pronto em segundos.",
+    "copyToClipboard": "Copiar para a área de transferência"
+  },
+  "spec": {
+    "title": "Especificação GEO",
+    "description": "Um conjunto de sinais estruturados que tornam seu site visível e corretamente representado nos mecanismos de busca IA.",
+    "readSpec": "Ler a especificação completa →",
+    "items": {
+      "llms": {
+        "title": "llms.txt",
+        "description": "Um arquivo estruturado que descreve seu site para grandes modelos de linguagem, ajudando-os a entender seu conteúdo e serviços."
+      },
+      "metadata": {
+        "title": "Metadados IA",
+        "description": "Marcação semântica e meta tags que fornecem aos mecanismos de busca IA informações ricas e estruturadas sobre suas páginas."
+      },
+      "crawler": {
+        "title": "Regras de rastreamento",
+        "description": "Diretivas de configuração que controlam como os rastreadores IA acessam, indexam e representam o conteúdo do seu site."
+      },
+      "signals": {
+        "title": "Sinais estruturados",
+        "description": "Formatos de dados legíveis por máquina que ajudam os sistemas IA a exibir e citar seu conteúdo com precisão."
+      }
+    }
+  },
+  "ecosystem": {
+    "title": "Ecossistema da plataforma",
+    "description": "Ferramentas de otimização de busca IA para cada plataforma. Escolha a integração certa para seu stack.",
+    "readMore": "Saiba mais →",
+    "products": {
+      "core": {
+        "title": "GEO AI Core",
+        "description": "Motor TypeScript para otimização de busca IA"
+      },
+      "woo": {
+        "title": "GEO AI Woo",
+        "description": "Plugin WordPress e WooCommerce"
+      },
+      "shopify": {
+        "title": "GEO AI Shopify",
+        "description": "Aplicativo Shopify para visibilidade IA"
+      }
+    }
+  },
+  "openSource": {
+    "title": "Código aberto",
+    "description": "Todas as ferramentas GEO AI são de código aberto. Explore os repositórios, contribua e ajude a moldar o futuro da otimização de busca IA."
+  },
+  "footer": {
+    "tagline": "Otimização de busca IA",
+    "copyright": "© 2026 GEO AI · Código aberto · Licença GPL-2.0"
+  },
+  "analyze": {
+    "title": "Analisador de busca IA",
+    "description": "Verifique a visibilidade do seu site nos mecanismos de busca IA.",
+    "placeholder": "Digite a URL do seu site",
+    "button": "Analisar",
+    "errorEmpty": "Por favor, insira uma URL",
+    "errorInvalid": "Por favor, insira uma URL válida (ex. example.com)",
+    "comingSoon": "Recurso de análise em breve. Fique atento."
+  }
+}

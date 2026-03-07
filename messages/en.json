@@ -1,0 +1,108 @@
+{
+  "nav": {
+    "analyzer": "Analyzer",
+    "github": "GitHub",
+    "documentation": "Documentation",
+    "specification": "Specification",
+    "skipToContent": "Skip to content",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "changeLanguage": "Change language",
+    "switchToLight": "Switch to light mode",
+    "switchToDark": "Switch to dark mode"
+  },
+  "hero": {
+    "title": "GEO AI",
+    "subtitle": "Open-source AI Search Optimization",
+    "description": "Generate llms.txt, AI crawler rules and metadata to make your site visible to AI search engines.",
+    "placeholder": "Enter your website URL",
+    "analyze": "Analyze site",
+    "viewOnGithub": "View on GitHub"
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "step": "Step {number}",
+    "steps": {
+      "generate": {
+        "title": "Generate llms.txt",
+        "description": "Create a structured file that tells AI systems about your site content and capabilities."
+      },
+      "crawler": {
+        "title": "Configure AI crawler rules",
+        "description": "Define how AI crawlers should interact with your site and what content to index."
+      },
+      "metadata": {
+        "title": "Add AI metadata",
+        "description": "Enrich your pages with metadata that AI search engines understand and prioritize."
+      },
+      "signals": {
+        "title": "Provide structured signals",
+        "description": "Send clear signals to AI systems so they surface your content accurately."
+      }
+    }
+  },
+  "quickstart": {
+    "title": "Quick Start",
+    "description": "Get up and running in seconds.",
+    "copyToClipboard": "Copy to clipboard"
+  },
+  "spec": {
+    "title": "GEO Specification",
+    "description": "A set of structured signals that make your website visible and accurately represented in AI-powered search engines.",
+    "readSpec": "Read the full specification →",
+    "items": {
+      "llms": {
+        "title": "llms.txt",
+        "description": "A structured file that describes your site to large language models, helping them understand your content and services."
+      },
+      "metadata": {
+        "title": "AI metadata",
+        "description": "Semantic markup and meta tags that provide AI search engines with rich, structured information about your pages."
+      },
+      "crawler": {
+        "title": "Crawler rules",
+        "description": "Configuration directives that control how AI crawlers access, index, and represent your site content."
+      },
+      "signals": {
+        "title": "Structured signals",
+        "description": "Machine-readable data formats that help AI systems accurately surface and cite your content in responses."
+      }
+    }
+  },
+  "ecosystem": {
+    "title": "Platform Ecosystem",
+    "description": "AI search optimization tools for every platform. Choose the right integration for your stack.",
+    "readMore": "Read more →",
+    "products": {
+      "core": {
+        "title": "GEO AI Core",
+        "description": "TypeScript engine for AI search optimization"
+      },
+      "woo": {
+        "title": "GEO AI Woo",
+        "description": "WordPress & WooCommerce plugin"
+      },
+      "shopify": {
+        "title": "GEO AI Shopify",
+        "description": "Shopify app for AI visibility"
+      }
+    }
+  },
+  "openSource": {
+    "title": "Open Source",
+    "description": "All GEO AI tools are open source. Explore the repositories, contribute, and help shape the future of AI search optimization."
+  },
+  "footer": {
+    "tagline": "AI Search Optimization",
+    "copyright": "© 2026 GEO AI · Open Source · GPL-2.0 License"
+  },
+  "analyze": {
+    "title": "AI Search Analyzer",
+    "description": "Check how visible your site is to AI search engines.",
+    "placeholder": "Enter your website URL",
+    "button": "Analyze",
+    "errorEmpty": "Please enter a URL",
+    "errorInvalid": "Please enter a valid URL (e.g. example.com)",
+    "comingSoon": "Analysis feature coming soon. Stay tuned."
+  }
+}

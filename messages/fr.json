@@ -1,0 +1,108 @@
+{
+  "nav": {
+    "analyzer": "Analyseur",
+    "github": "GitHub",
+    "documentation": "Documentation",
+    "specification": "Spécification",
+    "skipToContent": "Aller au contenu",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "changeLanguage": "Changer de langue",
+    "switchToLight": "Passer au mode clair",
+    "switchToDark": "Passer au mode sombre"
+  },
+  "hero": {
+    "title": "GEO AI",
+    "subtitle": "Optimisation IA open source pour la recherche",
+    "description": "Générez llms.txt, des règles de crawl IA et des métadonnées pour rendre votre site visible aux moteurs de recherche IA.",
+    "placeholder": "Entrez l'URL de votre site",
+    "analyze": "Analyser le site",
+    "viewOnGithub": "Voir sur GitHub"
+  },
+  "howItWorks": {
+    "title": "Comment ça marche",
+    "step": "Étape {number}",
+    "steps": {
+      "generate": {
+        "title": "Générer llms.txt",
+        "description": "Créez un fichier structuré qui décrit le contenu et les capacités de votre site aux systèmes IA."
+      },
+      "crawler": {
+        "title": "Configurer les règles de crawl IA",
+        "description": "Définissez comment les crawlers IA doivent interagir avec votre site et quel contenu indexer."
+      },
+      "metadata": {
+        "title": "Ajouter des métadonnées IA",
+        "description": "Enrichissez vos pages avec des métadonnées que les moteurs de recherche IA comprennent et priorisent."
+      },
+      "signals": {
+        "title": "Fournir des signaux structurés",
+        "description": "Envoyez des signaux clairs aux systèmes IA pour qu'ils affichent votre contenu avec précision."
+      }
+    }
+  },
+  "quickstart": {
+    "title": "Démarrage rapide",
+    "description": "Opérationnel en quelques secondes.",
+    "copyToClipboard": "Copier dans le presse-papiers"
+  },
+  "spec": {
+    "title": "Spécification GEO",
+    "description": "Un ensemble de signaux structurés qui rendent votre site visible et correctement représenté dans les moteurs de recherche IA.",
+    "readSpec": "Lire la spécification complète →",
+    "items": {
+      "llms": {
+        "title": "llms.txt",
+        "description": "Un fichier structuré qui décrit votre site aux grands modèles de langage, les aidant à comprendre votre contenu et vos services."
+      },
+      "metadata": {
+        "title": "Métadonnées IA",
+        "description": "Balisage sémantique et balises méta fournissant aux moteurs de recherche IA des informations riches et structurées sur vos pages."
+      },
+      "crawler": {
+        "title": "Règles de crawl",
+        "description": "Directives de configuration contrôlant comment les crawlers IA accèdent, indexent et représentent le contenu de votre site."
+      },
+      "signals": {
+        "title": "Signaux structurés",
+        "description": "Formats de données lisibles par machine aidant les systèmes IA à afficher et citer votre contenu avec précision."
+      }
+    }
+  },
+  "ecosystem": {
+    "title": "Écosystème de la plateforme",
+    "description": "Outils d'optimisation IA pour chaque plateforme. Choisissez la bonne intégration pour votre stack.",
+    "readMore": "En savoir plus →",
+    "products": {
+      "core": {
+        "title": "GEO AI Core",
+        "description": "Moteur TypeScript pour l'optimisation IA"
+      },
+      "woo": {
+        "title": "GEO AI Woo",
+        "description": "Plugin WordPress & WooCommerce"
+      },
+      "shopify": {
+        "title": "GEO AI Shopify",
+        "description": "Application Shopify pour la visibilité IA"
+      }
+    }
+  },
+  "openSource": {
+    "title": "Open Source",
+    "description": "Tous les outils GEO AI sont open source. Explorez les dépôts, contribuez et façonnez l'avenir de l'optimisation IA."
+  },
+  "footer": {
+    "tagline": "Optimisation IA pour la recherche",
+    "copyright": "© 2026 GEO AI · Open Source · Licence GPL-2.0"
+  },
+  "analyze": {
+    "title": "Analyseur de recherche IA",
+    "description": "Vérifiez la visibilité de votre site pour les moteurs de recherche IA.",
+    "placeholder": "Entrez l'URL de votre site",
+    "button": "Analyser",
+    "errorEmpty": "Veuillez entrer une URL",
+    "errorInvalid": "Veuillez entrer une URL valide (ex. example.com)",
+    "comingSoon": "Fonctionnalité d'analyse bientôt disponible. Restez à l'écoute."
+  }
+}

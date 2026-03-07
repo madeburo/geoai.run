@@ -6,29 +6,29 @@ Incremental implementation of the GEO AI landing site — a modern, minimalist N
 
 ## Tasks
 
-- [-] 1. Project setup and shared infrastructure
-  - [-] 1.1 Install dependencies and initialize Shadcn UI
+- [x] 1. Project setup and shared infrastructure
+  - [x] 1.1 Install dependencies and initialize Shadcn UI
     - Install framer-motion, fast-check, @testing-library/react, @testing-library/jest-dom, vitest, jsdom
     - Initialize Shadcn UI (`npx shadcn@latest init`)
     - Add Shadcn components: button, input, card
     - Configure Vitest in `vitest.config.ts` with jsdom environment and React plugin
     - _Requirements: 1.1, 1.2_
 
-  - [ ] 1.2 Configure theme system and global styles
+  - [x] 1.2 Configure theme system and global styles
     - Update `app/globals.css` with CSS custom properties for light theme (#ffffff bg, #0a0a0a text) and dark theme (#0a0a0a bg, #ffffff text) via `@media (prefers-color-scheme: dark)`
     - Configure Geist Sans and Geist Mono fonts in `app/layout.tsx`
     - Set smooth scroll behavior (`scroll-behavior: smooth`)
     - Add transition for theme color changes
     - _Requirements: 2.1, 2.2, 2.3, 2.4, 2.5, 1.2, 1.5_
 
-  - [ ] 1.3 Set up SEO metadata in layout
+  - [x] 1.3 Set up SEO metadata in layout
     - Add meta title "GEO AI — AI Search Optimization" and meta description in `app/layout.tsx` using Next.js Metadata API
     - Add Open Graph tags (og:title, og:description, og:type, og:url)
     - Ensure semantic HTML structure: `<html>`, `<body>` with proper lang attribute
     - _Requirements: 13.1, 13.2, 13.4_
 
-- [ ] 2. Shared visual components
-  - [ ] 2.1 Create ScrollReveal wrapper component
+- [x] 2. Shared visual components
+  - [x] 2.1 Create ScrollReveal wrapper component
     - Create `components/scroll-reveal.tsx` as a Client Component
     - Implement Framer Motion `motion.div` with `whileInView` and `viewport={{ once: true }}`
     - Support props: `children`, `className`, `delay`, `direction` ("up" | "down" | "left" | "right")
@@ -40,7 +40,7 @@ Incremental implementation of the GEO AI landing site — a modern, minimalist N
     - **Property 12: Анимации используют только GPU-ускоренные свойства**
     - **Validates: Requirements 12.2**
 
-  - [ ] 2.3 Create DotPatternBackground component
+  - [x] 2.3 Create DotPatternBackground component
     - Create `components/dot-pattern-bg.tsx` as a Client Component
     - Implement Canvas rendering of world map dot pattern using normalized `[x, y]` coordinates
     - Add subtle animation via `requestAnimationFrame` (slow drift/pulse)
@@ -49,7 +49,7 @@ Incremental implementation of the GEO AI landing site — a modern, minimalist N
     - Handle SSR: guard with `typeof window !== 'undefined'`
     - _Requirements: 4.3, 12.5, 12.6, 15.1, 15.2_
 
-  - [ ] 2.4 Create GeoIllustration SVG component
+  - [x] 2.4 Create GeoIllustration SVG component
     - Create `components/geo-illustrations.tsx`
     - Implement three SVG illustration variants: "rings" (3D concentric rings), "radial-burst" (radial dot pattern), "parallel-lines" (parallel line pattern)
     - Use monochrome/muted color palette
@@ -60,8 +60,8 @@ Incremental implementation of the GEO AI landing site — a modern, minimalist N
     - **Property 4: Уникальность иллюстраций на карточках экосистемы**
     - **Validates: Requirements 5.3, 15.3**
 
-- [ ] 3. Navbar and Footer
-  - [ ] 3.1 Implement Navbar component
+- [x] 3. Navbar and Footer
+  - [x] 3.1 Implement Navbar component
     - Create `components/navbar.tsx` as a Client Component
     - Add GEO AI logo on the left
     - Add navigation links: Analyzer (/analyze), GitHub (external), Documentation (external), Specification (#spec)
@@ -75,7 +75,7 @@ Incremental implementation of the GEO AI landing site — a modern, minimalist N
     - **Property 1: Навигационные ссылки присутствуют в Navbar**
     - **Validates: Requirements 3.3**
 
-  - [ ] 3.3 Implement Footer component
+  - [x] 3.3 Implement Footer component
     - Create `components/footer.tsx`
     - Display "GEO AI" title and "AI Search Optimization" subtitle
     - Add links: Analyzer (/analyze), GitHub (external), Documentation, Specification
@@ -87,11 +87,11 @@ Incremental implementation of the GEO AI landing site — a modern, minimalist N
     - **Property 10: Ссылки Footer содержат все обязательные элементы**
     - **Validates: Requirements 11.2**
 
-- [ ] 4. Checkpoint — Shared components complete
+- [x] 4. Checkpoint — Shared components complete
   - Ensure all tests pass, ask the user if questions arise.
 
-- [ ] 5. Hero Section
-  - [ ] 5.1 Implement Hero section component
+- [x] 5. Hero Section
+  - [x] 5.1 Implement Hero section component
     - Create `components/hero.tsx` as a Client Component
     - Full viewport height (`h-screen`) with white/light background
     - Integrate `DotPatternBackground` as subtle background layer
@@ -107,8 +107,8 @@ Incremental implementation of the GEO AI landing site — a modern, minimalist N
     - **Property 2: AI логотипы отображаются в Hero**
     - **Validates: Requirements 4.10**
 
-- [ ] 6. Platform Ecosystem Section
-  - [ ] 6.1 Implement Ecosystem section component
+- [x] 6. Platform Ecosystem Section
+  - [x] 6.1 Implement Ecosystem section component
     - Create `components/ecosystem.tsx` as a Client Component
     - Grid layout: section title on the left, description on the right
     - Three product cards in a row: GEO AI Core (rings illustration), GEO AI Woo (radial-burst), GEO AI Shopify (parallel-lines)
@@ -123,8 +123,8 @@ Incremental implementation of the GEO AI landing site — a modern, minimalist N
     - **Property 3: Карточки экосистемы содержат все обязательные элементы**
     - **Validates: Requirements 5.2, 5.5**
 
-- [ ] 7. How It Works Section
-  - [ ] 7.1 Implement How It Works section component
+- [x] 7. How It Works Section
+  - [x] 7.1 Implement How It Works section component
     - Create `components/how-it-works.tsx` as a Client Component
     - Four steps with Lucide icons: "Generate llms.txt", "Configure AI crawler rules", "Add AI metadata", "Provide structured signals"
     - Subtle connection lines between steps (SVG or CSS borders)
@@ -136,8 +136,8 @@ Incremental implementation of the GEO AI landing site — a modern, minimalist N
     - **Property 5: Шаги How It Works отображаются полностью**
     - **Validates: Requirements 6.1**
 
-- [ ] 8. Analyzer Demo Section
-  - [ ] 8.1 Implement Analyzer demo section component
+- [x] 8. Analyzer Demo Section
+  - [x] 8.1 Implement Analyzer demo section component
     - Create `components/analyzer.tsx` as a Client Component
     - Display heading "Check your AI search visibility"
     - URL input field with placeholder "Enter your website URL" and "Analyze site" button
@@ -156,8 +156,8 @@ Incremental implementation of the GEO AI landing site — a modern, minimalist N
 - [ ] 9. Checkpoint — Main sections complete
   - Ensure all tests pass, ask the user if questions arise.
 
-- [ ] 10. Developer Quick Start Section
-  - [ ] 10.1 Implement QuickStart section component
+- [x] 10. Developer Quick Start Section
+  - [x] 10.1 Implement QuickStart section component
     - Create `components/quickstart.tsx` as a Client Component
     - Code block with install command: `npm install geo-ai-core`
     - Code block with usage example using `createGeoAI`
@@ -170,8 +170,8 @@ Incremental implementation of the GEO AI landing site — a modern, minimalist N
     - **Property 7: Копирование кода в буфер обмена**
     - **Validates: Requirements 8.5**
 
-- [ ] 11. GEO Specification Section
-  - [ ] 11.1 Implement Spec section component
+- [x] 11. GEO Specification Section
+  - [x] 11.1 Implement Spec section component
     - Create `components/spec.tsx` as a Client Component
     - Display four specification elements: llms.txt, AI metadata, crawler rules, structured signals
     - Each element with Lucide icon, title, and description
@@ -184,8 +184,8 @@ Incremental implementation of the GEO AI landing site — a modern, minimalist N
     - **Property 8: Элементы спецификации отображаются полностью**
     - **Validates: Requirements 9.2**
 
-- [ ] 12. Open Source Section
-  - [ ] 12.1 Implement OpenSource section component
+- [x] 12. Open Source Section
+  - [x] 12.1 Implement OpenSource section component
     - Create `components/opensource.tsx` as a Client Component
     - Repository cards with links: GEO AI Core, GEO AI Woo, GEO AI Shopify, npm package
     - Display GitHub stars and npm downloads counts (static values)
@@ -196,8 +196,8 @@ Incremental implementation of the GEO AI landing site — a modern, minimalist N
     - **Property 9: Карточки репозиториев содержат все обязательные данные**
     - **Validates: Requirements 10.1, 10.2**
 
-- [ ] 13. Landing page composition and wiring
-  - [ ] 13.1 Compose landing page in app/page.tsx
+- [x] 13. Landing page composition and wiring
+  - [x] 13.1 Compose landing page in app/page.tsx
     - Import and arrange all section components in correct order in `app/page.tsx` (Server Component)
     - Order: Navbar, Hero, Ecosystem, HowItWorks, Analyzer, QuickStart, Spec, OpenSource, Footer
     - Wrap main content in semantic `<main>` element, each section in `<section>`
@@ -208,8 +208,8 @@ Incremental implementation of the GEO AI landing site — a modern, minimalist N
     - **Property 11: Семантическая HTML-разметка**
     - **Validates: Requirements 13.3**
 
-- [ ] 14. Analyzer page
-  - [ ] 14.1 Implement Analyzer page at /analyze
+- [x] 14. Analyzer page
+  - [x] 14.1 Implement Analyzer page at /analyze
     - Create `app/analyze/page.tsx` as a Client Component
     - URL input field and "Analyze" button
     - Client-side URL validation with inline error message
@@ -217,8 +217,8 @@ Incremental implementation of the GEO AI landing site — a modern, minimalist N
     - Same visual style as landing page (theme, fonts, spacing)
     - _Requirements: 14.1, 14.2, 14.3_
 
-- [ ] 15. Responsive design and polish
-  - [ ] 15.1 Ensure responsive layout across all components
+- [x] 15. Responsive design and polish
+  - [x] 15.1 Ensure responsive layout across all components
     - Test and adjust layouts for 320px–2560px screen widths
     - Ecosystem cards: 3-column on desktop, stack on mobile
     - How It Works: horizontal on desktop, vertical on mobile

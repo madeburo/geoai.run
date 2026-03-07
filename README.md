@@ -1,36 +1,104 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<p align="center">
+  <img src="public/geo-ai.svg" alt="GEO AI" width="280" />
+</p>
 
-## Getting Started
+<p align="center">
+  Open-Source AI Search Optimization
+</p>
 
-First, run the development server:
+<p align="center">
+  <a href="https://geoai.run">Website</a> ·
+  <a href="https://github.com/madeburo/GEO-AI">GitHub</a> ·
+  <a href="https://www.npmjs.com/package/geo-ai-core">npm</a>
+</p>
+
+---
+
+## What is GEO AI?
+
+GEO AI helps websites become visible to AI-powered search engines like ChatGPT, Claude, Gemini, Perplexity, Grok, Qwen, and DeepSeek. It generates `llms.txt`, AI crawler rules, and structured metadata so AI systems can accurately discover, understand, and cite your content.
+
+## Ecosystem
+
+| Product | Description | Link |
+|---------|-------------|------|
+| **GEO AI Core** | TypeScript engine for AI search optimization | [GitHub](https://github.com/madeburo/GEO-AI) |
+| **GEO AI Woo** | WordPress & WooCommerce plugin | [GitHub](https://github.com/madeburo/GEO-AI-Woo) |
+| **GEO AI Shopify** | Shopify app for AI visibility | [GitHub](https://github.com/madeburo/GEO-AI-Shopify) |
+
+## Quick Start
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install geo-ai-core
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+```typescript
+import { createGeoAI } from "geo-ai-core";
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+const geoai = createGeoAI({
+  siteUrl: "https://example.com",
+  outputDir: "./public",
+});
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+await geoai.generateLlmsTxt();
+await geoai.generateCrawlerRules();
+await geoai.generateMetadata();
+```
 
-## Learn More
+## How It Works
 
-To learn more about Next.js, take a look at the following resources:
+1. **Generate llms.txt** — a structured file that describes your site to large language models
+2. **Configure AI crawler rules** — control how AI crawlers access and index your content
+3. **Add AI metadata** — semantic markup and meta tags for AI search engines
+4. **Provide structured signals** — machine-readable data formats for accurate content surfacing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## GEO Specification
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+GEO defines a set of structured signals that make websites visible to AI-powered search:
 
-## Deploy on Vercel
+- `llms.txt` — site description for LLMs
+- AI metadata — semantic markup for AI search engines
+- Crawler rules — directives for AI crawlers
+- Structured signals — machine-readable data formats
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+[Read the full spec →](https://github.com/madeburo/GEO-AI)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## About This Site
+
+This repository contains the landing page for [geoai.run](https://geoai.run), built with:
+
+- **Next.js 16** (App Router, React 19)
+- **TypeScript** (strict mode)
+- **Tailwind CSS 4** with oklch color theming
+- **shadcn/ui** components (`@base-ui/react` primitives)
+- **Framer Motion** animations (respects `prefers-reduced-motion`)
+- **next-intl** — i18n with 6 languages (EN, DE, FR, ES, PT, RU)
+- **Vitest** + React Testing Library + fast-check
+
+Features: light/dark theme, scroll-reveal animations, responsive design, mobile-first horizontal scroll sections, infinite marquee, SEO metadata with Open Graph, and an AI visibility analyzer page.
+
+## Development
+
+```bash
+npm install
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000).
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start dev server |
+| `npm run build` | Production build |
+| `npm run test` | Run tests |
+| `npm run lint` | Lint |
+
+## License
+
+GPL-2.0 — see [LICENSE](LICENSE) for details.
+
+---
+
+<p align="center">
+  <a href="https://geoai.run">geoai.run</a>
+</p>
