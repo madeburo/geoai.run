@@ -262,10 +262,10 @@ export function HeroParticleField({ className }: { className?: string }) {
         const opacityBreath = 1 + breath * 0.08 * Math.sin(p.breathPhase);
         const opacity = p.baseOpacity * opacityBreath;
 
-        // Theme-aware colors
+        // Theme-aware colors — teal/cyan glow for dark, navy for light
         const dark = isDarkRef.current;
-        const glowColor = dark ? "rgba(160, 180, 220, 1)" : "rgba(15, 20, 50, 1)";
-        const coreColor = dark ? "rgba(180, 195, 230, 0.7)" : "rgba(15, 20, 50, 0.55)";
+        const glowColor = dark ? "rgba(94, 234, 180, 0.8)" : "rgba(15, 20, 50, 1)";
+        const coreColor = dark ? "rgba(140, 220, 190, 0.6)" : "rgba(15, 20, 50, 0.55)";
 
         // Soft glow (faint larger circle)
         ctx.globalAlpha = opacity * 0.08;

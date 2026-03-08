@@ -9,7 +9,7 @@ import { Footer } from "@/components/footer";
 
 export default function Home() {
   return (
-    <>
+    <div className="noise-bg">
       <Navbar />
       <main id="main-content">
         <Hero />
@@ -20,6 +20,6 @@ export default function Home() {
         <OpenSource />
       </main>
       <Footer />
-    </>
+    </div>
   );
 }

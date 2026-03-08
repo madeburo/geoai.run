@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { Navbar } from "@/components/navbar";
@@ -25,17 +25,11 @@ function isValidUrl(value: string): boolean {
 
 export default function AnalyzePage() {
   const searchParams = useSearchParams();
-  const [url, setUrl] = useState("");
+  const paramUrl = searchParams.get("url");
+  const [url, setUrl] = useState(paramUrl ?? "");
   const [error, setError] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const t = useTranslations("analyze");
-
-  useEffect(() => {
-    const paramUrl = searchParams.get("url");
-    if (paramUrl) {
-      setUrl(paramUrl);
-    }
-  }, [searchParams]);
 
   function handleAnalyze() {
     const trimmed = url.trim();
@@ -58,10 +52,10 @@ export default function AnalyzePage() {
       <Navbar />
       <main id="main-content" className="flex min-h-[calc(100vh-3.5rem)] flex-col items-center justify-center px-4 py-16 sm:px-6 sm:py-24">
         <div className="mx-auto w-full max-w-xl text-center">
-          <h1 className="mb-3 text-2xl font-bold tracking-tight sm:text-3xl lg:text-4xl">
+          <h1 className="mb-3 text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
             {t("title")}
           </h1>
-          <p className="mb-8 text-sm text-muted-foreground sm:mb-10 sm:text-base">
+          <p className="mb-10 text-sm text-muted-foreground sm:mb-12 sm:text-base">
             {t("description")}
           </p>
 
@@ -79,10 +73,10 @@ export default function AnalyzePage() {
                 onKeyDown={(e) => e.key === "Enter" && handleAnalyze()}
                 aria-invalid={!!error}
                 aria-describedby={error ? "analyze-error" : undefined}
-                className="h-10 rounded-full px-4"
+                className="h-12 rounded-xl border-border/50 bg-surface/80 px-5 text-sm backdrop-blur-sm dark:border-white/6 dark:bg-white/4"
               />
             </div>
-            <Button size="lg" className="w-full rounded-full px-6 sm:w-auto" onClick={handleAnalyze}>
+            <Button size="lg" className="h-12 w-full rounded-xl bg-foreground px-6 text-sm font-medium text-background dark:bg-white dark:text-black dark:hover:bg-white/90 sm:w-auto" onClick={handleAnalyze}>
               {t("button")}
             </Button>
           </div>

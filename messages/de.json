@@ -8,70 +8,70 @@
     "openMenu": "Menü öffnen",
     "closeMenu": "Menü schließen",
     "changeLanguage": "Sprache ändern",
-    "switchToLight": "Zum hellen Modus wechseln",
-    "switchToDark": "Zum dunklen Modus wechseln"
+    "switchToLight": "Helles Design",
+    "switchToDark": "Dunkles Design"
   },
   "hero": {
     "title": "GEO AI",
-    "subtitle": "Open-Source KI-Suchoptimierung",
-    "description": "Erstellen Sie llms.txt, KI-Crawler-Regeln und Metadaten, damit Ihre Website für KI-Suchmaschinen sichtbar wird.",
+    "subtitle": "Open-Source-Optimierung für KI-Suche",
+    "description": "Generieren Sie llms.txt, KI-Crawler-Regeln und Metadaten — machen Sie Ihre Website für KI-Suchmaschinen sichtbar.",
     "placeholder": "Website-URL eingeben",
-    "analyze": "Website analysieren",
+    "analyze": "Analysieren",
     "viewOnGithub": "Auf GitHub ansehen"
   },
   "howItWorks": {
-    "title": "So funktioniert es",
+    "title": "So funktioniert's",
     "step": "Schritt {number}",
     "steps": {
       "generate": {
         "title": "llms.txt generieren",
-        "description": "Erstellen Sie eine strukturierte Datei, die KI-Systemen Ihre Website-Inhalte und Funktionen beschreibt."
+        "description": "Erstellen Sie eine strukturierte Datei, die KI-Systemen den Inhalt und die Funktionen Ihrer Website beschreibt."
       },
       "crawler": {
         "title": "KI-Crawler-Regeln konfigurieren",
-        "description": "Legen Sie fest, wie KI-Crawler mit Ihrer Website interagieren und welche Inhalte indexiert werden sollen."
+        "description": "Legen Sie fest, welche KI-Crawler Ihre Website indexieren dürfen und auf welche Inhalte sie zugreifen können."
       },
       "metadata": {
         "title": "KI-Metadaten hinzufügen",
-        "description": "Reichern Sie Ihre Seiten mit Metadaten an, die KI-Suchmaschinen verstehen und priorisieren."
+        "description": "Ergänzen Sie Ihre Seiten mit Metadaten, die KI-Suchmaschinen verstehen und bei der Antwortgenerierung nutzen."
       },
       "signals": {
         "title": "Strukturierte Signale bereitstellen",
-        "description": "Senden Sie klare Signale an KI-Systeme, damit Ihre Inhalte korrekt angezeigt werden."
+        "description": "Senden Sie klare Signale an KI-Systeme, damit Ihre Inhalte korrekt angezeigt und zitiert werden."
       }
     }
   },
   "quickstart": {
     "title": "Schnellstart",
-    "description": "In Sekunden einsatzbereit.",
-    "copyToClipboard": "In Zwischenablage kopieren"
+    "description": "In wenigen Minuten einsatzbereit.",
+    "copyToClipboard": "Kopieren"
   },
   "spec": {
     "title": "GEO-Spezifikation",
-    "description": "Eine Reihe strukturierter Signale, die Ihre Website in KI-gestützten Suchmaschinen sichtbar und korrekt dargestellt machen.",
-    "readSpec": "Vollständige Spezifikation lesen →",
+    "description": "Strukturierte Signale, die Ihre Website in KI-Suchmaschinen sichtbar und korrekt dargestellt machen.",
+    "readSpec": "Spezifikation lesen →",
     "items": {
       "llms": {
         "title": "llms.txt",
-        "description": "Eine strukturierte Datei, die Ihre Website für große Sprachmodelle beschreibt und ihnen hilft, Ihre Inhalte und Dienste zu verstehen."
+        "description": "Eine strukturierte Datei für Sprachmodelle — hilft KI-Systemen, Ihre Inhalte und Services zu verstehen."
       },
       "metadata": {
         "title": "KI-Metadaten",
-        "description": "Semantisches Markup und Meta-Tags, die KI-Suchmaschinen reichhaltige, strukturierte Informationen über Ihre Seiten liefern."
+        "description": "Meta-Tags und semantisches Markup, die KI-Suchmaschinen strukturierte Informationen über Ihre Seiten liefern."
       },
       "crawler": {
         "title": "Crawler-Regeln",
-        "description": "Konfigurationsanweisungen, die steuern, wie KI-Crawler auf Ihre Website-Inhalte zugreifen, sie indexieren und darstellen."
+        "description": "Zugriffs- und Indexierungseinstellungen für KI-Crawler auf Ihrer Website."
       },
       "signals": {
         "title": "Strukturierte Signale",
-        "description": "Maschinenlesbare Datenformate, die KI-Systemen helfen, Ihre Inhalte korrekt anzuzeigen und zu zitieren."
+        "description": "Maschinenlesbare Daten, die KI-Systemen helfen, Ihre Inhalte korrekt zu zitieren und darzustellen."
       }
     }
   },
   "ecosystem": {
-    "title": "Plattform-Ökosystem",
-    "description": "KI-Suchoptimierungstools für jede Plattform. Wählen Sie die richtige Integration für Ihren Stack.",
+    "title": "Ökosystem",
+    "description": "KI-Suchoptimierung für jede Plattform. Wählen Sie die passende Integration für Ihren Stack.",
     "readMore": "Mehr erfahren →",
     "products": {
       "core": {
@@ -80,7 +80,7 @@
       },
       "woo": {
         "title": "GEO AI Woo",
-        "description": "WordPress & WooCommerce Plugin"
+        "description": "WordPress- & WooCommerce-Plugin"
       },
       "shopify": {
         "title": "GEO AI Shopify",
@@ -90,19 +90,19 @@
   },
   "openSource": {
     "title": "Open Source",
-    "description": "Alle GEO AI Tools sind Open Source. Erkunden Sie die Repositories, tragen Sie bei und gestalten Sie die Zukunft der KI-Suchoptimierung mit."
+    "description": "Alle GEO AI Tools sind Open Source. Entdecken Sie die Repositories, tragen Sie bei und gestalten Sie die Zukunft der KI-Suchoptimierung mit."
   },
   "footer": {
     "tagline": "KI-Suchoptimierung",
-    "copyright": "© 2026 GEO AI · Open Source · GPL-2.0 Lizenz"
+    "copyright": "© 2026 GEO AI · Open Source · GPL-2.0-Lizenz"
   },
   "analyze": {
-    "title": "KI-Such-Analyzer",
+    "title": "KI-Sichtbarkeits-Analyzer",
     "description": "Prüfen Sie, wie sichtbar Ihre Website für KI-Suchmaschinen ist.",
     "placeholder": "Website-URL eingeben",
     "button": "Analysieren",
-    "errorEmpty": "Bitte geben Sie eine URL ein",
-    "errorInvalid": "Bitte geben Sie eine gültige URL ein (z.B. example.com)",
-    "comingSoon": "Analysefunktion kommt bald. Bleiben Sie dran."
+    "errorEmpty": "Bitte URL eingeben",
+    "errorInvalid": "Bitte gültige URL eingeben (z.B. example.com)",
+    "comingSoon": "Analyzer kommt bald. Bleiben Sie dran."
   }
 }

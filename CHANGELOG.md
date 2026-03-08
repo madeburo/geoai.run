@@ -4,6 +4,29 @@ All notable changes to GEO AI are documented in this file.
 
 Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [0.1.1] — 2026-03-08
+
+Post-release cleanup and mobile UX fixes.
+
+### Fixed
+
+- Hero text and form no longer overflow on mobile (added container `max-w`, proper `px` padding)
+- Disabled parallax effect on mobile to prevent content clipping under `overflow-hidden`
+- Added `overflow-x-hidden` on `html` to eliminate horizontal scroll globally
+- Mobile menu now opens reliably — moved overlay out of `sticky` nav to avoid stacking context issues
+- Mobile menu covers full screen (`fixed inset-0`) without scrolling behind it
+
+### Changed
+
+- Hero section uses `min-h-[80vh]` on mobile instead of `min-h-screen` to reduce gap before How It Works
+- Mobile menu z-index raised to `z-60` above navbar
+- Removed separate backdrop overlay for mobile menu (unnecessary with fullscreen panel)
+- Description text size reduced to `text-sm` on mobile for better fit
+- License updated from GPL-2.0 to MIT
+- Removed logo image from README header
+
+---
+
 ## [0.1.0] — 2026-03-07
 
 Initial release. Site and project foundation.
@@ -31,4 +54,4 @@ Initial release. Site and project foundation.
 - ESLint 9 flat config (core-web-vitals + typescript)
 - Manrope font with cyrillic subset via `next/font/google`
 - SEO metadata with Open Graph tags
-- Footer: `© 2026 GEO AI · Open Source · GPL-2.0 License`
+- Footer: `© 2026 GEO AI · Open Source`

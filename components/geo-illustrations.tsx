@@ -16,13 +16,13 @@ function RingsIllustration({ className }: { className?: string }) {
           rx={r}
           ry={r * 0.4}
           fill="none"
-          stroke="#c4c4c4"
-          strokeWidth="1.2"
+          stroke="oklch(0.72 0.17 162 / 0.3)"
+          strokeWidth="0.8"
           transform={`rotate(${-15 + i * 15}, 100, 100)`}
-          opacity={0.6 + i * 0.15}
+          opacity={0.5 + i * 0.15}
         />
       ))}
-      <circle cx="100" cy="100" r="4" fill="#a0a0a0" opacity="0.7" />
+      <circle cx="100" cy="100" r="3" fill="oklch(0.72 0.17 162 / 0.5)" />
     </svg>
   );
 }
@@ -37,8 +37,8 @@ function RadialBurstIllustration({ className }: { className?: string }) {
       dots.push({
         cx: (100 + Math.cos(angle) * radius).toFixed(2),
         cy: (100 + Math.sin(angle) * radius).toFixed(2),
-        r: 2.2 - ring * 0.25,
-        opacity: 0.7 - ring * 0.08,
+        r: 1.8 - ring * 0.2,
+        opacity: 0.5 - ring * 0.06,
       });
     }
   }
@@ -46,9 +46,9 @@ function RadialBurstIllustration({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 200 200" className={className} aria-hidden="true">
       {dots.map((d, i) => (
-        <circle key={i} cx={d.cx} cy={d.cy} r={d.r} fill="#b0b0b0" opacity={d.opacity} />
+        <circle key={i} cx={d.cx} cy={d.cy} r={d.r} fill="oklch(0.72 0.17 162 / 0.4)" opacity={d.opacity} />
       ))}
-      <circle cx="100" cy="100" r="3" fill="#a0a0a0" opacity="0.8" />
+      <circle cx="100" cy="100" r="2.5" fill="oklch(0.72 0.17 162 / 0.6)" />
     </svg>
   );
 }
@@ -58,7 +58,7 @@ function ParallelLinesIllustration({ className }: { className?: string }) {
     y: 40 + i * 10,
     x1: 30 + (i % 3) * 8,
     x2: 170 - (i % 4) * 6,
-    opacity: 0.3 + (i % 5) * 0.1,
+    opacity: 0.2 + (i % 5) * 0.06,
   }));
 
   return (
@@ -70,8 +70,8 @@ function ParallelLinesIllustration({ className }: { className?: string }) {
           y1={l.y}
           x2={l.x2}
           y2={l.y}
-          stroke="#c0c0c0"
-          strokeWidth="1.2"
+          stroke="oklch(0.72 0.17 162 / 0.3)"
+          strokeWidth="0.8"
           opacity={l.opacity}
         />
       ))}

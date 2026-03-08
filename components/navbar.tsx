@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef, useTransition } from "react";
+import { useState, useEffect, useRef, useTransition, useSyncExternalStore, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
@@ -26,22 +26,32 @@ const NAV_LINKS_CONFIG = [
 ];
 
 function ThemeToggle() {
-  const [mounted, setMounted] = useState(false);
-  const [dark, setDark] = useState(true);
   const t = useTranslations("nav");
 
-  useEffect(() => {
-    const stored = localStorage.getItem("theme");
-    const isDark = stored ? stored === "dark" : document.documentElement.classList.contains("dark");
-    setDark(isDark);
-    setMounted(true);
+  // Use useSyncExternalStore to read theme without setState-in-effect
+  const subscribe = useCallback((cb: () => void) => {
+    // Listen for storage events (cross-tab) and our custom event
+    window.addEventListener("storage", cb);
+    window.addEventListener("theme-change", cb);
+    return () => {
+      window.removeEventListener("storage", cb);
+      window.removeEventListener("theme-change", cb);
+    };
   }, []);
+
+  const getSnapshot = useCallback(() => {
+    return document.documentElement.classList.contains("dark");
+  }, []);
+
+  const getServerSnapshot = useCallback(() => true, []);
+
+  const dark = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
   const toggle = () => {
     const next = !dark;
-    setDark(next);
     document.documentElement.classList.toggle("dark", next);
     localStorage.setItem("theme", next ? "dark" : "light");
+    window.dispatchEvent(new Event("theme-change"));
   };
 
   return (
@@ -49,11 +59,7 @@ function ThemeToggle() {
       onClick={toggle}
       className={cn(
         "relative inline-flex h-6 w-11 shrink-0 items-center rounded-full transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
-        mounted
-          ? dark
-            ? "bg-[rgba(60,75,120,0.5)]"
-            : "bg-[rgba(15,20,50,0.15)]"
-          : "bg-[rgba(60,75,120,0.5)]"
+        dark ? "bg-white/8" : "bg-[rgba(15,20,50,0.12)]"
       )}
       role="switch"
       aria-checked={dark}
@@ -61,8 +67,8 @@ function ThemeToggle() {
     >
       <span
         className={cn(
-          "pointer-events-none inline-block size-4 rounded-full bg-white shadow-sm ring-0 transition-transform duration-300",
-          dark ? "translate-x-6" : "translate-x-1"
+          "pointer-events-none inline-block size-4 rounded-full shadow-sm ring-0 transition-transform duration-300",
+          dark ? "translate-x-6 bg-glow" : "translate-x-1 bg-foreground"
         )}
       />
     </button>
@@ -137,7 +143,7 @@ function LanguageSwitcher() {
       </button>
       {open && (
         <div
-          className="absolute right-0 top-full mt-1 min-w-[80px] rounded-lg border border-border/40 bg-background/95 py-1 shadow-lg backdrop-blur-md"
+          className="absolute right-0 top-full mt-1 min-w-[80px] rounded-xl border border-border/40 bg-background/95 py-1 shadow-xl backdrop-blur-xl dark:border-white/6 dark:bg-surface/95"
           role="menu"
           aria-label="Language selection"
         >
@@ -161,6 +167,7 @@ function LanguageSwitcher() {
     </div>
   );
 }
+
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -218,10 +225,11 @@ export function Navbar() {
       <nav
         className={cn(
           "sticky top-0 z-50 w-full",
-          "border-b border-border/40",
-          "bg-background/80 backdrop-blur-md",
+          "border-b border-border/30",
+          "bg-background/70 backdrop-blur-xl backdrop-saturate-150",
           "px-4 sm:px-6",
-          "transition-colors duration-300"
+          "transition-colors duration-300",
+          "dark:border-white/4"
         )}
       >
         <div className="mx-auto flex h-14 max-w-6xl items-center">
@@ -229,12 +237,12 @@ export function Navbar() {
             <Image src="/geo-ai.svg" alt="GEO AI" width={96} height={24} className="h-5 w-auto sm:h-6 logo-navy dark:invert" />
           </Link>
 
-          <div className="hidden flex-1 items-center justify-center gap-6 md:flex">
+          <div className="hidden flex-1 items-center justify-center gap-8 md:flex">
             {navLinks.map((link) =>
               link.external ? (
-                <a key={link.key} href={link.href} target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground transition-colors hover:text-foreground">{link.label}</a>
+                <a key={link.key} href={link.href} target="_blank" rel="noopener noreferrer" className="text-[13px] text-muted-foreground transition-colors hover:text-foreground">{link.label}</a>
               ) : (
-                <Link key={link.key} href={link.href} className="text-sm text-muted-foreground transition-colors hover:text-foreground">{link.label}</Link>
+                <Link key={link.key} href={link.href} className="text-[13px] text-muted-foreground transition-colors hover:text-foreground">{link.label}</Link>
               )
             )}
           </div>
@@ -252,89 +260,75 @@ export function Navbar() {
           </div>
         </div>
 
-        <AnimatePresence>
-          {mobileOpen && (
-            <>
-              {/* Backdrop */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.25, ease: "easeOut" }}
-                className="fixed inset-0 z-40 bg-black/20 backdrop-blur-sm md:hidden"
-                onClick={() => setMobileOpen(false)}
-                aria-hidden="true"
-              />
-              {/* Menu panel */}
-              <motion.div
-                ref={mobileMenuRef}
-                initial={{ opacity: 0, y: -16 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -16 }}
-                transition={{ duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
-                className="fixed top-0 left-0 right-0 z-50 flex h-[50vh] flex-col justify-between border-b border-border/40 bg-background/90 px-6 pb-6 pt-6 backdrop-blur-xl md:hidden"
-                role="dialog"
-                aria-label="Mobile navigation"
-              >
-                {/* Close button top-right */}
-                <button
-                  onClick={() => setMobileOpen(false)}
-                  className="absolute top-4 right-4 inline-flex items-center justify-center rounded-md p-2 text-muted-foreground transition-colors hover:text-foreground"
-                  aria-label={t("closeMenu")}
-                >
-                  <X className="size-5" />
-                </button>
-                {/* Logo top-left */}
-                <div>
-                  <Link href="/" onClick={() => setMobileOpen(false)} className="mb-6 inline-block">
-                    <Image src="/geo-ai.svg" alt="GEO AI" width={96} height={24} className="h-5 w-auto logo-navy dark:invert" />
-                  </Link>
-                  <div className="flex flex-col gap-5">
-                    {navLinks.map((link, i) =>
-                      link.external ? (
-                        <motion.a
-                          key={link.key}
-                          href={link.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-base font-medium text-muted-foreground transition-colors hover:text-foreground"
-                          onClick={() => setMobileOpen(false)}
-                          initial={{ opacity: 0, x: -12 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{ duration: 0.25, delay: 0.05 + i * 0.05 }}
-                        >
-                          {link.label}
-                        </motion.a>
-                      ) : (
-                        <motion.div
-                          key={link.key}
-                          initial={{ opacity: 0, x: -12 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{ duration: 0.25, delay: 0.05 + i * 0.05 }}
-                        >
-                          <Link href={link.href} className="text-base font-medium text-muted-foreground transition-colors hover:text-foreground" onClick={() => setMobileOpen(false)}>{link.label}</Link>
-                        </motion.div>
-                      )
-                    )}
-                  </div>
-                </div>
-                <motion.a
-                  href="https://github.com/madeburo/GEO-AI"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="shrink-0"
-                  onClick={() => setMobileOpen(false)}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.3, delay: 0.2 }}
-                >
-                  <Image src="/github-logo.svg" alt="GitHub" width={80} height={22} className="h-5 w-auto opacity-50 dark:invert" />
-                </motion.a>
-              </motion.div>
-            </>
-          )}
-        </AnimatePresence>
       </nav>
+
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.div
+            ref={mobileMenuRef}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25 }}
+            className="fixed inset-0 z-60 flex flex-col justify-between bg-background px-6 pb-6 pt-6 md:hidden overflow-hidden"
+            role="dialog"
+            aria-label="Mobile navigation"
+          >
+            <button
+              onClick={() => setMobileOpen(false)}
+              className="absolute top-4 right-4 inline-flex items-center justify-center rounded-md p-2 text-muted-foreground transition-colors hover:text-foreground"
+              aria-label={t("closeMenu")}
+            >
+              <X className="size-5" />
+            </button>
+            <div>
+              <Link href="/" onClick={() => setMobileOpen(false)} className="mb-6 inline-block">
+                <Image src="/geo-ai.svg" alt="GEO AI" width={96} height={24} className="h-5 w-auto logo-navy dark:invert" />
+              </Link>
+              <div className="flex flex-col gap-5">
+                {navLinks.map((link, i) =>
+                  link.external ? (
+                    <motion.a
+                      key={link.key}
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-base font-medium text-muted-foreground transition-colors hover:text-foreground"
+                      onClick={() => setMobileOpen(false)}
+                      initial={{ opacity: 0, x: -12 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.25, delay: 0.05 + i * 0.05 }}
+                    >
+                      {link.label}
+                    </motion.a>
+                  ) : (
+                    <motion.div
+                      key={link.key}
+                      initial={{ opacity: 0, x: -12 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.25, delay: 0.05 + i * 0.05 }}
+                    >
+                      <Link href={link.href} className="text-base font-medium text-muted-foreground transition-colors hover:text-foreground" onClick={() => setMobileOpen(false)}>{link.label}</Link>
+                    </motion.div>
+                  )
+                )}
+              </div>
+            </div>
+            <motion.a
+              href="https://github.com/madeburo/GEO-AI"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="shrink-0"
+              onClick={() => setMobileOpen(false)}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.3, delay: 0.2 }}
+            >
+              <Image src="/github-logo.svg" alt="GitHub" width={80} height={22} className="h-5 w-auto opacity-50 dark:invert" />
+            </motion.a>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 }

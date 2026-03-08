@@ -8,15 +8,15 @@
     "openMenu": "Ouvrir le menu",
     "closeMenu": "Fermer le menu",
     "changeLanguage": "Changer de langue",
-    "switchToLight": "Passer au mode clair",
-    "switchToDark": "Passer au mode sombre"
+    "switchToLight": "Thème clair",
+    "switchToDark": "Thème sombre"
   },
   "hero": {
     "title": "GEO AI",
-    "subtitle": "Optimisation IA open source pour la recherche",
-    "description": "Générez llms.txt, des règles de crawl IA et des métadonnées pour rendre votre site visible aux moteurs de recherche IA.",
+    "subtitle": "Optimisation open source pour la recherche IA",
+    "description": "Générez llms.txt, configurez les crawlers IA et ajoutez des métadonnées pour rendre votre site visible aux moteurs de recherche IA.",
     "placeholder": "Entrez l'URL de votre site",
-    "analyze": "Analyser le site",
+    "analyze": "Analyser",
     "viewOnGithub": "Voir sur GitHub"
   },
   "howItWorks": {
@@ -25,58 +25,58 @@
     "steps": {
       "generate": {
         "title": "Générer llms.txt",
-        "description": "Créez un fichier structuré qui décrit le contenu et les capacités de votre site aux systèmes IA."
+        "description": "Créez un fichier structuré qui décrit le contenu et les fonctionnalités de votre site aux systèmes IA."
       },
       "crawler": {
-        "title": "Configurer les règles de crawl IA",
-        "description": "Définissez comment les crawlers IA doivent interagir avec votre site et quel contenu indexer."
+        "title": "Configurer les règles des crawlers IA",
+        "description": "Définissez quels crawlers IA peuvent indexer votre site et à quel contenu ils ont accès."
       },
       "metadata": {
         "title": "Ajouter des métadonnées IA",
-        "description": "Enrichissez vos pages avec des métadonnées que les moteurs de recherche IA comprennent et priorisent."
+        "description": "Enrichissez vos pages avec des métadonnées que les moteurs de recherche IA comprennent et utilisent pour générer des réponses."
       },
       "signals": {
         "title": "Fournir des signaux structurés",
-        "description": "Envoyez des signaux clairs aux systèmes IA pour qu'ils affichent votre contenu avec précision."
+        "description": "Envoyez des signaux clairs aux systèmes IA pour que votre contenu soit affiché et cité correctement."
       }
     }
   },
   "quickstart": {
     "title": "Démarrage rapide",
-    "description": "Opérationnel en quelques secondes.",
-    "copyToClipboard": "Copier dans le presse-papiers"
+    "description": "Opérationnel en quelques minutes.",
+    "copyToClipboard": "Copier"
   },
   "spec": {
     "title": "Spécification GEO",
-    "description": "Un ensemble de signaux structurés qui rendent votre site visible et correctement représenté dans les moteurs de recherche IA.",
-    "readSpec": "Lire la spécification complète →",
+    "description": "Des signaux structurés qui rendent votre site visible et correctement représenté dans les moteurs de recherche IA.",
+    "readSpec": "Lire la spécification →",
     "items": {
       "llms": {
         "title": "llms.txt",
-        "description": "Un fichier structuré qui décrit votre site aux grands modèles de langage, les aidant à comprendre votre contenu et vos services."
+        "description": "Un fichier structuré pour les modèles de langage — aide les systèmes IA à comprendre le contenu et les services de votre site."
       },
       "metadata": {
         "title": "Métadonnées IA",
-        "description": "Balisage sémantique et balises méta fournissant aux moteurs de recherche IA des informations riches et structurées sur vos pages."
+        "description": "Balises méta et balisage sémantique fournissant aux moteurs de recherche IA des informations structurées sur vos pages."
       },
       "crawler": {
-        "title": "Règles de crawl",
-        "description": "Directives de configuration contrôlant comment les crawlers IA accèdent, indexent et représentent le contenu de votre site."
+        "title": "Règles des crawlers",
+        "description": "Paramètres d'accès et d'indexation de votre contenu par les crawlers IA."
       },
       "signals": {
         "title": "Signaux structurés",
-        "description": "Formats de données lisibles par machine aidant les systèmes IA à afficher et citer votre contenu avec précision."
+        "description": "Données lisibles par machine qui aident les systèmes IA à citer et afficher votre contenu avec précision."
       }
     }
   },
   "ecosystem": {
-    "title": "Écosystème de la plateforme",
-    "description": "Outils d'optimisation IA pour chaque plateforme. Choisissez la bonne intégration pour votre stack.",
+    "title": "Écosystème",
+    "description": "Outils d'optimisation IA pour chaque plateforme. Choisissez l'intégration adaptée à votre stack.",
     "readMore": "En savoir plus →",
     "products": {
       "core": {
         "title": "GEO AI Core",
-        "description": "Moteur TypeScript pour l'optimisation IA"
+        "description": "Moteur TypeScript pour l'optimisation de la recherche IA"
       },
       "woo": {
         "title": "GEO AI Woo",
@@ -90,19 +90,19 @@
   },
   "openSource": {
     "title": "Open Source",
-    "description": "Tous les outils GEO AI sont open source. Explorez les dépôts, contribuez et façonnez l'avenir de l'optimisation IA."
+    "description": "Tous les outils GEO AI sont open source. Explorez les dépôts, contribuez et participez à l'avenir de l'optimisation pour la recherche IA."
   },
   "footer": {
-    "tagline": "Optimisation IA pour la recherche",
+    "tagline": "Optimisation pour la recherche IA",
     "copyright": "© 2026 GEO AI · Open Source · Licence GPL-2.0"
   },
   "analyze": {
-    "title": "Analyseur de recherche IA",
+    "title": "Analyseur de visibilité IA",
     "description": "Vérifiez la visibilité de votre site pour les moteurs de recherche IA.",
     "placeholder": "Entrez l'URL de votre site",
     "button": "Analyser",
     "errorEmpty": "Veuillez entrer une URL",
     "errorInvalid": "Veuillez entrer une URL valide (ex. example.com)",
-    "comingSoon": "Fonctionnalité d'analyse bientôt disponible. Restez à l'écoute."
+    "comingSoon": "L'analyseur sera bientôt disponible. Restez à l'écoute."
   }
 }
