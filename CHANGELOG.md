@@ -4,6 +4,31 @@ All notable changes to GEO AI are documented in this file.
 
 Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [0.1.3] — 2026-03-08
+
+Language selector redesign and localized SEO infrastructure.
+
+### Added
+
+- `lib/locale-utils.ts` — single source of truth for locale data: `LOCALES` constant array, `Locale` type, `LOCALE_META` record (shortCode + nativeName per locale), `toBcp47` helper mapping `zh` → `zh-CN`
+- `LanguageSelector` component in `components/navbar.tsx` replaces `LanguageSwitcher`:
+  - Trigger button with Globe icon and active locale short code (EN, DE, …)
+  - Dropdown list showing native language name and short code per option
+  - Active locale highlight (background + Check icon) with `aria-current="true"`
+  - Full keyboard navigation: Enter/Space/ArrowDown open the menu, ArrowUp/Down move focus with wrapping, Escape closes and returns focus to trigger
+  - ARIA attributes: `aria-haspopup="menu"`, `aria-expanded`, `role="menu"`, `role="menuitem"`
+  - Framer Motion `AnimatePresence` animation respecting `useReducedMotion`
+- `app/layout.tsx` — expanded SEO metadata:
+  - `<html lang>` now uses BCP 47 tag via `toBcp47(locale)` (zh → zh-CN)
+  - `alternates.canonical` — absolute URL for the current page
+  - `alternates.languages` — hreflang links for all 9 locales + `x-default`
+  - `openGraph.locale` and `openGraph.alternateLocale` with BCP 47 tags
+  - Localized `title`, `description`, `og:title`, `og:description` from the active locale's message catalog
+- `app/sitemap.ts` — locale alternates annotation:
+  - Entries for `/` and `/analyze` now include `alternates.languages` with all 9 BCP 47 tags pointing to the base URL (cookie-based routing, no path prefixes)
+
+---
+
 ## [0.1.2] — 2026-03-08
 
 UI polish, new languages, and localized SEO.

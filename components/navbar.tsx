@@ -4,22 +4,12 @@ import { useState, useEffect, useRef, useTransition, useSyncExternalStore, useCa
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, X, Globe } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { Menu, X, Globe, Check } from "lucide-react";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { useTranslations, useLocale } from "next-intl";
 import { cn } from "@/lib/utils";
+import { LOCALES, LOCALE_META } from "@/lib/locale-utils";
 
-const LANGUAGES = [
-  { code: "de", label: "DE" },
-  { code: "en", label: "EN" },
-  { code: "es", label: "ES" },
-  { code: "fr", label: "FR" },
-  { code: "ja", label: "JA" },
-  { code: "ko", label: "KO" },
-  { code: "pt", label: "PT" },
-  { code: "ru", label: "RU" },
-  { code: "zh", label: "ZH" },
-];
 
 const NAV_LINKS_CONFIG = [
   { key: "analyzer", href: "/analyze", external: false },
@@ -78,95 +68,157 @@ function ThemeToggle() {
   );
 }
 
-function LanguageSwitcher() {
+function LanguageSelector() {
   const [open, setOpen] = useState(false);
+  const [focusedIndex, setFocusedIndex] = useState(-1);
   const locale = useLocale();
   const router = useRouter();
   const [, startTransition] = useTransition();
-  const menuRef = useRef<HTMLDivElement>(null);
-  const buttonRef = useRef<HTMLButtonElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const triggerRef = useRef<HTMLButtonElement>(null);
+  const itemRefs = useRef<(HTMLButtonElement | null)[]>([]);
+  const prefersReducedMotion = useReducedMotion();
   const t = useTranslations("nav");
 
+  const close = useCallback(() => {
+    setOpen(false);
+    setFocusedIndex(-1);
+  }, []);
+
+  // Close on outside click
   useEffect(() => {
     if (!open) return;
     const handleClick = (e: MouseEvent) => {
-      if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
-        setOpen(false);
+      if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
+        close();
       }
     };
     document.addEventListener("mousedown", handleClick);
     return () => document.removeEventListener("mousedown", handleClick);
+  }, [open, close]);
+
+  // Focus first item when dropdown opens; return focus to trigger on close
+  useEffect(() => {
+    if (open) {
+      itemRefs.current[0]?.focus();
+    }
   }, [open]);
 
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === "Escape") {
-      setOpen(false);
-      buttonRef.current?.focus();
+  // Sync programmatic focus with focusedIndex changes (keyboard nav)
+  const prevOpenRef = useRef(false);
+  useEffect(() => {
+    // Skip the initial focus-first-item effect (handled above)
+    if (!open || !prevOpenRef.current) {
+      prevOpenRef.current = open;
+      return;
     }
-    if (!open && (e.key === "ArrowDown" || e.key === "Enter" || e.key === " ")) {
+    prevOpenRef.current = open;
+    if (focusedIndex >= 0) {
+      itemRefs.current[focusedIndex]?.focus();
+    }
+  }, [focusedIndex, open]);
+
+  const handleTriggerKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === "Enter" || e.key === " " || e.key === "ArrowDown") {
       e.preventDefault();
       setOpen(true);
     }
-    if (open && (e.key === "ArrowDown" || e.key === "ArrowUp")) {
+  };
+
+  const handleMenuKeyDown = (e: React.KeyboardEvent) => {
+    const n = LOCALES.length;
+    if (e.key === "Escape") {
       e.preventDefault();
-      const items = menuRef.current?.querySelectorAll<HTMLButtonElement>('[role="menuitem"]');
-      if (!items?.length) return;
-      const current = Array.from(items).indexOf(document.activeElement as HTMLButtonElement);
-      const next = e.key === "ArrowDown"
-        ? (current + 1) % items.length
-        : (current - 1 + items.length) % items.length;
-      items[next].focus();
+      close();
+      triggerRef.current?.focus();
+    } else if (e.key === "ArrowDown") {
+      e.preventDefault();
+      setFocusedIndex((i) => (i + 1) % n);
+    } else if (e.key === "ArrowUp") {
+      e.preventDefault();
+      setFocusedIndex((i) => (i - 1 + n) % n);
     }
   };
 
   const switchLocale = async (newLocale: string) => {
-    await fetch("/api/locale", {
-      method: "POST",
-      body: JSON.stringify({ locale: newLocale }),
-    });
-    setOpen(false);
-    buttonRef.current?.focus();
-    startTransition(() => {
-      router.refresh();
-    });
+    try {
+      const res = await fetch("/api/locale", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ locale: newLocale }),
+      });
+      if (!res.ok) return; // keep dropdown open, locale unchanged
+      close();
+      startTransition(() => {
+        router.refresh();
+      });
+    } catch {
+      // network error — keep dropdown open, locale unchanged
+    }
   };
 
+  const dropdownVariants = {
+    hidden: { opacity: 0, scale: 0.95 },
+    visible: { opacity: 1, scale: 1 },
+  };
+
+  const transition = prefersReducedMotion ? { duration: 0 } : { duration: 0.15 };
+
   return (
-    <div className="relative" ref={menuRef} onKeyDown={handleKeyDown}>
+    <div className="relative" ref={containerRef}>
       <button
-        ref={buttonRef}
-        onClick={() => setOpen(!open)}
+        ref={triggerRef}
+        onClick={() => setOpen((v) => !v)}
+        onKeyDown={handleTriggerKeyDown}
         className="inline-flex items-center gap-1 rounded-md p-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
         aria-label={t("changeLanguage")}
         aria-haspopup="menu"
         aria-expanded={open}
       >
         <Globe className="size-4" />
-        <span className="text-xs uppercase">{locale}</span>
+        <span className="text-xs font-medium">{LOCALE_META[locale as keyof typeof LOCALE_META]?.shortCode ?? locale.toUpperCase()}</span>
       </button>
-      {open && (
-        <div
-          className="absolute right-0 top-full mt-1 min-w-[80px] rounded-xl border border-border/40 bg-background/95 py-1 shadow-xl backdrop-blur-xl dark:border-white/6 dark:bg-surface/95"
-          role="menu"
-          aria-label="Language selection"
-        >
-          {LANGUAGES.map((l) => (
-            <button
-              key={l.code}
-              role="menuitem"
-              tabIndex={0}
-              onClick={() => switchLocale(l.code)}
-              className={cn(
-                "block w-full px-3 py-1.5 text-left text-xs transition-colors hover:bg-accent",
-                locale === l.code ? "text-foreground font-medium" : "text-muted-foreground"
-              )}
-              aria-current={locale === l.code ? "true" : undefined}
-            >
-              {l.label}
-            </button>
-          ))}
-        </div>
-      )}
+
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            key="language-dropdown"
+            variants={dropdownVariants}
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+            transition={transition}
+            className="absolute right-0 top-full mt-1 min-w-[140px] rounded-xl border border-border/40 bg-background/95 py-1 shadow-xl backdrop-blur-xl dark:border-white/6 dark:bg-surface/95"
+            role="menu"
+            aria-label={t("changeLanguage")}
+            onKeyDown={handleMenuKeyDown}
+          >
+            {LOCALES.map((code, i) => {
+              const meta = LOCALE_META[code];
+              const isActive = locale === code;
+              return (
+                <button
+                  key={code}
+                  ref={(el) => { itemRefs.current[i] = el; }}
+                  role="menuitem"
+                  tabIndex={focusedIndex === i ? 0 : -1}
+                  onClick={() => switchLocale(code)}
+                  aria-current={isActive ? "true" : undefined}
+                  className={cn(
+                    "flex w-full items-center gap-2 px-3 py-1.5 text-left text-xs transition-colors",
+                    isActive
+                      ? "bg-accent text-foreground font-medium"
+                      : "text-muted-foreground hover:bg-accent/60 hover:text-foreground"
+                  )}
+                >
+                  <span className="flex-1">{meta.nativeName}</span>
+                  {isActive && <Check className="size-3 shrink-0" />}
+                </button>
+              );
+            })}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
@@ -252,7 +304,7 @@ export function Navbar() {
 
           <div className="ml-auto flex items-center gap-1 md:ml-0">
             <ThemeToggle />
-            <LanguageSwitcher />
+            <LanguageSelector />
             <button
               className="inline-flex items-center justify-center rounded-md p-2 text-muted-foreground transition-colors hover:text-foreground md:hidden"
               onClick={() => setMobileOpen(!mobileOpen)}

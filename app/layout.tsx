@@ -4,6 +4,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages, getTranslations } from "next-intl/server";
 import { createGeoAI } from "geo-ai-core";
 import { GEO_SITE_NAME, GEO_SITE_URL, createGeoProvider } from "@/lib/geo-config";
+import { LOCALES, toBcp47 } from "@/lib/locale-utils";
 import { clarityScript } from "@/lib/clarity";
 import "./globals.css";
 
@@ -30,32 +31,40 @@ const notoSC = Noto_Sans_SC({
   weight: ["400", "500", "600", "700"],
 });
 
-const SUPPORTED_LOCALES = ["de", "en", "es", "fr", "ja", "ko", "pt", "ru", "zh"] as const;
-
 const geo = createGeoAI({
   siteName: GEO_SITE_NAME,
   siteUrl: GEO_SITE_URL,
   provider: createGeoProvider(),
 });
 
+const BASE_URL = "https://www.geoai.run";
+
 export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getLocale();
   const t = await getTranslations("metadata.home");
+
+  const activeLocale = locale;
+  const activeBcp47 = toBcp47(activeLocale);
+  const alternateLocales = LOCALES.filter((l) => l !== activeLocale).map(toBcp47);
 
   return {
     title: t("title"),
     description: t("description"),
-    metadataBase: new URL("https://www.geoai.run"),
+    metadataBase: new URL(BASE_URL),
     alternates: {
-      canonical: "/",
-      languages: Object.fromEntries(
-        SUPPORTED_LOCALES.map((l) => [l, "/"])
-      ),
+      canonical: BASE_URL,
+      languages: {
+        ...Object.fromEntries(LOCALES.map((l) => [toBcp47(l), BASE_URL])),
+        "x-default": BASE_URL,
+      },
     },
     openGraph: {
       title: t("title"),
       description: t("description"),
       type: "website",
-      url: "https://www.geoai.run",
+      url: BASE_URL,
+      locale: activeBcp47,
+      alternateLocale: alternateLocales,
       images: [
         {
           url: "/og.png",
@@ -91,7 +100,7 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`${manrope.variable} ${notoJP.variable} ${notoKR.variable} ${notoSC.variable} dark`}>
+    <html lang={toBcp47(locale)} className={`${manrope.variable} ${notoJP.variable} ${notoKR.variable} ${notoSC.variable} dark`}>
       <head>
         {clarityScript && (
           <script

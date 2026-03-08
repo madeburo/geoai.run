@@ -203,7 +203,7 @@ export function Hero() {
             {[...AI_LOGOS, ...AI_LOGOS].map((logo, i) => (
               <span
                 key={`${logo.name}-${i}`}
-                className="text-[11px] font-medium tracking-widest text-muted-foreground/30 uppercase select-none whitespace-nowrap sm:text-xs"
+                className="text-[12px] font-medium text-muted-foreground/80 uppercase select-none whitespace-nowrap sm:text-xs"
               >
                 {logo.name}
               </span>
