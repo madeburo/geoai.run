@@ -17,7 +17,8 @@
     "description": "llms.txt、AIクローラールール、メタデータを生成し、AI検索エンジンにサイトを認識させましょう。",
     "placeholder": "ウェブサイトのURLを入力",
     "analyze": "サイトを分析",
-    "viewOnGithub": "GitHubで見る"
+    "viewOnGithub": "GitHubで見る",
+    "readDocs": "ドキュメントを読む"
   },
   "howItWorks": {
     "title": "仕組み",
@@ -103,7 +104,10 @@
     "button": "分析する",
     "errorEmpty": "URLを入力してください",
     "errorInvalid": "有効なURLを入力してください（例：example.com）",
-    "comingSoon": "分析機能は近日公開予定です。お楽しみに。"
+    "comingSoon": "分析機能は近日公開予定です。お楽しみに。",
+    "readDocs": "ドキュメントを読む",
+    "viewOnGithub": "GitHubで見る",
+    "generateDescription": "llms.txt、AIクローラールール、メタデータを生成し、AI検索エンジンにサイトを認識させましょう。"
   },
   "cookies": {
     "message": "サイト改善のためにCookieと分析ツールを使用しています。",

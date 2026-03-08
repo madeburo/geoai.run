@@ -17,7 +17,8 @@
     "description": "Generieren Sie llms.txt, KI-Crawler-Regeln und Metadaten — machen Sie Ihre Website für KI-Suchmaschinen sichtbar.",
     "placeholder": "Website-URL eingeben",
     "analyze": "Analysieren",
-    "viewOnGithub": "Auf GitHub ansehen"
+    "viewOnGithub": "Auf GitHub ansehen",
+    "readDocs": "Dokumentation lesen"
   },
   "howItWorks": {
     "title": "So funktioniert's",
@@ -103,7 +104,10 @@
     "button": "Analysieren",
     "errorEmpty": "Bitte URL eingeben",
     "errorInvalid": "Bitte gültige URL eingeben (z.B. example.com)",
-    "comingSoon": "Analyzer kommt bald. Bleiben Sie dran."
+    "comingSoon": "Analyzer kommt bald. Bleiben Sie dran.",
+    "readDocs": "Dokumentation lesen",
+    "viewOnGithub": "Auf GitHub ansehen",
+    "generateDescription": "Generieren Sie llms.txt, KI-Crawler-Regeln und Metadaten — machen Sie Ihre Website für KI-Suchmaschinen sichtbar."
   },
   "cookies": {
     "message": "Wir verwenden Cookies und Analysetools um die Website zu verbessern.",

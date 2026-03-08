@@ -4,6 +4,30 @@ All notable changes to GEO AI are documented in this file.
 
 Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [0.1.5] — 2026-03-09
+
+Secondary action row, /analyze page content, i18n fixes, hydration fix, middleware – proxy migration.
+
+### Added
+
+- Secondary action row in hero (below the analyzer form): "Read docs" (accented), "View on GitHub" (outline), `npm install geo-ai-core` (copyable code chip with copy/check icon)
+- Same secondary action row on `/analyze` page below the form, with a localized description
+- `readDocs`, `viewOnGithub`, `generateDescription` translation keys added to all 9 locales in both `hero` and `analyze` namespaces
+
+### Changed
+
+- `middleware.ts` renamed to `proxy.ts`, exported function renamed from `middleware` to `proxy` — resolves Next.js 16 deprecation warning
+- `app/layout.tsx` — removed hardcoded `dark` class from `<html>`; added inline `<script>` in `<head>` that synchronously reads `localStorage` and applies `dark` class before hydration; added `suppressHydrationWarning` on `<html>`; dark mode remains the default for new visitors
+- `components/cookie-banner.tsx` — fixed hydration mismatch: `consent` state now always initializes as `null` on server; `localStorage` is read in `useEffect` only
+
+### Fixed
+
+- Hydration mismatch caused by `CookieBanner` reading `localStorage` in `useState` initializer (server/client divergence)
+- Hydration mismatch caused by theme class difference between SSR (`dark`) and client (user preference)
+- `Github` icon import replaced with `Github as GithubIcon` in `hero.tsx` and `analyze/page.tsx` — resolves lucide-react deprecation hint
+
+---
+
 ## [0.1.4] — 2026-03-08
 
 Cookie consent banner with Clarity integration.

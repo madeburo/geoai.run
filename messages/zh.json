@@ -17,7 +17,8 @@
     "description": "生成llms.txt、AI爬虫规则和元数据，让您的网站被AI搜索引擎发现。",
     "placeholder": "输入您的网站URL",
     "analyze": "分析网站",
-    "viewOnGithub": "在GitHub上查看"
+    "viewOnGithub": "在GitHub上查看",
+    "readDocs": "阅读文档"
   },
   "howItWorks": {
     "title": "工作原理",
@@ -103,7 +104,10 @@
     "button": "分析",
     "errorEmpty": "请输入URL",
     "errorInvalid": "请输入有效的URL（例如：example.com）",
-    "comingSoon": "分析功能即将推出，敬请期待。"
+    "comingSoon": "分析功能即将推出，敬请期待。",
+    "readDocs": "阅读文档",
+    "viewOnGithub": "在GitHub上查看",
+    "generateDescription": "生成llms.txt、AI爬虫规则和元数据，让您的网站被AI搜索引擎发现。"
   },
   "cookies": {
     "message": "我们使用 Cookie 和分析工具来改善网站体验。",

@@ -21,7 +21,7 @@ const geoMiddleware = geoAIMiddleware({
   cacheMaxAge: 3600,
 });
 
-export default function middleware(request: NextRequest) {
+export default function proxy(request: NextRequest) {
   const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ?? "unknown";
   const { allowed, remaining } = rateLimit(ip);
 

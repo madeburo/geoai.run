@@ -101,8 +101,13 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={toBcp47(locale)} className={`${manrope.variable} ${notoJP.variable} ${notoKR.variable} ${notoSC.variable} dark`}>
+    <html lang={toBcp47(locale)} className={`${manrope.variable} ${notoJP.variable} ${notoKR.variable} ${notoSC.variable}`} suppressHydrationWarning>
       <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem('theme');if(t==='light'){document.documentElement.classList.remove('dark')}else{document.documentElement.classList.add('dark')}}catch(e){}})()`,
+          }}
+        />
         <meta name="llms" content="https://www.geoai.run/llms.txt" />
         <meta name="llms-full" content="https://www.geoai.run/llms-full.txt" />
         <script

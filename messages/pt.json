@@ -17,7 +17,8 @@
     "description": "Gere llms.txt, regras de rastreamento IA e metadados para tornar seu site visível nos mecanismos de busca IA.",
     "placeholder": "Digite a URL do seu site",
     "analyze": "Analisar site",
-    "viewOnGithub": "Ver no GitHub"
+    "viewOnGithub": "Ver no GitHub",
+    "readDocs": "Ler documentação"
   },
   "howItWorks": {
     "title": "Como funciona",
@@ -103,7 +104,10 @@
     "button": "Analisar",
     "errorEmpty": "Por favor, insira uma URL",
     "errorInvalid": "Por favor, insira uma URL válida (ex. example.com)",
-    "comingSoon": "Recurso de análise em breve. Fique atento."
+    "comingSoon": "Recurso de análise em breve. Fique atento.",
+    "readDocs": "Ler documentação",
+    "viewOnGithub": "Ver no GitHub",
+    "generateDescription": "Gere llms.txt, regras de rastreamento IA e metadados para tornar seu site visível nos mecanismos de busca IA."
   },
   "cookies": {
     "message": "Usamos cookies e ferramentas de análise para melhorar a experiência do site.",

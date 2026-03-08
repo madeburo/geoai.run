@@ -7,6 +7,7 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { BookOpen, Github as GithubIcon, Copy, Check } from "lucide-react";
 
 function isValidUrl(value: string): boolean {
   try {
@@ -29,7 +30,14 @@ export default function AnalyzePage() {
   const [url, setUrl] = useState(paramUrl ?? "");
   const [error, setError] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [copied, setCopied] = useState(false);
   const t = useTranslations("analyze");
+
+  function handleCopy() {
+    navigator.clipboard.writeText("npm install geo-ai-core");
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  }
 
   function handleAnalyze() {
     const trimmed = url.trim();
@@ -90,6 +98,52 @@ export default function AnalyzePage() {
               {t("comingSoon")}
             </p>
           )}
+
+          {/* Divider */}
+          <div className="mt-12 border-t border-border/40 pt-10">
+            <p className="mb-6 text-xs text-muted-foreground">
+              {t("generateDescription")}
+            </p>
+
+            {/* Secondary action row */}
+            <div className="flex flex-col gap-2 sm:flex-row">
+              {/* Read docs */}
+              <a
+                href="https://github.com/madeburo/GEO-AI/blob/main/README.md"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex h-9 flex-1 items-center justify-center gap-2 rounded-lg border border-glow/30 bg-glow/8 px-4 text-xs font-medium text-foreground/80 backdrop-blur-sm transition-all hover:border-glow/50 hover:bg-glow/15 hover:text-foreground dark:border-glow/20 dark:bg-glow/5 dark:text-white/70 dark:hover:text-white"
+              >
+                <BookOpen className="h-3.5 w-3.5 shrink-0 text-glow" />
+                {t("readDocs")}
+              </a>
+
+              {/* View on GitHub */}
+              <a
+                href="https://github.com/madeburo/GEO-AI"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex h-9 flex-1 items-center justify-center gap-2 rounded-lg border border-border/50 bg-surface/40 px-4 text-xs font-medium text-muted-foreground backdrop-blur-sm transition-all hover:border-border hover:bg-surface/80 hover:text-foreground dark:border-white/8 dark:bg-white/3 dark:hover:border-white/15 dark:hover:text-white"
+              >
+                <GithubIcon className="h-3.5 w-3.5 shrink-0" />
+                {t("viewOnGithub")}
+              </a>
+
+              {/* npm install chip */}
+              <button
+                onClick={handleCopy}
+                aria-label="Copy install command"
+                className="group flex h-9 flex-1 items-center justify-center gap-2 rounded-lg border border-border/50 bg-surface/40 px-4 font-mono text-xs text-muted-foreground backdrop-blur-sm transition-all hover:border-border hover:bg-surface/80 hover:text-foreground dark:border-white/8 dark:bg-white/3 dark:hover:border-white/15 dark:hover:text-white"
+              >
+                <span className="truncate">npm install geo-ai-core</span>
+                {copied ? (
+                  <Check className="h-3 w-3 shrink-0 text-glow" />
+                ) : (
+                  <Copy className="h-3 w-3 shrink-0 opacity-50 transition-opacity group-hover:opacity-100" />
+                )}
+              </button>
+            </div>
+          </div>
         </div>
       </main>
       <Footer />

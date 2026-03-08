@@ -26,17 +26,16 @@ function loadClarity(id: string) {
 
 export function CookieBanner({ clarityId }: { clarityId: string }) {
   const t = useTranslations("cookies");
-  const [consent, setConsent] = useState<ConsentValue>(() => {
-    if (typeof window === "undefined") return null;
-    return (localStorage.getItem(STORAGE_KEY) as ConsentValue) ?? null;
-  });
+  const [consent, setConsent] = useState<ConsentValue>(null);
   const [visible, setVisible] = useState(false);
   const reduced = useReducedMotion();
 
   useEffect(() => {
-    if (consent === "accepted") {
+    const stored = (localStorage.getItem(STORAGE_KEY) as ConsentValue) ?? null;
+    setConsent(stored);
+    if (stored === "accepted") {
       loadClarity(clarityId);
-    } else if (consent === null) {
+    } else if (stored === null) {
       setVisible(true);
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps

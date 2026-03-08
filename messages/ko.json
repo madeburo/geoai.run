@@ -17,7 +17,8 @@
     "description": "llms.txt, AI 크롤러 규칙 및 메타데이터를 생성하여 AI 검색 엔진에서 사이트를 노출시키세요.",
     "placeholder": "웹사이트 URL을 입력하세요",
     "analyze": "사이트 분석",
-    "viewOnGithub": "GitHub에서 보기"
+    "viewOnGithub": "GitHub에서 보기",
+    "readDocs": "문서 읽기"
   },
   "howItWorks": {
     "title": "작동 방식",
@@ -103,7 +104,10 @@
     "button": "분석",
     "errorEmpty": "URL을 입력해 주세요",
     "errorInvalid": "유효한 URL을 입력해 주세요 (예: example.com)",
-    "comingSoon": "분석 기능이 곧 출시됩니다. 기대해 주세요."
+    "comingSoon": "분석 기능이 곧 출시됩니다. 기대해 주세요.",
+    "readDocs": "문서 읽기",
+    "viewOnGithub": "GitHub에서 보기",
+    "generateDescription": "llms.txt, AI 크롤러 규칙 및 메타데이터를 생성하여 AI 검색 엔진에서 사이트를 노출시키세요."
   },
   "cookies": {
     "message": "사이트 개선을 위해 쿠키와 분석 도구를 사용합니다.",

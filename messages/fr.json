@@ -17,7 +17,8 @@
     "description": "Générez llms.txt, configurez les crawlers IA et ajoutez des métadonnées pour rendre votre site visible aux moteurs de recherche IA.",
     "placeholder": "Entrez l'URL de votre site",
     "analyze": "Analyser",
-    "viewOnGithub": "Voir sur GitHub"
+    "viewOnGithub": "Voir sur GitHub",
+    "readDocs": "Lire la documentation"
   },
   "howItWorks": {
     "title": "Comment ça marche",
@@ -103,7 +104,10 @@
     "button": "Analyser",
     "errorEmpty": "Veuillez entrer une URL",
     "errorInvalid": "Veuillez entrer une URL valide (ex. example.com)",
-    "comingSoon": "L'analyseur sera bientôt disponible. Restez à l'écoute."
+    "comingSoon": "L'analyseur sera bientôt disponible. Restez à l'écoute.",
+    "readDocs": "Lire la documentation",
+    "viewOnGithub": "Voir sur GitHub",
+    "generateDescription": "Générez llms.txt, configurez les crawlers IA et ajoutez des métadonnées pour rendre votre site visible aux moteurs de recherche IA."
   },
   "cookies": {
     "message": "Nous utilisons des cookies et des outils d'analyse pour améliorer l'expérience du site.",

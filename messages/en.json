@@ -17,7 +17,8 @@
     "description": "Generate llms.txt, AI crawler rules and metadata to make your site visible to AI search engines.",
     "placeholder": "Enter your website URL",
     "analyze": "Analyze site",
-    "viewOnGithub": "View on GitHub"
+    "viewOnGithub": "View on GitHub",
+    "readDocs": "Read docs"
   },
   "howItWorks": {
     "title": "How It Works",
@@ -103,7 +104,10 @@
     "button": "Analyze",
     "errorEmpty": "Please enter a URL",
     "errorInvalid": "Please enter a valid URL (e.g. example.com)",
-    "comingSoon": "Analysis feature coming soon. Stay tuned."
+    "comingSoon": "Analysis feature coming soon. Stay tuned.",
+    "readDocs": "Read docs",
+    "viewOnGithub": "View on GitHub",
+    "generateDescription": "Generate llms.txt, AI crawler rules and metadata to make your site visible to AI search engines."
   },
   "cookies": {
     "message": "We use cookies and analytics to improve the site experience.",
