@@ -105,6 +105,12 @@
     "errorInvalid": "请输入有效的URL（例如：example.com）",
     "comingSoon": "分析功能即将推出，敬请期待。"
   },
+  "cookies": {
+    "message": "我们使用 Cookie 和分析工具来改善网站体验。",
+    "accept": "接受",
+    "reject": "拒绝",
+    "settings": "Cookie 设置"
+  },
   "metadata": {
     "home": {
       "title": "GEO AI — AI搜索优化",

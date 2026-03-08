@@ -5,7 +5,8 @@ import { getLocale, getMessages, getTranslations } from "next-intl/server";
 import { createGeoAI } from "geo-ai-core";
 import { GEO_SITE_NAME, GEO_SITE_URL, createGeoProvider } from "@/lib/geo-config";
 import { LOCALES, toBcp47 } from "@/lib/locale-utils";
-import { clarityScript } from "@/lib/clarity";
+import { CLARITY_ID } from "@/lib/clarity";
+import { CookieBanner } from "@/components/cookie-banner";
 import "./globals.css";
 
 const manrope = Manrope({
@@ -102,11 +103,6 @@ export default async function RootLayout({
   return (
     <html lang={toBcp47(locale)} className={`${manrope.variable} ${notoJP.variable} ${notoKR.variable} ${notoSC.variable} dark`}>
       <head>
-        {clarityScript && (
-          <script
-            dangerouslySetInnerHTML={{ __html: clarityScript }}
-          />
-        )}
         <meta name="llms" content="https://www.geoai.run/llms.txt" />
         <meta name="llms-full" content="https://www.geoai.run/llms-full.txt" />
         <script
@@ -117,6 +113,7 @@ export default async function RootLayout({
       <body className="antialiased">
         <NextIntlClientProvider messages={messages}>
           {children}
+          <CookieBanner clarityId={CLARITY_ID} />
         </NextIntlClientProvider>
       </body>
     </html>

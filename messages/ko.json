@@ -105,6 +105,12 @@
     "errorInvalid": "유효한 URL을 입력해 주세요 (예: example.com)",
     "comingSoon": "분석 기능이 곧 출시됩니다. 기대해 주세요."
   },
+  "cookies": {
+    "message": "사이트 개선을 위해 쿠키와 분석 도구를 사용합니다.",
+    "accept": "동의",
+    "reject": "거부",
+    "settings": "쿠키 설정"
+  },
   "metadata": {
     "home": {
       "title": "GEO AI — AI 검색 최적화",

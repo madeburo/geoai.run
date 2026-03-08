@@ -4,6 +4,23 @@ All notable changes to GEO AI are documented in this file.
 
 Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [0.1.4] — 2026-03-08
+
+Cookie consent banner with Clarity integration.
+
+### Added
+
+- `components/cookie-banner.tsx` — fixed bottom-right consent banner
+- Cookie consent logic: `accepted` – loads Clarity script dynamically; `rejected` – no tracking; `unset` – banner shown; choice persisted in `localStorage`
+- Small "cookies" re-open trigger shown after consent is set, allowing the user to change their choice
+- `cookies` translation keys (`message`, `accept`, `reject`, `settings`) added to all 9 locales: en, ru, de, es, fr, ja, ko, pt, zh
+
+### Changed
+
+- `app/layout.tsx` — removed inline Clarity script injection; Clarity now loads only after user consent via `CookieBanner`
+
+---
+
 ## [0.1.3] — 2026-03-08
 
 Language selector redesign and localized SEO infrastructure.

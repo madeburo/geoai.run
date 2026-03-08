@@ -105,6 +105,12 @@
     "errorInvalid": "有効なURLを入力してください（例：example.com）",
     "comingSoon": "分析機能は近日公開予定です。お楽しみに。"
   },
+  "cookies": {
+    "message": "サイト改善のためにCookieと分析ツールを使用しています。",
+    "accept": "同意する",
+    "reject": "拒否する",
+    "settings": "Cookie設定"
+  },
   "metadata": {
     "home": {
       "title": "GEO AI — AI検索最適化",

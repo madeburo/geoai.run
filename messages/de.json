@@ -105,6 +105,12 @@
     "errorInvalid": "Bitte gültige URL eingeben (z.B. example.com)",
     "comingSoon": "Analyzer kommt bald. Bleiben Sie dran."
   },
+  "cookies": {
+    "message": "Wir verwenden Cookies und Analysetools um die Website zu verbessern.",
+    "accept": "Akzeptieren",
+    "reject": "Ablehnen",
+    "settings": "Cookie-Einstellungen"
+  },
   "metadata": {
     "home": {
       "title": "GEO AI — KI-Suchoptimierung",

@@ -105,6 +105,12 @@
     "errorInvalid": "Por favor ingresa una URL válida (ej. example.com)",
     "comingSoon": "Función de análisis próximamente. Mantente atento."
   },
+  "cookies": {
+    "message": "Usamos cookies y herramientas de análisis para mejorar la experiencia del sitio.",
+    "accept": "Aceptar",
+    "reject": "Rechazar",
+    "settings": "Configuración de cookies"
+  },
   "metadata": {
     "home": {
       "title": "GEO AI — Optimización de búsqueda IA",
