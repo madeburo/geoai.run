@@ -8,7 +8,7 @@ export function OpenSource() {
   const t = useTranslations("openSource");
 
   return (
-    <section className="relative w-full px-4 py-24 sm:px-6 md:py-32 lg:py-40">
+    <section className="relative w-full px-4 py-16 sm:px-6 md:py-20 lg:py-24">
       <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 h-px w-2/3 max-w-xl glow-line opacity-20" />
 
       <div className="mx-auto max-w-6xl">

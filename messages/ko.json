@@ -1,0 +1,118 @@
+{
+  "nav": {
+    "analyzer": "분석기",
+    "github": "GitHub",
+    "documentation": "문서",
+    "specification": "사양",
+    "skipToContent": "콘텐츠로 건너뛰기",
+    "openMenu": "메뉴 열기",
+    "closeMenu": "메뉴 닫기",
+    "changeLanguage": "언어 변경",
+    "switchToLight": "라이트 모드로 전환",
+    "switchToDark": "다크 모드로 전환"
+  },
+  "hero": {
+    "title": "GEO AI",
+    "subtitle": "오픈소스 AI 검색 최적화",
+    "description": "llms.txt, AI 크롤러 규칙 및 메타데이터를 생성하여 AI 검색 엔진에서 사이트를 노출시키세요.",
+    "placeholder": "웹사이트 URL을 입력하세요",
+    "analyze": "사이트 분석",
+    "viewOnGithub": "GitHub에서 보기"
+  },
+  "howItWorks": {
+    "title": "작동 방식",
+    "step": "단계 {number}",
+    "steps": {
+      "generate": {
+        "title": "llms.txt 생성",
+        "description": "AI 시스템에 사이트 콘텐츠와 기능을 알려주는 구조화된 파일을 만듭니다."
+      },
+      "crawler": {
+        "title": "AI 크롤러 규칙 설정",
+        "description": "AI 크롤러가 사이트와 상호작용하는 방식과 인덱싱할 콘텐츠를 정의합니다."
+      },
+      "metadata": {
+        "title": "AI 메타데이터 추가",
+        "description": "AI 검색 엔진이 이해하고 우선시하는 메타데이터로 페이지를 강화합니다."
+      },
+      "signals": {
+        "title": "구조화된 신호 제공",
+        "description": "AI 시스템이 콘텐츠를 정확하게 표시할 수 있도록 명확한 신호를 보냅니다."
+      }
+    }
+  },
+  "quickstart": {
+    "title": "빠른 시작",
+    "description": "몇 초 만에 시작할 수 있습니다.",
+    "copyToClipboard": "클립보드에 복사"
+  },
+  "spec": {
+    "title": "GEO 사양",
+    "description": "AI 검색 엔진에서 웹사이트를 가시적이고 정확하게 표현하는 구조화된 신호 세트입니다.",
+    "readSpec": "전체 사양 읽기 →",
+    "items": {
+      "llms": {
+        "title": "llms.txt",
+        "description": "대규모 언어 모델에 사이트를 설명하는 구조화된 파일로, 콘텐츠와 서비스를 이해하는 데 도움을 줍니다."
+      },
+      "metadata": {
+        "title": "AI 메타데이터",
+        "description": "AI 검색 엔진에 풍부한 구조화된 페이지 정보를 제공하는 시맨틱 마크업과 메타 태그."
+      },
+      "crawler": {
+        "title": "크롤러 규칙",
+        "description": "AI 크롤러가 사이트 콘텐츠에 접근, 인덱싱, 표현하는 방식을 제어하는 설정 지시문."
+      },
+      "signals": {
+        "title": "구조화된 신호",
+        "description": "AI 시스템이 콘텐츠를 정확하게 표시하고 인용하는 데 도움이 되는 기계 판독 가능 데이터 형식."
+      }
+    }
+  },
+  "ecosystem": {
+    "title": "플랫폼 에코시스템",
+    "description": "모든 플랫폼을 위한 AI 검색 최적화 도구. 기술 스택에 맞는 통합을 선택하세요.",
+    "readMore": "자세히 보기 →",
+    "products": {
+      "core": {
+        "title": "GEO AI Core",
+        "description": "AI 검색 최적화를 위한 TypeScript 엔진"
+      },
+      "woo": {
+        "title": "GEO AI Woo",
+        "description": "WordPress & WooCommerce 플러그인"
+      },
+      "shopify": {
+        "title": "GEO AI Shopify",
+        "description": "AI 가시성을 위한 Shopify 앱"
+      }
+    }
+  },
+  "openSource": {
+    "title": "오픈 소스",
+    "description": "모든 GEO AI 도구는 오픈 소스입니다. 리포지토리를 탐색하고, 기여하고, AI 검색 최적화의 미래를 함께 만들어 가세요."
+  },
+  "footer": {
+    "tagline": "AI 검색 최적화",
+    "copyright": "© 2026 GEO AI · 오픈 소스 · GPL-2.0 라이선스"
+  },
+  "analyze": {
+    "title": "AI 검색 분석기",
+    "description": "AI 검색 엔진에 대한 사이트의 가시성을 확인합니다.",
+    "placeholder": "웹사이트 URL을 입력하세요",
+    "button": "분석",
+    "errorEmpty": "URL을 입력해 주세요",
+    "errorInvalid": "유효한 URL을 입력해 주세요 (예: example.com)",
+    "comingSoon": "분석 기능이 곧 출시됩니다. 기대해 주세요."
+  },
+  "metadata": {
+    "home": {
+      "title": "GEO AI — AI 검색 최적화",
+      "description": "웹사이트와 이커머스를 위한 오픈소스 AI 검색 최적화 플랫폼."
+    },
+    "analyze": {
+      "title": "AI 검색 분석기 — GEO AI",
+      "description": "ChatGPT, Claude, Gemini, Perplexity 등 AI 검색 엔진에 대한 사이트 가시성을 확인합니다."
+    }
+  }
+}

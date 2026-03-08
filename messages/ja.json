@@ -1,0 +1,118 @@
+{
+  "nav": {
+    "analyzer": "アナライザー",
+    "github": "GitHub",
+    "documentation": "ドキュメント",
+    "specification": "仕様",
+    "skipToContent": "コンテンツへスキップ",
+    "openMenu": "メニューを開く",
+    "closeMenu": "メニューを閉じる",
+    "changeLanguage": "言語を変更",
+    "switchToLight": "ライトモードに切替",
+    "switchToDark": "ダークモードに切替"
+  },
+  "hero": {
+    "title": "GEO AI",
+    "subtitle": "オープンソースAI検索最適化",
+    "description": "llms.txt、AIクローラールール、メタデータを生成し、AI検索エンジンにサイトを認識させましょう。",
+    "placeholder": "ウェブサイトのURLを入力",
+    "analyze": "サイトを分析",
+    "viewOnGithub": "GitHubで見る"
+  },
+  "howItWorks": {
+    "title": "仕組み",
+    "step": "ステップ {number}",
+    "steps": {
+      "generate": {
+        "title": "llms.txtを生成",
+        "description": "AIシステムにサイトのコンテンツと機能を伝える構造化ファイルを作成します。"
+      },
+      "crawler": {
+        "title": "AIクローラールールを設定",
+        "description": "AIクローラーがサイトとどのように連携し、どのコンテンツをインデックスするかを定義します。"
+      },
+      "metadata": {
+        "title": "AIメタデータを追加",
+        "description": "AI検索エンジンが理解し優先するメタデータでページを強化します。"
+      },
+      "signals": {
+        "title": "構造化シグナルを提供",
+        "description": "AIシステムがコンテンツを正確に表示できるよう、明確なシグナルを送信します。"
+      }
+    }
+  },
+  "quickstart": {
+    "title": "クイックスタート",
+    "description": "数秒で始められます。",
+    "copyToClipboard": "クリップボードにコピー"
+  },
+  "spec": {
+    "title": "GEO仕様",
+    "description": "AI検索エンジンでウェブサイトを可視化し、正確に表現するための構造化シグナルのセットです。",
+    "readSpec": "仕様全文を読む →",
+    "items": {
+      "llms": {
+        "title": "llms.txt",
+        "description": "大規模言語モデルにサイトを説明する構造化ファイル。コンテンツとサービスの理解を助けます。"
+      },
+      "metadata": {
+        "title": "AIメタデータ",
+        "description": "AI検索エンジンにページの豊富な構造化情報を提供するセマンティックマークアップとメタタグ。"
+      },
+      "crawler": {
+        "title": "クローラールール",
+        "description": "AIクローラーがサイトコンテンツにアクセス、インデックス、表現する方法を制御する設定ディレクティブ。"
+      },
+      "signals": {
+        "title": "構造化シグナル",
+        "description": "AIシステムがコンテンツを正確に表示・引用するための機械可読データ形式。"
+      }
+    }
+  },
+  "ecosystem": {
+    "title": "プラットフォームエコシステム",
+    "description": "あらゆるプラットフォーム向けのAI検索最適化ツール。スタックに合った統合を選択してください。",
+    "readMore": "詳細を見る →",
+    "products": {
+      "core": {
+        "title": "GEO AI Core",
+        "description": "AI検索最適化のためのTypeScriptエンジン"
+      },
+      "woo": {
+        "title": "GEO AI Woo",
+        "description": "WordPress & WooCommerceプラグイン"
+      },
+      "shopify": {
+        "title": "GEO AI Shopify",
+        "description": "AI可視化のためのShopifyアプリ"
+      }
+    }
+  },
+  "openSource": {
+    "title": "オープンソース",
+    "description": "すべてのGEO AIツールはオープンソースです。リポジトリを探索し、貢献し、AI検索最適化の未来を一緒に作りましょう。"
+  },
+  "footer": {
+    "tagline": "AI検索最適化",
+    "copyright": "© 2026 GEO AI · オープンソース · GPL-2.0ライセンス"
+  },
+  "analyze": {
+    "title": "AI検索アナライザー",
+    "description": "AI検索エンジンに対するサイトの可視性を確認します。",
+    "placeholder": "ウェブサイトのURLを入力",
+    "button": "分析する",
+    "errorEmpty": "URLを入力してください",
+    "errorInvalid": "有効なURLを入力してください（例：example.com）",
+    "comingSoon": "分析機能は近日公開予定です。お楽しみに。"
+  },
+  "metadata": {
+    "home": {
+      "title": "GEO AI — AI検索最適化",
+      "description": "ウェブサイトとECサイト向けのオープンソースAI検索最適化プラットフォーム。"
+    },
+    "analyze": {
+      "title": "AI検索アナライザー — GEO AI",
+      "description": "ChatGPT、Claude、Gemini、PerplexityなどのAI検索エンジンに対するサイトの可視性を確認します。"
+    }
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "nav": {
+    "analyzer": "分析器",
+    "github": "GitHub",
+    "documentation": "文档",
+    "specification": "规范",
+    "skipToContent": "跳转到内容",
+    "openMenu": "打开菜单",
+    "closeMenu": "关闭菜单",
+    "changeLanguage": "切换语言",
+    "switchToLight": "切换到浅色模式",
+    "switchToDark": "切换到深色模式"
+  },
+  "hero": {
+    "title": "GEO AI",
+    "subtitle": "开源AI搜索优化",
+    "description": "生成llms.txt、AI爬虫规则和元数据，让您的网站被AI搜索引擎发现。",
+    "placeholder": "输入您的网站URL",
+    "analyze": "分析网站",
+    "viewOnGithub": "在GitHub上查看"
+  },
+  "howItWorks": {
+    "title": "工作原理",
+    "step": "步骤 {number}",
+    "steps": {
+      "generate": {
+        "title": "生成llms.txt",
+        "description": "创建一个结构化文件，向AI系统描述您的网站内容和功能。"
+      },
+      "crawler": {
+        "title": "配置AI爬虫规则",
+        "description": "定义AI爬虫如何与您的网站交互以及索引哪些内容。"
+      },
+      "metadata": {
+        "title": "添加AI元数据",
+        "description": "为页面添加AI搜索引擎能够理解和优先处理的元数据。"
+      },
+      "signals": {
+        "title": "提供结构化信号",
+        "description": "向AI系统发送清晰的信号，使其准确展示您的内容。"
+      }
+    }
+  },
+  "quickstart": {
+    "title": "快速开始",
+    "description": "几秒钟即可上手。",
+    "copyToClipboard": "复制到剪贴板"
+  },
+  "spec": {
+    "title": "GEO规范",
+    "description": "一组结构化信号，使您的网站在AI搜索引擎中可见并被准确呈现。",
+    "readSpec": "阅读完整规范 →",
+    "items": {
+      "llms": {
+        "title": "llms.txt",
+        "description": "一个向大语言模型描述您网站的结构化文件，帮助它们理解您的内容和服务。"
+      },
+      "metadata": {
+        "title": "AI元数据",
+        "description": "为AI搜索引擎提供丰富结构化页面信息的语义标记和元标签。"
+      },
+      "crawler": {
+        "title": "爬虫规则",
+        "description": "控制AI爬虫如何访问、索引和呈现您网站内容的配置指令。"
+      },
+      "signals": {
+        "title": "结构化信号",
+        "description": "帮助AI系统准确展示和引用您内容的机器可读数据格式。"
+      }
+    }
+  },
+  "ecosystem": {
+    "title": "平台生态系统",
+    "description": "适用于每个平台的AI搜索优化工具。选择适合您技术栈的集成方案。",
+    "readMore": "了解更多 →",
+    "products": {
+      "core": {
+        "title": "GEO AI Core",
+        "description": "用于AI搜索优化的TypeScript引擎"
+      },
+      "woo": {
+        "title": "GEO AI Woo",
+        "description": "WordPress和WooCommerce插件"
+      },
+      "shopify": {
+        "title": "GEO AI Shopify",
+        "description": "用于AI可见性的Shopify应用"
+      }
+    }
+  },
+  "openSource": {
+    "title": "开源",
+    "description": "所有GEO AI工具均为开源。探索代码仓库，参与贡献，共同塑造AI搜索优化的未来。"
+  },
+  "footer": {
+    "tagline": "AI搜索优化",
+    "copyright": "© 2026 GEO AI · 开源 · GPL-2.0许可证"
+  },
+  "analyze": {
+    "title": "AI搜索分析器",
+    "description": "检查您的网站对AI搜索引擎的可见性。",
+    "placeholder": "输入您的网站URL",
+    "button": "分析",
+    "errorEmpty": "请输入URL",
+    "errorInvalid": "请输入有效的URL（例如：example.com）",
+    "comingSoon": "分析功能即将推出，敬请期待。"
+  },
+  "metadata": {
+    "home": {
+      "title": "GEO AI — AI搜索优化",
+      "description": "面向网站和电商的开源AI搜索优化平台。"
+    },
+    "analyze": {
+      "title": "AI搜索分析器 — GEO AI",
+      "description": "检查您的网站在ChatGPT、Claude、Gemini和Perplexity等AI搜索引擎中的可见性。"
+    }
+  }
+}

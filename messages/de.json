@@ -104,5 +104,15 @@
     "errorEmpty": "Bitte URL eingeben",
     "errorInvalid": "Bitte gültige URL eingeben (z.B. example.com)",
     "comingSoon": "Analyzer kommt bald. Bleiben Sie dran."
+  },
+  "metadata": {
+    "home": {
+      "title": "GEO AI — KI-Suchoptimierung",
+      "description": "Open-Source-KI-Suchoptimierung für Websites und E-Commerce."
+    },
+    "analyze": {
+      "title": "KI-Suchanalyse — GEO AI",
+      "description": "Prüfen Sie, wie sichtbar Ihre Website für KI-Suchmaschinen wie ChatGPT, Claude, Gemini und Perplexity ist."
+    }
   }
 }

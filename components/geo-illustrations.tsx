@@ -16,13 +16,14 @@ function RingsIllustration({ className }: { className?: string }) {
           rx={r}
           ry={r * 0.4}
           fill="none"
-          stroke="oklch(0.72 0.17 162 / 0.3)"
-          strokeWidth="0.8"
+          stroke="oklch(0.45 0.15 250)"
+          strokeWidth="1"
           transform={`rotate(${-15 + i * 15}, 100, 100)`}
-          opacity={0.5 + i * 0.15}
+          opacity={0.35 + i * 0.15}
+          className="dark:stroke-[oklch(0.72_0.17_162/0.3)]"
         />
       ))}
-      <circle cx="100" cy="100" r="3" fill="oklch(0.72 0.17 162 / 0.5)" />
+      <circle cx="100" cy="100" r="3" fill="oklch(0.45 0.15 250)" className="dark:fill-[oklch(0.72_0.17_162/0.5)]" />
     </svg>
   );
 }
@@ -46,9 +47,9 @@ function RadialBurstIllustration({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 200 200" className={className} aria-hidden="true">
       {dots.map((d, i) => (
-        <circle key={i} cx={d.cx} cy={d.cy} r={d.r} fill="oklch(0.72 0.17 162 / 0.4)" opacity={d.opacity} />
+        <circle key={i} cx={d.cx} cy={d.cy} r={d.r} fill="oklch(0.45 0.15 250)" opacity={d.opacity} className="dark:fill-[oklch(0.72_0.17_162/0.4)]" />
       ))}
-      <circle cx="100" cy="100" r="2.5" fill="oklch(0.72 0.17 162 / 0.6)" />
+      <circle cx="100" cy="100" r="2.5" fill="oklch(0.45 0.15 250)" className="dark:fill-[oklch(0.72_0.17_162/0.6)]" />
     </svg>
   );
 }
@@ -70,9 +71,10 @@ function ParallelLinesIllustration({ className }: { className?: string }) {
           y1={l.y}
           x2={l.x2}
           y2={l.y}
-          stroke="oklch(0.72 0.17 162 / 0.3)"
-          strokeWidth="0.8"
-          opacity={l.opacity}
+          stroke="oklch(0.45 0.15 250)"
+          strokeWidth="1"
+          opacity={l.opacity + 0.15}
+          className="dark:stroke-[oklch(0.72_0.17_162/0.3)]"
         />
       ))}
     </svg>

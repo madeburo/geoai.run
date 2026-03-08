@@ -104,5 +104,15 @@
     "errorEmpty": "Veuillez entrer une URL",
     "errorInvalid": "Veuillez entrer une URL valide (ex. example.com)",
     "comingSoon": "L'analyseur sera bientôt disponible. Restez à l'écoute."
+  },
+  "metadata": {
+    "home": {
+      "title": "GEO AI — Optimisation pour la recherche IA",
+      "description": "Optimisation open source pour la recherche IA, pour sites web et e-commerce."
+    },
+    "analyze": {
+      "title": "Analyseur de recherche IA — GEO AI",
+      "description": "Vérifiez la visibilité de votre site web auprès des moteurs de recherche IA comme ChatGPT, Claude, Gemini et Perplexity."
+    }
   }
 }

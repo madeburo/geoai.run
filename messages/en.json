@@ -104,5 +104,15 @@
     "errorEmpty": "Please enter a URL",
     "errorInvalid": "Please enter a valid URL (e.g. example.com)",
     "comingSoon": "Analysis feature coming soon. Stay tuned."
+  },
+  "metadata": {
+    "home": {
+      "title": "GEO AI — AI Search Optimization",
+      "description": "Open-source AI Search Optimization for websites and ecommerce."
+    },
+    "analyze": {
+      "title": "AI Search Analyzer — GEO AI",
+      "description": "Check how visible your website is to AI search engines like ChatGPT, Claude, Gemini, and Perplexity."
+    }
   }
 }

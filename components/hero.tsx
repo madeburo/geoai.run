@@ -70,10 +70,10 @@ export function Hero() {
     <motion.section
       ref={sectionRef}
       style={{ opacity: heroOpacity, scale: heroScale }}
-      className="relative flex min-h-[80vh] w-full flex-col items-center justify-center overflow-hidden sm:min-h-screen"
+      className="relative flex min-h-[80vh] w-full flex-col items-center justify-center overflow-hidden sm:min-h-[85vh]"
     >
       {/* Deep dark atmospheric background */}
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_45%,rgba(245,247,252,1)_0%,rgba(238,241,247,1)_50%,rgba(232,236,243,1)_100%)] dark:bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,oklch(0.20_0.04_162/25%),oklch(0.085_0.015_260)_70%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_45%,rgba(244,250,255,1)_0%,rgba(238,245,252,1)_50%,rgba(232,240,248,1)_100%)] dark:bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,oklch(0.20_0.04_162/25%),oklch(0.085_0.015_260)_70%)]" />
 
       {/* Subtle grid overlay */}
       <div className="pointer-events-none absolute inset-0 hidden dark:block grid-bg opacity-60" />
@@ -190,7 +190,7 @@ export function Hero() {
 
         {/* AI Logos — infinite marquee */}
         <motion.div
-          className="w-full max-w-2xl overflow-hidden pt-12 sm:pt-16 mask-[linear-gradient(to_right,transparent,black_15%,black_85%,transparent)]"
+          className="w-full max-w-2xl overflow-hidden pt-8 sm:pt-10 mask-[linear-gradient(to_right,transparent,black_15%,black_85%,transparent)]"
           initial={prefersReducedMotion ? {} : { opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 1.0 }}
@@ -213,7 +213,7 @@ export function Hero() {
       </div>
 
       {/* Bottom fade to next section */}
-      <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-background to-transparent" />
+      <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-20 bg-linear-to-t from-background to-transparent" />
     </motion.section>
   );
 }

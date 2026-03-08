@@ -68,7 +68,7 @@ This repository contains the landing page for [geoai.run](https://geoai.run), bu
 - **Tailwind CSS 4** with oklch color theming
 - **shadcn/ui** components (`@base-ui/react` primitives)
 - **Framer Motion** animations (respects `prefers-reduced-motion`)
-- **next-intl** — i18n with 6 languages (EN, DE, FR, ES, PT, RU)
+- **next-intl** — i18n with 9 languages (DE, EN, ES, FR, JA, KO, PT, RU, ZH)
 - **Vitest** + React Testing Library + fast-check
 
 Features: light/dark theme, scroll-reveal animations, responsive design, mobile-first horizontal scroll sections, infinite marquee, SEO metadata with Open Graph, and an AI visibility analyzer page.

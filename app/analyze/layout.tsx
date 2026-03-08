@@ -1,35 +1,42 @@
 import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 
-export const metadata: Metadata = {
-  title: "AI Search Analyzer — GEO AI",
-  description:
-    "Check how visible your website is to AI search engines like ChatGPT, Claude, Gemini, and Perplexity.",
-  alternates: {
-    canonical: "https://www.geoai.run/analyze",
-  },
-  openGraph: {
-    title: "AI Search Analyzer — GEO AI",
-    description:
-      "Check how visible your website is to AI search engines like ChatGPT, Claude, Gemini, and Perplexity.",
-    type: "website",
-    url: "https://www.geoai.run/analyze",
-    images: [
-      {
-        url: "/og.png",
-        width: 1200,
-        height: 630,
-        alt: "GEO AI — AI Search Analyzer",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "AI Search Analyzer — GEO AI",
-    description:
-      "Check how visible your website is to AI search engines like ChatGPT, Claude, Gemini, and Perplexity.",
-    images: ["/og.png"],
-  },
-};
+const SUPPORTED_LOCALES = ["de", "en", "es", "fr", "ja", "ko", "pt", "ru", "zh"];
+
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("metadata.analyze");
+
+  return {
+    title: t("title"),
+    description: t("description"),
+    alternates: {
+      canonical: "https://www.geoai.run/analyze",
+      languages: Object.fromEntries(
+        SUPPORTED_LOCALES.map((l) => [l, "https://www.geoai.run/analyze"])
+      ),
+    },
+    openGraph: {
+      title: t("title"),
+      description: t("description"),
+      type: "website",
+      url: "https://www.geoai.run/analyze",
+      images: [
+        {
+          url: "/og.png",
+          width: 1200,
+          height: 630,
+          alt: t("title"),
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("title"),
+      description: t("description"),
+      images: ["/og.png"],
+    },
+  };
+}
 
 export default function AnalyzeLayout({
   children,

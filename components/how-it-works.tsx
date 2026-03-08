@@ -17,7 +17,7 @@ export function HowItWorks() {
   const t = useTranslations("howItWorks");
 
   return (
-    <section className="relative w-full px-4 py-24 sm:px-6 md:py-32 lg:py-40">
+    <section className="relative w-full px-4 py-16 sm:px-6 md:py-20 lg:py-24">
       <div className="mx-auto max-w-6xl">
         <ScrollReveal>
           <h2 className="mb-4 text-center text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">

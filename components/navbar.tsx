@@ -10,12 +10,15 @@ import { useTranslations, useLocale } from "next-intl";
 import { cn } from "@/lib/utils";
 
 const LANGUAGES = [
-  { code: "en", label: "EN" },
   { code: "de", label: "DE" },
-  { code: "fr", label: "FR" },
+  { code: "en", label: "EN" },
   { code: "es", label: "ES" },
+  { code: "fr", label: "FR" },
+  { code: "ja", label: "JA" },
+  { code: "ko", label: "KO" },
   { code: "pt", label: "PT" },
   { code: "ru", label: "RU" },
+  { code: "zh", label: "ZH" },
 ];
 
 const NAV_LINKS_CONFIG = [
