@@ -4,6 +4,23 @@ All notable changes to GEO AI are documented in this file.
 
 Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [0.1.7] — 2026-03-09
+
+Live site analysis wired up end-to-end.
+
+### Added
+
+- `app/api/analyze/route.ts` — GET endpoint that calls `analyzeSiteForAIReadiness`, with rate limiting (via `lib/rate-limit.ts`) and input validation
+- `/analyze` page now runs real analysis: loading state with 4 check chips, score display, per-category status cards with pass/warn/fail/not_found/unknown icons, issues list (color-coded by severity), and recommendations list
+- `?url=` query param auto-triggers analysis on page load — hero form on homepage navigates directly into a live result
+- `analyzing`, `errorRateLimit`, `errorApi` translation keys added to all 9 locales
+
+### Changed
+
+- Landing content (check cards, how it works, what you get) now only renders when no analysis is active — replaced by live results after submission
+
+---
+
 ## [0.1.6] — 2026-03-09
 
 Site analysis module and /analyze page redesign.
