@@ -100,6 +100,7 @@
   "analyze": {
     "title": "KI-Sichtbarkeits-Analyzer",
     "description": "Prüfen Sie, wie sichtbar Ihre Website für KI-Suchmaschinen ist.",
+    "scope": "Analysiert llms.txt, KI-Metadaten, Crawler-Regeln und strukturierte Signale.",
     "placeholder": "Website-URL eingeben",
     "button": "Analysieren",
     "errorEmpty": "Bitte URL eingeben",
@@ -107,7 +108,32 @@
     "comingSoon": "Analyzer kommt bald. Bleiben Sie dran.",
     "readDocs": "Dokumentation lesen",
     "viewOnGithub": "Auf GitHub ansehen",
-    "generateDescription": "Generieren Sie llms.txt, KI-Crawler-Regeln und Metadaten — machen Sie Ihre Website für KI-Suchmaschinen sichtbar."
+    "generateDescription": "Generieren Sie llms.txt, KI-Crawler-Regeln und Metadaten — machen Sie Ihre Website für KI-Suchmaschinen sichtbar.",
+    "trust": {
+      "noSignup": "Keine Registrierung erforderlich",
+      "runsInSeconds": "Analyse in Sekunden",
+      "checksSpec": "Prüft gegen die GEO-Spezifikation"
+    },
+    "checksLabel": "Was geprüft wird",
+    "checks": {
+      "llmsTxt": { "name": "llms.txt", "desc": "Sitebeschreibung für LLMs" },
+      "aiMetadata": { "name": "KI-Metadaten", "desc": "Semantische Tags für KI-Auffindbarkeit" },
+      "crawlerRules": { "name": "Crawler-Regeln", "desc": "Direktiven für KI-Bots" },
+      "structuredSignals": { "name": "Strukturierte Signale", "desc": "Maschinenlesbare Schema-Daten" }
+    },
+    "howLabel": "So funktioniert's",
+    "how": [
+      { "title": "URL eingeben", "desc": "Beliebige Website-Adresse einfügen" },
+      { "title": "Wir prüfen Ihre Website", "desc": "Vier Checks laufen parallel gegen die GEO-Spezifikation" },
+      { "title": "Ergebnisse und Empfehlungen", "desc": "Probleme, Empfehlungen und ein Bereitschafts-Score" }
+    ],
+    "whatYouGetLabel": "Was Sie erhalten",
+    "whatYouGet": {
+      "score": "KI-Bereitschafts-Score",
+      "statuses": "Status je Kategorie",
+      "issues": "Implementierungsprobleme",
+      "recommendations": "Umsetzbare Verbesserungen"
+    }
   },
   "cookies": {
     "message": "Wir verwenden Cookies und Analysetools um die Website zu verbessern.",

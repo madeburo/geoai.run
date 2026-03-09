@@ -41,6 +41,19 @@ await geoai.generateCrawlerRules();
 await geoai.generateMetadata();
 ```
 
+## Analyzer
+
+The `/analyze` page checks a website's AI search readiness across four categories:
+
+| Check | What it inspects |
+|-------|-----------------|
+| **llms.txt** | Presence, content quality, and informativeness |
+| **AI metadata** | Title, meta description, og:title, og:description, and more |
+| **Crawler rules** | robots.txt access for 10 known AI crawlers |
+| **Structured signals** | JSON-LD, microdata, RDFa, and sitemap.xml |
+
+Returns a 0–100 readiness score, per-category statuses, issues, and actionable recommendations. Implemented in `lib/analyzer/` — fully typed, fault-tolerant, and covered by 160 unit and property-based tests.
+
 ## How It Works
 
 1. **Generate llms.txt** — a structured file that describes your site to large language models
@@ -71,7 +84,7 @@ This repository contains the landing page for [geoai.run](https://geoai.run), bu
 - **next-intl** — i18n with 9 languages (DE, EN, ES, FR, JA, KO, PT, RU, ZH)
 - **Vitest** + React Testing Library + fast-check
 
-Features: light/dark theme, scroll-reveal animations, responsive design, mobile-first horizontal scroll sections, infinite marquee, SEO metadata with Open Graph, and an AI visibility analyzer page.
+Features: light/dark theme, scroll-reveal animations, responsive design, mobile-first horizontal scroll sections, infinite marquee, SEO metadata with Open Graph, an AI visibility analyzer page (`/analyze`) with check cards and result preview.
 
 ## Development
 

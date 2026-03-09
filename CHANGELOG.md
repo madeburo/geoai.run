@@ -4,6 +4,23 @@ All notable changes to GEO AI are documented in this file.
 
 Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [0.1.6] — 2026-03-09
+
+Site analysis module and /analyze page redesign.
+
+### Added
+
+- `lib/analyzer/` — full site analysis module: `analyzeSiteForAIReadiness(url)` orchestrator, four checkers (llms.txt, AI metadata, crawler rules, structured signals), URL normalizer, HTML fetcher, score calculator, helper utilities, and all public TypeScript types
+- 160 unit and property-based tests across all analyzer modules (Vitest + fast-check)
+- `/analyze` page redesigned: 4 check cards (llms.txt, AI metadata, crawler rules, structured signals), "How it works" 3-step block, "What you get" panel, trust lines (no signup, runs in seconds, checks GEO spec), scope subheadline
+- New `analyze` i18n keys (`scope`, `trust.*`, `checksLabel`, `checks.*`, `howLabel`, `how[]`, `whatYouGetLabel`, `whatYouGet.*`) added to all 9 locales
+
+### Changed
+
+- Property-based test `numRuns` reduced from 100 to 25 across all test files — test suite runs in ~1.2s
+
+---
+
 ## [0.1.5] — 2026-03-09
 
 Secondary action row, /analyze page content, i18n fixes, hydration fix, middleware – proxy migration.

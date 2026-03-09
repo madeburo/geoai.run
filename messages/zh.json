@@ -100,6 +100,7 @@
   "analyze": {
     "title": "AI搜索分析器",
     "description": "检查您的网站对AI搜索引擎的可见性。",
+    "scope": "分析llms.txt、AI元数据、爬虫规则和结构化信号。",
     "placeholder": "输入您的网站URL",
     "button": "分析",
     "errorEmpty": "请输入URL",
@@ -107,7 +108,32 @@
     "comingSoon": "分析功能即将推出，敬请期待。",
     "readDocs": "阅读文档",
     "viewOnGithub": "在GitHub上查看",
-    "generateDescription": "生成llms.txt、AI爬虫规则和元数据，让您的网站被AI搜索引擎发现。"
+    "generateDescription": "生成llms.txt、AI爬虫规则和元数据，让您的网站被AI搜索引擎发现。",
+    "trust": {
+      "noSignup": "无需注册",
+      "runsInSeconds": "分析仅需数秒",
+      "checksSpec": "依据GEO规范进行检查"
+    },
+    "checksLabel": "检查内容",
+    "checks": {
+      "llmsTxt": { "name": "llms.txt", "desc": "面向LLM的网站描述" },
+      "aiMetadata": { "name": "AI元数据", "desc": "AI发现的语义标签" },
+      "crawlerRules": { "name": "爬虫规则", "desc": "AI机器人指令" },
+      "structuredSignals": { "name": "结构化信号", "desc": "机器可读的模式和数据" }
+    },
+    "howLabel": "工作原理",
+    "how": [
+      { "title": "输入URL", "desc": "粘贴任意网址" },
+      { "title": "我们检查您的网站", "desc": "依据GEO规范并行运行四项检查" },
+      { "title": "获取发现和修复建议", "desc": "问题、建议和准备度评分" }
+    ],
+    "whatYouGetLabel": "您将获得",
+    "whatYouGet": {
+      "score": "AI准备度评分",
+      "statuses": "各类别状态",
+      "issues": "实现问题",
+      "recommendations": "可操作的修复建议"
+    }
   },
   "cookies": {
     "message": "我们使用 Cookie 和分析工具来改善网站体验。",

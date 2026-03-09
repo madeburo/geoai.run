@@ -37,19 +37,19 @@ export function HowItWorks() {
 
           {STEP_KEYS.map((key, i) => (
             <ScrollReveal key={key} delay={i * 0.1} className="w-[260px] shrink-0 md:w-auto md:shrink">
-              <div className="group relative flex flex-col items-center rounded-2xl border border-border/40 bg-card/50 p-6 text-center transition-all hover:border-border/60 dark:border-white/4 dark:bg-white/2 dark:hover:border-white/8 dark:hover:bg-white/3">
+              <div className="group relative flex flex-col items-center rounded-2xl border border-border/60 bg-card p-6 text-center shadow-sm transition-all hover:border-border hover:shadow-md dark:border-white/8 dark:bg-white/4 dark:hover:border-white/14 dark:hover:bg-white/6">
                 {/* Step number */}
-                <span className="mb-4 text-[10px] font-semibold tracking-[0.2em] text-muted-foreground/40 uppercase">
+                <span className="mb-4 text-[10px] font-semibold tracking-[0.2em] text-muted-foreground/60 uppercase">
                   {t("step", { number: i + 1 })}
                 </span>
 
                 {/* Icon */}
-                <div className="relative z-10 mb-5 flex h-12 w-12 items-center justify-center rounded-xl border border-border/40 bg-background dark:border-white/6 dark:bg-white/3">
-                  <span className="text-muted-foreground transition-colors group-hover:text-glow">{STEP_ICONS[i]}</span>
+                <div className="relative z-10 mb-5 flex h-12 w-12 items-center justify-center rounded-xl border border-border/60 bg-background shadow-sm dark:border-white/10 dark:bg-white/6">
+                  <span className="text-foreground/60 transition-colors group-hover:text-glow">{STEP_ICONS[i]}</span>
                 </div>
 
-                <h3 className="mb-2 text-sm font-semibold sm:text-base">{t(`steps.${key}.title`)}</h3>
-                <p className="text-xs leading-relaxed text-muted-foreground sm:text-sm">
+                <h3 className="mb-2 text-sm font-bold tracking-tight sm:text-base">{t(`steps.${key}.title`)}</h3>
+                <p className="text-xs leading-relaxed text-muted-foreground/80 sm:text-sm">
                   {t(`steps.${key}.description`)}
                 </p>
               </div>

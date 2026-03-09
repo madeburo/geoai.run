@@ -100,6 +100,7 @@
   "analyze": {
     "title": "AI Search Analyzer",
     "description": "Check how visible your site is to AI search engines.",
+    "scope": "Analyze llms.txt, AI metadata, crawler rules, and structured signals.",
     "placeholder": "Enter your website URL",
     "button": "Analyze",
     "errorEmpty": "Please enter a URL",
@@ -107,7 +108,53 @@
     "comingSoon": "Analysis feature coming soon. Stay tuned.",
     "readDocs": "Read docs",
     "viewOnGithub": "View on GitHub",
-    "generateDescription": "Generate llms.txt, AI crawler rules and metadata to make your site visible to AI search engines."
+    "generateDescription": "Generate llms.txt, AI crawler rules and metadata to make your site visible to AI search engines.",
+    "trust": {
+      "noSignup": "No signup required",
+      "runsInSeconds": "Analysis runs in seconds",
+      "checksSpec": "Checks against the GEO specification"
+    },
+    "checksLabel": "What gets checked",
+    "checks": {
+      "llmsTxt": {
+        "name": "llms.txt",
+        "desc": "Site description for LLMs"
+      },
+      "aiMetadata": {
+        "name": "AI metadata",
+        "desc": "Semantic tags for AI discovery"
+      },
+      "crawlerRules": {
+        "name": "Crawler rules",
+        "desc": "Directives for AI bots"
+      },
+      "structuredSignals": {
+        "name": "Structured signals",
+        "desc": "Machine-readable schema and data"
+      }
+    },
+    "howLabel": "How it works",
+    "how": [
+      {
+        "title": "Enter a URL",
+        "desc": "Paste any website address — domain or full URL"
+      },
+      {
+        "title": "We inspect your site",
+        "desc": "Four checks run in parallel against the GEO spec"
+      },
+      {
+        "title": "Get findings and fixes",
+        "desc": "Issues, recommendations, and a readiness score"
+      }
+    ],
+    "whatYouGetLabel": "What you get",
+    "whatYouGet": {
+      "score": "AI readiness score",
+      "statuses": "Per-category status",
+      "issues": "Implementation issues",
+      "recommendations": "Actionable fixes"
+    }
   },
   "cookies": {
     "message": "We use cookies and analytics to improve the site experience.",

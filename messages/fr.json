@@ -100,6 +100,7 @@
   "analyze": {
     "title": "Analyseur de visibilité IA",
     "description": "Vérifiez la visibilité de votre site pour les moteurs de recherche IA.",
+    "scope": "Analyse llms.txt, métadonnées IA, règles des crawlers et signaux structurés.",
     "placeholder": "Entrez l'URL de votre site",
     "button": "Analyser",
     "errorEmpty": "Veuillez entrer une URL",
@@ -107,7 +108,32 @@
     "comingSoon": "L'analyseur sera bientôt disponible. Restez à l'écoute.",
     "readDocs": "Lire la documentation",
     "viewOnGithub": "Voir sur GitHub",
-    "generateDescription": "Générez llms.txt, configurez les crawlers IA et ajoutez des métadonnées pour rendre votre site visible aux moteurs de recherche IA."
+    "generateDescription": "Générez llms.txt, configurez les crawlers IA et ajoutez des métadonnées pour rendre votre site visible aux moteurs de recherche IA.",
+    "trust": {
+      "noSignup": "Sans inscription",
+      "runsInSeconds": "Analyse en quelques secondes",
+      "checksSpec": "Vérifie selon la spécification GEO"
+    },
+    "checksLabel": "Ce qui est vérifié",
+    "checks": {
+      "llmsTxt": { "name": "llms.txt", "desc": "Description du site pour les LLMs" },
+      "aiMetadata": { "name": "Métadonnées IA", "desc": "Balises sémantiques pour la découverte IA" },
+      "crawlerRules": { "name": "Règles des crawlers", "desc": "Directives pour les bots IA" },
+      "structuredSignals": { "name": "Signaux structurés", "desc": "Schéma et données lisibles par machine" }
+    },
+    "howLabel": "Comment ça marche",
+    "how": [
+      { "title": "Entrez une URL", "desc": "Collez n'importe quelle adresse web" },
+      { "title": "Nous inspectons votre site", "desc": "Quatre vérifications en parallèle selon la spécification GEO" },
+      { "title": "Obtenez les résultats", "desc": "Problèmes, recommandations et score de préparation" }
+    ],
+    "whatYouGetLabel": "Ce que vous obtenez",
+    "whatYouGet": {
+      "score": "Score de préparation IA",
+      "statuses": "Statut par catégorie",
+      "issues": "Problèmes d'implémentation",
+      "recommendations": "Corrections actionnables"
+    }
   },
   "cookies": {
     "message": "Nous utilisons des cookies et des outils d'analyse pour améliorer l'expérience du site.",

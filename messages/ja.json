@@ -100,6 +100,7 @@
   "analyze": {
     "title": "AI検索アナライザー",
     "description": "AI検索エンジンに対するサイトの可視性を確認します。",
+    "scope": "llms.txt、AIメタデータ、クローラールール、構造化シグナルを分析します。",
     "placeholder": "ウェブサイトのURLを入力",
     "button": "分析する",
     "errorEmpty": "URLを入力してください",
@@ -107,7 +108,32 @@
     "comingSoon": "分析機能は近日公開予定です。お楽しみに。",
     "readDocs": "ドキュメントを読む",
     "viewOnGithub": "GitHubで見る",
-    "generateDescription": "llms.txt、AIクローラールール、メタデータを生成し、AI検索エンジンにサイトを認識させましょう。"
+    "generateDescription": "llms.txt、AIクローラールール、メタデータを生成し、AI検索エンジンにサイトを認識させましょう。",
+    "trust": {
+      "noSignup": "登録不要",
+      "runsInSeconds": "数秒で分析完了",
+      "checksSpec": "GEO仕様に基づいて検証"
+    },
+    "checksLabel": "チェック項目",
+    "checks": {
+      "llmsTxt": { "name": "llms.txt", "desc": "LLM向けサイト説明" },
+      "aiMetadata": { "name": "AIメタデータ", "desc": "AI発見のためのセマンティックタグ" },
+      "crawlerRules": { "name": "クローラールール", "desc": "AIボット向けディレクティブ" },
+      "structuredSignals": { "name": "構造化シグナル", "desc": "機械可読スキーマとデータ" }
+    },
+    "howLabel": "仕組み",
+    "how": [
+      { "title": "URLを入力", "desc": "任意のウェブアドレスを貼り付け" },
+      { "title": "サイトを検査", "desc": "GEO仕様に基づき4つのチェックを並行実行" },
+      { "title": "結果と改善策を取得", "desc": "問題点、推奨事項、準備スコアを確認" }
+    ],
+    "whatYouGetLabel": "取得できる情報",
+    "whatYouGet": {
+      "score": "AI準備スコア",
+      "statuses": "カテゴリ別ステータス",
+      "issues": "実装上の問題",
+      "recommendations": "具体的な改善策"
+    }
   },
   "cookies": {
     "message": "サイト改善のためにCookieと分析ツールを使用しています。",

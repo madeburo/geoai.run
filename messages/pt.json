@@ -100,6 +100,7 @@
   "analyze": {
     "title": "Analisador de busca IA",
     "description": "Verifique a visibilidade do seu site nos mecanismos de busca IA.",
+    "scope": "Analisa llms.txt, metadados IA, regras de rastreamento e sinais estruturados.",
     "placeholder": "Digite a URL do seu site",
     "button": "Analisar",
     "errorEmpty": "Por favor, insira uma URL",
@@ -107,7 +108,32 @@
     "comingSoon": "Recurso de análise em breve. Fique atento.",
     "readDocs": "Ler documentação",
     "viewOnGithub": "Ver no GitHub",
-    "generateDescription": "Gere llms.txt, regras de rastreamento IA e metadados para tornar seu site visível nos mecanismos de busca IA."
+    "generateDescription": "Gere llms.txt, regras de rastreamento IA e metadados para tornar seu site visível nos mecanismos de busca IA.",
+    "trust": {
+      "noSignup": "Sem cadastro necessário",
+      "runsInSeconds": "Análise em segundos",
+      "checksSpec": "Verifica contra a especificação GEO"
+    },
+    "checksLabel": "O que é verificado",
+    "checks": {
+      "llmsTxt": { "name": "llms.txt", "desc": "Descrição do site para LLMs" },
+      "aiMetadata": { "name": "Metadados IA", "desc": "Tags semânticas para descoberta IA" },
+      "crawlerRules": { "name": "Regras de rastreamento", "desc": "Diretivas para bots IA" },
+      "structuredSignals": { "name": "Sinais estruturados", "desc": "Esquema e dados legíveis por máquina" }
+    },
+    "howLabel": "Como funciona",
+    "how": [
+      { "title": "Digite uma URL", "desc": "Cole qualquer endereço web" },
+      { "title": "Inspecionamos seu site", "desc": "Quatro verificações em paralelo contra a especificação GEO" },
+      { "title": "Obtenha resultados e correções", "desc": "Problemas, recomendações e pontuação de prontidão" }
+    ],
+    "whatYouGetLabel": "O que você recebe",
+    "whatYouGet": {
+      "score": "Pontuação de prontidão IA",
+      "statuses": "Status por categoria",
+      "issues": "Problemas de implementação",
+      "recommendations": "Correções acionáveis"
+    }
   },
   "cookies": {
     "message": "Usamos cookies e ferramentas de análise para melhorar a experiência do site.",

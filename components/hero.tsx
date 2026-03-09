@@ -78,7 +78,7 @@ export function Hero() {
     <motion.section
       ref={sectionRef}
       style={{ opacity: heroOpacity, scale: heroScale }}
-      className="relative flex min-h-[80vh] w-full flex-col items-center justify-center overflow-hidden sm:min-h-[85vh]"
+      className="relative flex min-h-[70vh] w-full flex-col items-center justify-center overflow-hidden sm:min-h-[75vh]"
     >
       {/* Deep dark atmospheric background */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_45%,rgba(244,250,255,1)_0%,rgba(238,245,252,1)_50%,rgba(232,240,248,1)_100%)] dark:bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,oklch(0.20_0.04_162/25%),oklch(0.085_0.015_260)_70%)]" />

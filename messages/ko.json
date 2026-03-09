@@ -100,6 +100,7 @@
   "analyze": {
     "title": "AI 검색 분석기",
     "description": "AI 검색 엔진에 대한 사이트의 가시성을 확인합니다.",
+    "scope": "llms.txt, AI 메타데이터, 크롤러 규칙, 구조화된 신호를 분석합니다.",
     "placeholder": "웹사이트 URL을 입력하세요",
     "button": "분석",
     "errorEmpty": "URL을 입력해 주세요",
@@ -107,7 +108,32 @@
     "comingSoon": "분석 기능이 곧 출시됩니다. 기대해 주세요.",
     "readDocs": "문서 읽기",
     "viewOnGithub": "GitHub에서 보기",
-    "generateDescription": "llms.txt, AI 크롤러 규칙 및 메타데이터를 생성하여 AI 검색 엔진에서 사이트를 노출시키세요."
+    "generateDescription": "llms.txt, AI 크롤러 규칙 및 메타데이터를 생성하여 AI 검색 엔진에서 사이트를 노출시키세요.",
+    "trust": {
+      "noSignup": "회원가입 불필요",
+      "runsInSeconds": "몇 초 만에 분석 완료",
+      "checksSpec": "GEO 사양 기준으로 검사"
+    },
+    "checksLabel": "검사 항목",
+    "checks": {
+      "llmsTxt": { "name": "llms.txt", "desc": "LLM을 위한 사이트 설명" },
+      "aiMetadata": { "name": "AI 메타데이터", "desc": "AI 발견을 위한 시맨틱 태그" },
+      "crawlerRules": { "name": "크롤러 규칙", "desc": "AI 봇을 위한 지시문" },
+      "structuredSignals": { "name": "구조화된 신호", "desc": "기계 판독 가능한 스키마 및 데이터" }
+    },
+    "howLabel": "작동 방식",
+    "how": [
+      { "title": "URL 입력", "desc": "웹 주소를 붙여넣기" },
+      { "title": "사이트 검사", "desc": "GEO 사양에 따라 4가지 검사 병렬 실행" },
+      { "title": "결과 및 개선 방법 확인", "desc": "문제점, 권장 사항, 준비 점수 제공" }
+    ],
+    "whatYouGetLabel": "제공되는 정보",
+    "whatYouGet": {
+      "score": "AI 준비 점수",
+      "statuses": "카테고리별 상태",
+      "issues": "구현 문제",
+      "recommendations": "실행 가능한 개선 방법"
+    }
   },
   "cookies": {
     "message": "사이트 개선을 위해 쿠키와 분석 도구를 사용합니다.",
