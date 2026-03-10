@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 const QUICK_LINKS = [
   { label: "Analyzer", href: "/analyze" },
-  { label: "Documentation", href: "#" },
+  { label: "Documentation", href: "/docs" },
   { label: "Specification", href: "/#spec" },
   { label: "GitHub", href: "https://github.com/madeburo/GEO-AI" },
 ];

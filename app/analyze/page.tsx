@@ -498,9 +498,7 @@ export default function AnalyzePage() {
             </p>
             <div className="flex flex-col gap-2 sm:flex-row">
               <a
-                href="https://github.com/madeburo/GEO-AI/blob/main/README.md"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/docs"
                 className="group flex h-9 flex-1 items-center justify-center gap-2 rounded-lg border border-glow/30 bg-glow/8 px-4 text-xs font-medium text-foreground/80 backdrop-blur-sm transition-all hover:border-glow/50 hover:bg-glow/15 hover:text-foreground dark:border-glow/20 dark:bg-glow/5 dark:text-white/70 dark:hover:text-white"
               >
                 <BookOpen className="h-3.5 w-3.5 shrink-0 text-glow" />
