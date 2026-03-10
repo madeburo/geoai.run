@@ -9,14 +9,19 @@ const INSTALL_COMMAND = "npm install geo-ai-core";
 
 const USAGE_CODE = `import { createGeoAI } from "geo-ai-core";
 
-const geoai = createGeoAI({
+const geo = createGeoAI({
+  siteName: "My Site",
   siteUrl: "https://example.com",
-  outputDir: "./public",
+  provider: {
+    Pages: [{ title: "Home", url: "/", description: "Welcome" }],
+  },
+  crawlers: "all",
 });
 
-await geoai.generateLlmsTxt();
-await geoai.generateCrawlerRules();
-await geoai.generateMetadata();`;
+const llmsTxt = await geo.generateLlms(false);
+const robotsTxt = geo.generateRobotsTxt();
+const metaTags = geo.generateMetaTags();
+const jsonLd = geo.generateJsonLd();`;
 
 function CopyButton({ text, label }: { text: string; label: string }) {
   const [copied, setCopied] = useState(false);

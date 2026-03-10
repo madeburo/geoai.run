@@ -4,6 +4,35 @@ All notable changes to GEO AI are documented in this file.
 
 Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [0.2.0] — 2026-03-10
+
+Full documentation experience at `/docs` technical docs.
+
+### Added
+
+- `app/docs/` — new `/docs` route with dedicated docs layout (sticky left sidebar, right-side TOC on desktop, mobile drawer navigation)
+- `app/docs/page.tsx` — docs homepage: intro, "Start here" cards, package grid, "Choose your path" shortcuts, "Coming next" section
+- `app/docs/[...slug]/page.tsx` — dynamic route covering all doc pages; breadcrumbs, prev/next navigation, right-side TOC, `generateStaticParams` for static build
+- `lib/docs/navigation.ts` — sidebar navigation structure (6 sections, 21 items) and `getPrevNext()` helper
+- `lib/docs/content.ts` — slug-to-page mapping for all doc routes
+- `components/docs/doc-sidebar.tsx` — sticky sidebar with active item highlight and "soon" badges
+- `components/docs/doc-toc.tsx` — right-side table of contents with `IntersectionObserver`-based active section tracking
+- `components/docs/mobile-nav.tsx` — mobile docs drawer triggered from a sticky bar below the header
+- `components/docs/breadcrumbs.tsx` — breadcrumb trail component
+- `components/docs/prev-next.tsx` — previous/next page navigation at the bottom of each doc
+- `components/docs/callout.tsx` — note/warning/tip/success callout blocks
+- `components/docs/code-block.tsx` — premium code block with filename, language label, and copy button; `InlineCode` component
+- `components/docs/doc-heading.tsx` — typed heading and table primitives (`H1`, `H2`, `H3`, `Lead`, `P`, `UL`, `LI`, `IC`, `DocTable`, etc.)
+- 21 documentation pages covering: Getting Started, Choose Your Package, GEO Specification, llms.txt, AI Metadata, Crawler Rules, Structured Signals, GEO AI Core, GEO AI Next, GEO AI Woo, GEO AI Shopify, Analyzer, Scoring, Recommendations, CLI, NestJS (placeholder), Laravel (placeholder), Configuration Reference, API Reference, FAQ
+
+### Changed
+
+- `components/navbar.tsx` — "Documentation" link updated from `#` to `/docs`
+- `components/footer.tsx` — "Documentation" link updated from `#` to `/docs`
+- `components/quickstart.tsx` — `USAGE_CODE` corrected to match actual `geo-ai-core` API: added required `siteName` and `provider` fields, replaced non-existent methods (`generateLlmsTxt`, `generateCrawlerRules`, `generateMetadata`) with real ones (`generateLlms`, `generateRobotsTxt`, `generateMetaTags`, `generateJsonLd`)
+
+---
+
 ## [0.1.10] — 2026-03-10
 
 Analyzer score/issues consistency fix, optional improvements section, and richer llms.txt content.

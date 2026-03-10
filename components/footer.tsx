@@ -7,7 +7,7 @@ import { useTranslations } from "next-intl";
 const NAV_LINKS_CONFIG = [
   { key: "analyzer", href: "/analyze", external: false },
   { key: "github", href: "https://github.com/madeburo/GEO-AI", external: true },
-  { key: "documentation", href: "#", external: true },
+  { key: "documentation", href: "/docs", external: false },
   { key: "specification", href: "#spec", external: false },
 ];
 
