@@ -137,6 +137,7 @@ export function Ecosystem() {
               key={product.key}
               delay={i * 0.1}
               className="min-w-[280px] shrink-0 md:min-w-0 md:shrink"
+              mobileStatic
             >
               <ProductCard product={product} />
             </ScrollReveal>

@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 
 interface ScrollRevealProps {
@@ -7,6 +8,7 @@ interface ScrollRevealProps {
   className?: string;
   delay?: number;
   direction?: "up" | "down" | "left" | "right";
+  mobileStatic?: boolean;
 }
 
 const directionOffset: Record<string, { x?: number; y?: number }> = {
@@ -21,10 +23,20 @@ export function ScrollReveal({
   className,
   delay = 0,
   direction = "up",
+  mobileStatic = false,
 }: ScrollRevealProps) {
   const prefersReducedMotion = useReducedMotion();
+  const [isMobile, setIsMobile] = useState(false);
 
-  if (prefersReducedMotion) {
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 767px)");
+    setIsMobile(mq.matches);
+    const handler = (e: MediaQueryListEvent) => setIsMobile(e.matches);
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  }, []);
+
+  if (prefersReducedMotion || (mobileStatic && isMobile)) {
     return <div className={className}>{children}</div>;
   }
 

@@ -13,9 +13,9 @@ import { LOCALES, LOCALE_META } from "@/lib/locale-utils";
 
 const NAV_LINKS_CONFIG = [
   { key: "analyzer", href: "/analyze", external: false },
-  { key: "github", href: "https://github.com/madeburo/GEO-AI", external: true },
   { key: "documentation", href: "#", external: true },
   { key: "specification", href: "#spec", external: false },
+  { key: "github", href: "https://github.com/madeburo/GEO-AI", external: true },
 ];
 
 function ThemeToggle() {
@@ -350,18 +350,18 @@ export function Navbar() {
                       rel="noopener noreferrer"
                       className="text-base font-medium text-muted-foreground transition-colors hover:text-foreground"
                       onClick={() => setMobileOpen(false)}
-                      initial={{ opacity: 0, x: -12 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.25, delay: 0.05 + i * 0.05 }}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ duration: 0.2, delay: 0.05 + i * 0.04 }}
                     >
                       {link.label}
                     </motion.a>
                   ) : (
                     <motion.div
                       key={link.key}
-                      initial={{ opacity: 0, x: -12 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.25, delay: 0.05 + i * 0.05 }}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ duration: 0.2, delay: 0.05 + i * 0.04 }}
                     >
                       <Link href={link.href} className="text-base font-medium text-muted-foreground transition-colors hover:text-foreground" onClick={() => setMobileOpen(false)}>{link.label}</Link>
                     </motion.div>

@@ -4,6 +4,25 @@ All notable changes to GEO AI are documented in this file.
 
 Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [0.1.9] — 2026-03-10
+
+Dependency updates, static llms.txt generation, and mobile animation fixes.
+
+### Added
+
+- `geo-ai.config.mjs` — static config for `geo-ai-generate` CLI: site name, URL, description, pages and products
+- `geo:generate` script in `package.json` — runs `geo-ai-generate` to produce `public/llms.txt` and `public/llms-full.txt` before build
+- `build` script now runs `geo:generate` before `next build` — static files are generated at build time, no middleware needed
+
+### Changed
+
+- `geo-ai-next` and `geo-ai-core` updated from `0.1.2` to `0.2.0`
+- `components/scroll-reveal.tsx` — added `mobileStatic` prop; when set, renders children without animation on mobile (`< 768px`) via `matchMedia`
+- `components/ecosystem.tsx` — Platform Ecosystem cards use `mobileStatic` on `ScrollReveal` — no slide-up or fade on mobile
+- `components/navbar.tsx` — GitHub link moved to last position in nav; mobile menu items animate with fade only (removed `x: -12` slide)
+
+---
+
 ## [0.1.8] — 2026-03-10
 
 404 page redesigned as a product-recovery screen.
