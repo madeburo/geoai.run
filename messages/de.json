@@ -135,7 +135,8 @@
       "score": "KI-Bereitschafts-Score",
       "statuses": "Status je Kategorie",
       "issues": "Implementierungsprobleme",
-      "recommendations": "Umsetzbare Verbesserungen"
+      "recommendations": "Umsetzbare Verbesserungen",
+      "optionalImprovements": "Optionale Verbesserungen"
     }
   },
   "cookies": {

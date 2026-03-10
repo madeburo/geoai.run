@@ -348,20 +348,36 @@ export default function AnalyzePage() {
                   })}
                 </div>
 
-                {/* Issues */}
-                {report.issues.length > 0 && (
+                {/* Issues — only medium/high severity */}
+                {report.issues.filter(i => i.severity !== "low").length > 0 && (
                   <div className="rounded-xl border border-border/40 bg-surface/20 p-5 dark:border-white/6 dark:bg-white/2">
                     <p className="mb-3 text-xs font-medium uppercase tracking-widest text-muted-foreground/50">
-                      {t("whatYouGet.issues")} ({report.issues.length})
+                      {t("whatYouGet.issues")} ({report.issues.filter(i => i.severity !== "low").length})
                     </p>
                     <ul className="space-y-2">
-                      {report.issues.map((issue, i) => (
+                      {report.issues.filter(i => i.severity !== "low").map((issue, i) => (
                         <li key={i} className="flex items-start gap-2.5">
                           <span className={`mt-0.5 h-1.5 w-1.5 shrink-0 rounded-full ${
-                            issue.severity === "high" ? "bg-red-400" :
-                            issue.severity === "medium" ? "bg-yellow-400" : "bg-muted-foreground/40"
+                            issue.severity === "high" ? "bg-red-400" : "bg-yellow-400"
                           }`} />
                           <span className="text-xs text-muted-foreground">{issue.message}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {/* Optional improvements — low severity only */}
+                {report.issues.filter(i => i.severity === "low").length > 0 && (
+                  <div className="rounded-xl border border-border/30 bg-surface/10 p-5 dark:border-white/4 dark:bg-white/1">
+                    <p className="mb-3 text-xs font-medium uppercase tracking-widest text-muted-foreground/40">
+                      {t("whatYouGet.optionalImprovements")} ({report.issues.filter(i => i.severity === "low").length})
+                    </p>
+                    <ul className="space-y-2">
+                      {report.issues.filter(i => i.severity === "low").map((issue, i) => (
+                        <li key={i} className="flex items-start gap-2.5">
+                          <span className="mt-0.5 h-1.5 w-1.5 shrink-0 rounded-full bg-muted-foreground/25" />
+                          <span className="text-xs text-muted-foreground/60">{issue.message}</span>
                         </li>
                       ))}
                     </ul>

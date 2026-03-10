@@ -135,7 +135,8 @@
       "score": "Pontuação de prontidão IA",
       "statuses": "Status por categoria",
       "issues": "Problemas de implementação",
-      "recommendations": "Correções acionáveis"
+      "recommendations": "Correções acionáveis",
+      "optionalImprovements": "Melhorias opcionais"
     }
   },
   "cookies": {

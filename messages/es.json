@@ -135,7 +135,8 @@
       "score": "Puntuación de preparación IA",
       "statuses": "Estado por categoría",
       "issues": "Problemas de implementación",
-      "recommendations": "Correcciones accionables"
+      "recommendations": "Correcciones accionables",
+      "optionalImprovements": "Mejoras opcionales"
     }
   },
   "cookies": {

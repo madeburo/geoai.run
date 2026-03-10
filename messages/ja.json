@@ -135,7 +135,8 @@
       "score": "AI準備スコア",
       "statuses": "カテゴリ別ステータス",
       "issues": "実装上の問題",
-      "recommendations": "具体的な改善策"
+      "recommendations": "具体的な改善策",
+      "optionalImprovements": "任意の改善点"
     }
   },
   "cookies": {

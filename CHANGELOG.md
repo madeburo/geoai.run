@@ -4,6 +4,18 @@ All notable changes to GEO AI are documented in this file.
 
 Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [0.1.10] — 2026-03-10
+
+Analyzer score/issues consistency fix, optional improvements section, and richer llms.txt content.
+
+### Changed
+
+- `app/analyze/page.tsx` — low-severity issues no longer appear under "Implementation issues"; they render in a separate visually subdued "Optional improvements" block — a 100/100 score with only minor metadata gaps no longer looks contradictory
+- `lib/geo-provider.ts` — provider enriched with `keywords` and `content` fields on all resources; added Documentation section (Getting Started, GEO Specification); product descriptions unified in style — `llms-full.txt` is now meaningfully richer than `llms.txt` (content fields are appended only in full mode by the library)
+- `messages/*.json` — `optionalImprovements` key added to `whatYouGet` in all 9 locales (en, de, es, fr, ja, ko, pt, ru, zh)
+
+---
+
 ## [0.1.9] — 2026-03-10
 
 Dependency updates, static llms.txt generation, and mobile animation fixes.

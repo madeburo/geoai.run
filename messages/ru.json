@@ -135,7 +135,8 @@
       "score": "Оценка AI-готовности",
       "statuses": "Статус по категориям",
       "issues": "Проблемы реализации",
-      "recommendations": "Конкретные рекомендации"
+      "recommendations": "Конкретные рекомендации",
+      "optionalImprovements": "Необязательные улучшения"
     }
   },
   "cookies": {

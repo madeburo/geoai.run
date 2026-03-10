@@ -135,7 +135,8 @@
       "score": "AI准备度评分",
       "statuses": "各类别状态",
       "issues": "实现问题",
-      "recommendations": "可操作的修复建议"
+      "recommendations": "可操作的修复建议",
+      "optionalImprovements": "可选改进项"
     }
   },
   "cookies": {

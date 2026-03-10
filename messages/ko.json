@@ -135,7 +135,8 @@
       "score": "AI 준비 점수",
       "statuses": "카테고리별 상태",
       "issues": "구현 문제",
-      "recommendations": "실행 가능한 개선 방법"
+      "recommendations": "실행 가능한 개선 방법",
+      "optionalImprovements": "선택적 개선 사항"
     }
   },
   "cookies": {

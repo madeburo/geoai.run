@@ -156,7 +156,8 @@
       "score": "AI readiness score",
       "statuses": "Per-category status",
       "issues": "Implementation issues",
-      "recommendations": "Actionable fixes"
+      "recommendations": "Actionable fixes",
+      "optionalImprovements": "Optional improvements"
     }
   },
   "cookies": {
