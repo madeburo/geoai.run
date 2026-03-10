@@ -4,6 +4,16 @@ All notable changes to GEO AI are documented in this file.
 
 Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [0.1.8] — 2026-03-10
+
+404 page redesigned as a product-recovery screen.
+
+### Changed
+
+- `app/not-found.tsx` — replaced minimal single-button 404 with a brand-aware recovery page: GEO AI logo, large 404 heading, descriptive subtitle, three primary CTAs (Go home, Open analyzer, Read docs), and a "Popular destinations" quick-links row (Analyzer, Documentation, Specification, GitHub); subtle radial glow background matches product atmosphere
+
+---
+
 ## [0.1.7] — 2026-03-09
 
 Live site analysis wired up end-to-end.
