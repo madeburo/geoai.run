@@ -145,6 +145,79 @@
     "reject": "Rechazar",
     "settings": "Configuración de cookies"
   },
+  "specificationPage": {
+    "badge": "GEO AI",
+    "title": "Especificación GEO",
+    "subtitle": "El modelo de implementación canónico para la optimización de búsqueda IA — cuatro capas que definen qué significa ser visible para los motores de búsqueda IA.",
+    "cta": { "readSpec": "Leer la especificación completa", "checkSite": "Analizar mi sitio" },
+    "why": {
+      "items": [
+        { "title": "Los motores IA leen diferente", "body": "ChatGPT, Claude, Gemini y Perplexity no clasifican palabras clave. Procesan contenido estructurado — e ignoran los sitios que no lo proporcionan." },
+        { "title": "No existía ningún estándar", "body": "GEO Specification define las señales exactas que esperan los crawlers IA: formatos de archivo, selectores de etiquetas, sintaxis de directivas y tipos de esquema." },
+        { "title": "El cumplimiento es medible", "body": "El Analizador evalúa cada capa contra la especificación y produce una puntuación de 0–100 con recomendaciones concretas." }
+      ]
+    },
+    "layers": {
+      "label": "Las cuatro capas de implementación",
+      "title": "Qué define la Especificación GEO",
+      "readSpec": "Leer especificación",
+      "items": [
+        { "title": "llms.txt", "description": "Un archivo de texto en la raíz del sitio que da a los modelos IA un mapa estructurado de tu contenido." },
+        { "title": "Metadatos IA", "description": "Etiquetas meta HTML críticas y complementarias — title, description, Open Graph, Twitter Card." },
+        { "title": "Reglas de rastreo", "description": "Directivas Allow explícitas en robots.txt para todos los crawlers IA principales: GPTBot, ClaudeBot, PerplexityBot, Google-Extended y siete más." },
+        { "title": "Señales estructuradas", "description": "Marcado JSON-LD (WebSite, Product, Article) que proporciona a los motores IA hechos legibles por máquina." }
+      ]
+    },
+    "analyzer": {
+      "label": "Analizador",
+      "title": "Cómo el Analizador usa la especificación",
+      "checkSite": "Analizar mi sitio",
+      "items": [
+        { "title": "Verifica llms.txt", "description": "Comprueba presencia, tipo de contenido y contenido informativo en la raíz del sitio." },
+        { "title": "Valida metadatos", "description": "Confirma que las cuatro etiquetas críticas están presentes y no vacías." },
+        { "title": "Inspecciona reglas de rastreo", "description": "Analiza robots.txt y clasifica cada uno de los 10 crawlers IA conocidos." },
+        { "title": "Evalúa señales estructuradas", "description": "Detecta bloques JSON-LD, microdata, RDFa y sitemap como fallback." }
+      ]
+    },
+    "scoring": {
+      "label": "Modelo de puntuación",
+      "title": "Cada capa contribuye un 25%",
+      "description": "El Analizador evalúa cada capa de forma independiente y asigna un estado. Las cuatro puntuaciones se promedian en una puntuación de preparación de 0–100.",
+      "scoringModel": "Modelo de puntuación",
+      "recommendations": "Recomendaciones",
+      "formula": "score = round((llmsTxt + aiMetadata + crawlerRules + structuredSignals) / 4)"
+    },
+    "geoReady": {
+      "label": "Definición",
+      "title": "¿Qué significa \"GEO-ready\"?",
+      "description": "Un sitio es GEO-ready cuando las cuatro capas están implementadas y superan el Analizador.",
+      "items": [
+        "llms.txt presente, accesible e informativo",
+        "Las cuatro etiquetas de metadatos críticas presentes",
+        "robots.txt permite la mayoría de los crawlers IA",
+        "Al menos un bloque JSON-LD válido presente"
+      ]
+    },
+    "packages": {
+      "label": "Implementaciones",
+      "title": "Los paquetes GEO AI implementan esta especificación",
+      "description": "Cada paquete genera salida conforme a la especificación. Elige el que se adapte a tu stack.",
+      "items": [
+        { "label": "Core", "badge": "Universal", "description": "Motor TypeScript. Sin dependencias. Funciona con cualquier framework Node.js." },
+        { "label": "Next.js", "badge": "Framework", "description": "Generación de archivos estáticos, middleware y route handler para App Router." },
+        { "label": "WooCommerce", "badge": "Plugin", "description": "Plugin para WordPress y WooCommerce. Zero-config, WooCommerce-first." },
+        { "label": "Shopify", "badge": "App", "description": "App embebida de Shopify. Metafields nativos, App Proxy, multilingüe." }
+      ]
+    },
+    "finalCta": {
+      "label": "Comenzar",
+      "title": "¿Listo para implementar la especificación?",
+      "description": "Verifica tu puntuación de cumplimiento, lee la referencia técnica completa o elige un paquete.",
+      "checkSite": "Analizar mi sitio",
+      "fullSpec": "Especificación completa",
+      "choosePackage": "Elegir paquete"
+    }
+  },
   "metadata": {
     "home": {
       "title": "GEO AI — Optimización de búsqueda IA",

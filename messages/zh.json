@@ -145,6 +145,79 @@
     "reject": "拒绝",
     "settings": "Cookie 设置"
   },
+  "specificationPage": {
+    "badge": "GEO AI",
+    "title": "GEO规范",
+    "subtitle": "AI搜索优化的标准实现模型 — 四个层次定义了网站对AI搜索引擎可见的含义。",
+    "cta": { "readSpec": "阅读完整规范", "checkSite": "检查我的网站" },
+    "why": {
+      "items": [
+        { "title": "AI引擎的读取方式不同", "body": "ChatGPT、Claude、Gemini和Perplexity不对关键词排名。它们处理结构化内容 — 并忽略不提供结构化内容的网站。" },
+        { "title": "此前没有标准", "body": "GEO规范定义了AI爬虫期望的确切信号：文件格式、标签选择器、指令语法和模式类型。" },
+        { "title": "合规性可以衡量", "body": "分析器根据规范评估每个层次，并生成0–100的分数和具体建议。" }
+      ]
+    },
+    "layers": {
+      "label": "四个实现层次",
+      "title": "GEO规范定义的内容",
+      "readSpec": "阅读规范",
+      "items": [
+        { "title": "llms.txt", "description": "网站根目录的纯文本文件，为AI模型提供内容的结构化地图。" },
+        { "title": "AI元数据", "description": "AI爬虫读取的关键HTML元标签 — title、description、Open Graph、Twitter Card。" },
+        { "title": "爬虫规则", "description": "robots.txt中针对所有主要AI爬虫的明确Allow指令：GPTBot、ClaudeBot、PerplexityBot、Google-Extended等。" },
+        { "title": "结构化信号", "description": "JSON-LD模式标记（WebSite、Product、Article），为AI引擎提供机器可读的事实。" }
+      ]
+    },
+    "analyzer": {
+      "label": "分析器",
+      "title": "分析器如何使用规范",
+      "checkSite": "检查我的网站",
+      "items": [
+        { "title": "检查llms.txt", "description": "验证网站根目录的存在性、内容类型和信息内容。" },
+        { "title": "验证元数据", "description": "确认四个关键标签均存在且非空。" },
+        { "title": "检查爬虫规则", "description": "解析robots.txt并对10个已知AI爬虫进行分类。" },
+        { "title": "评估结构化信号", "description": "检测JSON-LD块、微数据、RDFa和站点地图回退。" }
+      ]
+    },
+    "scoring": {
+      "label": "评分模型",
+      "title": "每个层次贡献25%",
+      "description": "分析器独立评估每个层次并分配状态。四个类别分数平均为0–100的准备度分数。",
+      "scoringModel": "评分模型",
+      "recommendations": "建议",
+      "formula": "score = round((llmsTxt + aiMetadata + crawlerRules + structuredSignals) / 4)"
+    },
+    "geoReady": {
+      "label": "定义",
+      "title": "\"GEO-ready\"是什么意思？",
+      "description": "当所有四个规范层次都已实现并通过分析器时，网站即为GEO-ready。",
+      "items": [
+        "llms.txt存在、可访问且信息丰富",
+        "四个关键元数据标签均存在",
+        "robots.txt允许大多数AI爬虫",
+        "至少存在一个有效的JSON-LD块"
+      ]
+    },
+    "packages": {
+      "label": "实现",
+      "title": "GEO AI软件包实现此规范",
+      "description": "每个软件包都生成符合规范的输出。选择适合您技术栈的那个。",
+      "items": [
+        { "label": "Core", "badge": "通用", "description": "TypeScript引擎。零依赖。适用于任何Node.js框架。" },
+        { "label": "Next.js", "badge": "框架", "description": "静态文件生成、中间件和App Router路由处理器。" },
+        { "label": "WooCommerce", "badge": "插件", "description": "WordPress & WooCommerce插件。零配置，WooCommerce优先。" },
+        { "label": "Shopify", "badge": "应用", "description": "Shopify嵌入式应用。原生元字段、App Proxy、多语言支持。" }
+      ]
+    },
+    "finalCta": {
+      "label": "开始",
+      "title": "准备好实现规范了吗？",
+      "description": "检查您当前的合规分数，阅读完整的技术参考，或选择一个软件包开始生成符合规范的输出。",
+      "checkSite": "检查我的网站",
+      "fullSpec": "完整规范",
+      "choosePackage": "选择软件包"
+    }
+  },
   "metadata": {
     "home": {
       "title": "GEO AI — AI搜索优化",

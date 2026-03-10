@@ -18,7 +18,7 @@
     "placeholder": "Website-URL eingeben",
     "analyze": "Analysieren",
     "viewOnGithub": "Auf GitHub ansehen",
-    "readDocs": "Dokumentation lesen"
+    "readDocs": "Dokumentation"
   },
   "howItWorks": {
     "title": "So funktioniert's",
@@ -26,19 +26,19 @@
     "steps": {
       "generate": {
         "title": "llms.txt generieren",
-        "description": "Erstellen Sie eine strukturierte Datei, die KI-Systemen den Inhalt und die Funktionen Ihrer Website beschreibt."
+        "description": "Erstellen Sie eine Datei, die KI-Systemen Ihre Inhalte strukturiert beschreibt."
       },
       "crawler": {
-        "title": "KI-Crawler-Regeln konfigurieren",
-        "description": "Legen Sie fest, welche KI-Crawler Ihre Website indexieren dürfen und auf welche Inhalte sie zugreifen können."
+        "title": "Crawler-Regeln konfigurieren",
+        "description": "Legen Sie fest, welche KI-Crawler Ihre Website indexieren dürfen und worauf sie zugreifen können."
       },
       "metadata": {
         "title": "KI-Metadaten hinzufügen",
-        "description": "Ergänzen Sie Ihre Seiten mit Metadaten, die KI-Suchmaschinen verstehen und bei der Antwortgenerierung nutzen."
+        "description": "Ergänzen Sie Ihre Seiten mit Metadaten, die KI-Suchmaschinen bei der Antwortgenerierung nutzen."
       },
       "signals": {
-        "title": "Strukturierte Signale bereitstellen",
-        "description": "Senden Sie klare Signale an KI-Systeme, damit Ihre Inhalte korrekt angezeigt und zitiert werden."
+        "title": "Strukturierte Signale",
+        "description": "Helfen Sie KI-Systemen, Ihre Inhalte korrekt zu zitieren und darzustellen."
       }
     }
   },
@@ -49,24 +49,24 @@
   },
   "spec": {
     "title": "GEO-Spezifikation",
-    "description": "Strukturierte Signale, die Ihre Website in KI-Suchmaschinen sichtbar und korrekt dargestellt machen.",
+    "description": "Signale, die Ihre Website für KI-Suchmaschinen sichtbar machen.",
     "readSpec": "Spezifikation lesen →",
     "items": {
       "llms": {
         "title": "llms.txt",
-        "description": "Eine strukturierte Datei für Sprachmodelle — hilft KI-Systemen, Ihre Inhalte und Services zu verstehen."
+        "description": "Eine Datei für Sprachmodelle — hilft KI zu verstehen, was auf Ihrer Website zu finden ist."
       },
       "metadata": {
         "title": "KI-Metadaten",
-        "description": "Meta-Tags und semantisches Markup, die KI-Suchmaschinen strukturierte Informationen über Ihre Seiten liefern."
+        "description": "Meta-Tags und Markup, die KI-Suchmaschinen Kontext zu Ihren Seiten liefern."
       },
       "crawler": {
         "title": "Crawler-Regeln",
-        "description": "Zugriffs- und Indexierungseinstellungen für KI-Crawler auf Ihrer Website."
+        "description": "Zugriffs- und Indexierungsregeln für KI-Bots."
       },
       "signals": {
         "title": "Strukturierte Signale",
-        "description": "Maschinenlesbare Daten, die KI-Systemen helfen, Ihre Inhalte korrekt zu zitieren und darzustellen."
+        "description": "Maschinenlesbare Daten für die korrekte Zitierung Ihrer Inhalte."
       }
     }
   },
@@ -91,7 +91,7 @@
   },
   "openSource": {
     "title": "Open Source",
-    "description": "Alle GEO AI Tools sind Open Source. Entdecken Sie die Repositories, tragen Sie bei und gestalten Sie die Zukunft der KI-Suchoptimierung mit."
+    "description": "Alle GEO AI Tools sind Open Source. Entdecken, beitragen und mitgestalten."
   },
   "footer": {
     "tagline": "KI-Suchoptimierung",
@@ -99,60 +99,133 @@
   },
   "analyze": {
     "title": "KI-Sichtbarkeits-Analyzer",
-    "description": "Prüfen Sie, wie sichtbar Ihre Website für KI-Suchmaschinen ist.",
-    "scope": "Analysiert llms.txt, KI-Metadaten, Crawler-Regeln und strukturierte Signale.",
+    "description": "Prüfen Sie, wie gut Ihre Website für KI-Suche aufgestellt ist.",
+    "scope": "Prüft llms.txt, KI-Metadaten, Crawler-Regeln und strukturierte Signale.",
     "placeholder": "Website-URL eingeben",
     "button": "Analysieren",
     "errorEmpty": "Bitte URL eingeben",
     "errorInvalid": "Bitte gültige URL eingeben (z.B. example.com)",
     "errorRateLimit": "Zu viele Anfragen. Bitte kurz warten.",
     "errorApi": "Analyse fehlgeschlagen. Bitte erneut versuchen.",
-    "analyzing": "Ihre Website wird analysiert…",
-    "comingSoon": "Analyzer kommt bald. Bleiben Sie dran.",
-    "readDocs": "Dokumentation lesen",
+    "analyzing": "Website wird analysiert…",
+    "comingSoon": "Analyzer kommt bald.",
+    "readDocs": "Dokumentation",
     "viewOnGithub": "Auf GitHub ansehen",
     "generateDescription": "Generieren Sie llms.txt, KI-Crawler-Regeln und Metadaten — machen Sie Ihre Website für KI-Suchmaschinen sichtbar.",
     "trust": {
-      "noSignup": "Keine Registrierung erforderlich",
-      "runsInSeconds": "Analyse in Sekunden",
-      "checksSpec": "Prüft gegen die GEO-Spezifikation"
+      "noSignup": "Keine Registrierung",
+      "runsInSeconds": "Ergebnis in Sekunden",
+      "checksSpec": "Prüfung gegen die GEO-Spezifikation"
     },
     "checksLabel": "Was geprüft wird",
     "checks": {
-      "llmsTxt": { "name": "llms.txt", "desc": "Sitebeschreibung für LLMs" },
-      "aiMetadata": { "name": "KI-Metadaten", "desc": "Semantische Tags für KI-Auffindbarkeit" },
+      "llmsTxt": { "name": "llms.txt", "desc": "Website-Beschreibung für Sprachmodelle" },
+      "aiMetadata": { "name": "KI-Metadaten", "desc": "Tags für KI-Indexierung" },
       "crawlerRules": { "name": "Crawler-Regeln", "desc": "Direktiven für KI-Bots" },
-      "structuredSignals": { "name": "Strukturierte Signale", "desc": "Maschinenlesbare Schema-Daten" }
+      "structuredSignals": { "name": "Strukturierte Signale", "desc": "Maschinenlesbare Daten und Schemas" }
     },
     "howLabel": "So funktioniert's",
     "how": [
       { "title": "URL eingeben", "desc": "Beliebige Website-Adresse einfügen" },
-      { "title": "Wir prüfen Ihre Website", "desc": "Vier Checks laufen parallel gegen die GEO-Spezifikation" },
-      { "title": "Ergebnisse und Empfehlungen", "desc": "Probleme, Empfehlungen und ein Bereitschafts-Score" }
+      { "title": "Prüfung starten", "desc": "Vier Checks parallel gegen die GEO-Spezifikation" },
+      { "title": "Ergebnis erhalten", "desc": "Probleme, Empfehlungen und Bereitschafts-Score" }
     ],
     "whatYouGetLabel": "Was Sie erhalten",
     "whatYouGet": {
       "score": "KI-Bereitschafts-Score",
       "statuses": "Status je Kategorie",
-      "issues": "Implementierungsprobleme",
-      "recommendations": "Umsetzbare Verbesserungen",
+      "issues": "Gefundene Probleme",
+      "recommendations": "Konkrete Empfehlungen",
       "optionalImprovements": "Optionale Verbesserungen"
     }
   },
   "cookies": {
-    "message": "Wir verwenden Cookies und Analysetools um die Website zu verbessern.",
+    "message": "Wir verwenden Cookies und Analysetools zur Verbesserung der Website.",
     "accept": "Akzeptieren",
     "reject": "Ablehnen",
     "settings": "Cookie-Einstellungen"
   },
+  "specificationPage": {
+    "badge": "GEO AI",
+    "title": "GEO Specification",
+    "subtitle": "Das Implementierungsmodell für AI Search Optimization — vier Schichten, die KI-Sichtbarkeit definieren.",
+    "cta": { "readSpec": "Spezifikation lesen", "checkSite": "Website prüfen" },
+    "why": {
+      "items": [
+        { "title": "KI-Engines arbeiten anders", "body": "ChatGPT, Claude, Gemini und Perplexity ranken keine Keywords. Sie verarbeiten strukturierte Inhalte — und überspringen Seiten ohne sie." },
+        { "title": "Es gab keinen Standard", "body": "GEO Specification beschreibt die konkreten Signale für KI-Crawler: Dateiformate, Meta-Tags, Direktiven-Syntax und Schema-Typen." },
+        { "title": "Bereitschaft ist messbar", "body": "Der Analyzer bewertet jede Schicht und liefert einen Score von 0–100 mit konkreten Empfehlungen." }
+      ]
+    },
+    "layers": {
+      "label": "Vier Schichten",
+      "title": "Was GEO Specification definiert",
+      "readSpec": "Spezifikation lesen",
+      "items": [
+        { "title": "llms.txt", "description": "Textdatei im Site-Root — eine strukturierte Inhaltskarte für KI-Modelle." },
+        { "title": "KI-Metadaten", "description": "HTML-Meta-Tags: Title, Description, Open Graph, Twitter Card." },
+        { "title": "Crawler-Regeln", "description": "Allow-Direktiven in robots.txt für die wichtigsten KI-Bots: GPTBot, ClaudeBot, PerplexityBot, Google-Extended und weitere." },
+        { "title": "Strukturierte Signale", "description": "JSON-LD-Markup (WebSite, Product, Article) mit maschinenlesbaren Daten für KI." }
+      ]
+    },
+    "analyzer": {
+      "label": "Analyzer",
+      "title": "So arbeitet der Analyzer",
+      "checkSite": "Website prüfen",
+      "items": [
+        { "title": "Prüft llms.txt", "description": "Vorhandensein, Content-Type und Inhalt der Datei." },
+        { "title": "Validiert Metadaten", "description": "Alle vier kritischen Tags vorhanden und ausgefüllt." },
+        { "title": "Prüft Crawler-Regeln", "description": "Parst robots.txt und bestimmt den Status jedes KI-Crawlers." },
+        { "title": "Bewertet Signale", "description": "Sucht nach JSON-LD, Microdata, RDFa und Sitemap." }
+      ]
+    },
+    "scoring": {
+      "label": "Scoring-Modell",
+      "title": "Jede Schicht zählt 25%",
+      "description": "Der Analyzer bewertet jede Schicht einzeln. Vier Scores ergeben gemittelt den Gesamtscore von 0 bis 100.",
+      "scoringModel": "Scoring-Modell",
+      "recommendations": "Empfehlungen",
+      "formula": "score = round((llmsTxt + aiMetadata + crawlerRules + structuredSignals) / 4)"
+    },
+    "geoReady": {
+      "label": "Definition",
+      "title": "Was bedeutet «GEO-ready»?",
+      "description": "Eine Website ist GEO-ready, wenn alle vier Schichten implementiert sind und die Prüfung bestehen.",
+      "items": [
+        "llms.txt vorhanden, erreichbar und informativ",
+        "Alle vier kritischen Meta-Tags vorhanden",
+        "robots.txt erlaubt die meisten KI-Crawler",
+        "Mindestens ein gültiger JSON-LD-Block vorhanden"
+      ]
+    },
+    "packages": {
+      "label": "Implementierungen",
+      "title": "GEO AI Pakete setzen die Spezifikation um",
+      "description": "Jedes Paket generiert spezifikationskonformen Output. Wählen Sie passend zu Ihrem Stack.",
+      "items": [
+        { "label": "Core", "badge": "Universal", "description": "TypeScript-Engine. Zero Dependencies. Jedes Node.js-Framework." },
+        { "label": "Next.js", "badge": "Framework", "description": "Statische Generierung, Middleware und Route Handler für App Router." },
+        { "label": "WooCommerce", "badge": "Plugin", "description": "WordPress & WooCommerce. Zero-Config, WooCommerce-first." },
+        { "label": "Shopify", "badge": "App", "description": "Shopify Embedded App. Metafields, App Proxy, mehrsprachig." }
+      ]
+    },
+    "finalCta": {
+      "label": "Loslegen",
+      "title": "Bereit für die Umsetzung?",
+      "description": "Prüfen Sie Ihren Score, lesen Sie die Spezifikation oder wählen Sie ein Paket.",
+      "checkSite": "Website prüfen",
+      "fullSpec": "Vollständige Spezifikation",
+      "choosePackage": "Paket wählen"
+    }
+  },
   "metadata": {
     "home": {
       "title": "GEO AI — KI-Suchoptimierung",
-      "description": "Open-Source-KI-Suchoptimierung für Websites und E-Commerce."
+      "description": "Open-Source-Ökosystem für die Optimierung von Websites und Online-Shops für KI-Suchmaschinen."
     },
     "analyze": {
-      "title": "KI-Suchanalyse — GEO AI",
-      "description": "Prüfen Sie, wie sichtbar Ihre Website für KI-Suchmaschinen wie ChatGPT, Claude, Gemini und Perplexity ist."
+      "title": "KI-Sichtbarkeits-Analyzer — GEO AI",
+      "description": "Prüfen Sie die Sichtbarkeit Ihrer Website für ChatGPT, Claude, Gemini und Perplexity."
     }
   }
 }

@@ -34,28 +34,38 @@ export const DOC_PAGES: Record<string, DocPage> = {
   },
   "specification": {
     title: "GEO Specification",
-    description: "The open specification for AI Search Optimization.",
+    description: "The canonical implementation model for AI Search Optimization.",
     content: "specification",
   },
-  "concepts/llms-txt": {
-    title: "llms.txt",
-    description: "The structured file that tells AI systems about your site.",
-    content: "concepts/llms-txt",
+  "specification/llms-txt": {
+    title: "llms.txt Specification",
+    description: "File location, format, required fields, and Analyzer checks for llms.txt.",
+    content: "specification/llms-txt",
   },
-  "concepts/ai-metadata": {
-    title: "AI Metadata",
-    description: "Meta tags and HTTP headers for AI content discovery.",
-    content: "concepts/ai-metadata",
+  "specification/ai-metadata": {
+    title: "AI Metadata Specification",
+    description: "Critical and non-critical metadata fields, selectors, and Analyzer checks.",
+    content: "specification/ai-metadata",
   },
-  "concepts/crawler-rules": {
-    title: "Crawler Rules",
-    description: "Per-bot allow/disallow rules for 16+ AI crawlers.",
-    content: "concepts/crawler-rules",
+  "specification/crawler-rules": {
+    title: "Crawler Rules Specification",
+    description: "AI crawler user-agents, robots.txt directives, and Analyzer checks.",
+    content: "specification/crawler-rules",
   },
-  "concepts/structured-signals": {
-    title: "Structured Signals",
-    description: "JSON-LD and Schema.org signals for AI search engines.",
-    content: "concepts/structured-signals",
+  "specification/structured-signals": {
+    title: "Structured Signals Specification",
+    description: "JSON-LD schema types, required fields, and Analyzer checks.",
+    content: "specification/structured-signals",
+  },
+  "specification/scoring": {
+    title: "Scoring Specification",
+    description: "CheckStatus weights, category contributions, and score formula.",
+    content: "specification/scoring",
+  },
+  "specification/recommendations": {
+    title: "Recommendations Specification",
+    description: "Recommendation codes, categories, and prioritization guidance.",
+    content: "specification/recommendations",
   },
   "packages/core": {
     title: "GEO AI Core",

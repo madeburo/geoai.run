@@ -8,5 +8,5 @@ export const NAV_LINKS: NavLink[] = [
   { label: "Analyzer", href: "/analyze" },
   { label: "GitHub", href: "https://github.com/madeburo/GEO-AI", external: true },
   { label: "Documentation", href: "#", external: true },
-  { label: "Specification", href: "#spec" },
+  { label: "Specification", href: "/specification" },
 ];

@@ -96,7 +96,10 @@ export default function DocsHomePage() {
           Documentation
         </h1>
         <p className="text-base text-muted-foreground leading-relaxed max-w-xl">
-          GEO AI is an open-source AI Search Optimization platform. Generate{" "}
+          Use these docs to integrate GEO AI, understand the specification, and choose the right package for your stack.
+        </p>
+        <p className="mt-2 text-sm text-muted-foreground/60 leading-relaxed max-w-xl">
+          GEO AI generates{" "}
           <code className="rounded px-1.5 py-0.5 text-[0.875em] font-mono bg-white/6 text-glow border border-white/8">
             llms.txt
           </code>
@@ -217,7 +220,7 @@ export default function DocsHomePage() {
               >
                 <Icon className="size-4 shrink-0" />
                 <span>{item.label}</span>
-                <span className="ml-auto rounded px-1.5 py-0.5 text-[10px] font-medium uppercase tracking-wide bg-white/4 text-muted-foreground/40">
+                <span className="ml-auto rounded-sm px-1.5 py-px text-[9px] font-semibold uppercase tracking-wider border border-border/40 text-muted-foreground/35">
                   soon
                 </span>
               </Link>

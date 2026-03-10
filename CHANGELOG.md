@@ -4,6 +4,22 @@ All notable changes to GEO AI are documented in this file.
 
 Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [0.2.1] — 2026-03-11
+
+GEO Specification as a top-level product pillar: standalone overview page, full docs section.
+
+### Added
+
+- `app/specification/page.tsx` — standalone `/specification` page: hero, "Why it exists" framing cards, four implementation layers, "How the Analyzer uses the spec" cards, scoring model with status table and formula, GEO-ready definition block, packages grid, and final CTA section; full i18n via `useTranslations("specificationPage")`
+- GEO Specification docs section: 7 pages at `/docs/specification/*` (Overview, llms.txt, AI Metadata, Crawler Rules, Structured Signals, Scoring, Recommendations) replacing legacy `/docs/concepts/*`
+
+### Changed
+
+- All "Specification" nav links updated from `#spec` / `/#spec` to `/specification` — `components/navbar.tsx`, `components/footer.tsx`, `lib/nav-links.ts`, `app/not-found.tsx`
+- `components/spec.tsx` — "Read Spec" link updated to `/specification`
+
+---
+
 ## [0.2.0] — 2026-03-10
 
 Full documentation experience at `/docs` technical docs.

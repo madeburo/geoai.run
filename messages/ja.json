@@ -145,6 +145,79 @@
     "reject": "拒否する",
     "settings": "Cookie設定"
   },
+  "specificationPage": {
+    "badge": "GEO AI",
+    "title": "GEO仕様",
+    "subtitle": "AI検索最適化の標準実装モデル — サイトがAI検索エンジンに認識されるための4つの層を定義します。",
+    "cta": { "readSpec": "仕様全文を読む", "checkSite": "サイトを確認" },
+    "why": {
+      "items": [
+        { "title": "AI検索エンジンは異なる読み方をする", "body": "ChatGPT、Claude、Gemini、Perplexityはキーワードをランク付けしません。構造化コンテンツを処理し、提供しないサイトを無視します。" },
+        { "title": "標準が存在しなかった", "body": "GEO仕様はAIクローラーが期待する正確なシグナルを定義します：ファイル形式、タグセレクター、ディレクティブ構文、スキーマタイプ。" },
+        { "title": "コンプライアンスは測定可能", "body": "アナライザーは各層を仕様に照らして評価し、具体的な推奨事項とともに0〜100のスコアを生成します。" }
+      ]
+    },
+    "layers": {
+      "label": "4つの実装層",
+      "title": "GEO仕様が定義するもの",
+      "readSpec": "仕様を読む",
+      "items": [
+        { "title": "llms.txt", "description": "サイトルートにあるプレーンテキストファイルで、AIモデルにコンテンツの構造化マップを提供します。" },
+        { "title": "AIメタデータ", "description": "AIクローラーがページのアイデンティティとコンテキストを理解するための重要なHTMLメタタグ。" },
+        { "title": "クローラールール", "description": "主要なAIクローラー（GPTBot、ClaudeBot、PerplexityBot、Google-Extendedなど）のrobots.txtへの明示的なAllow指令。" },
+        { "title": "構造化シグナル", "description": "JSON-LDスキーママークアップ（WebSite、Product、Article）でAIエンジンに機械可読な情報を提供します。" }
+      ]
+    },
+    "analyzer": {
+      "label": "アナライザー",
+      "title": "アナライザーが仕様をどのように使用するか",
+      "checkSite": "サイトを確認",
+      "items": [
+        { "title": "llms.txtを確認", "description": "サイトルートでの存在、コンテンツタイプ、情報内容を検証します。" },
+        { "title": "メタデータを検証", "description": "4つの重要なタグがすべて存在し、空でないことを確認します。" },
+        { "title": "クローラールールを検査", "description": "robots.txtを解析し、10の既知のAIクローラーを分類します。" },
+        { "title": "構造化シグナルを評価", "description": "JSON-LDブロック、マイクロデータ、RDFa、サイトマップフォールバックを検出します。" }
+      ]
+    },
+    "scoring": {
+      "label": "スコアリングモデル",
+      "title": "各層が25%を担当",
+      "description": "アナライザーは各層を独立して評価し、ステータスを割り当てます。4つのカテゴリスコアが0〜100の準備スコアに平均化されます。",
+      "scoringModel": "スコアリングモデル",
+      "recommendations": "推奨事項",
+      "formula": "score = round((llmsTxt + aiMetadata + crawlerRules + structuredSignals) / 4)"
+    },
+    "geoReady": {
+      "label": "定義",
+      "title": "「GEO-ready」とは何を意味するか？",
+      "description": "4つの仕様層がすべて実装され、アナライザーに合格した場合、サイトはGEO-readyです。",
+      "items": [
+        "llms.txtが存在し、アクセス可能で情報が充実している",
+        "4つの重要なメタデータタグがすべて存在する",
+        "robots.txtが大多数のAIクローラーを許可している",
+        "少なくとも1つの有効なJSON-LDブロックが存在する"
+      ]
+    },
+    "packages": {
+      "label": "実装",
+      "title": "GEO AIパッケージがこの仕様を実装",
+      "description": "すべてのパッケージが仕様準拠の出力を生成します。スタックに合ったものを選択してください。",
+      "items": [
+        { "label": "Core", "badge": "ユニバーサル", "description": "TypeScriptエンジン。依存関係なし。あらゆるNode.jsフレームワークで動作。" },
+        { "label": "Next.js", "badge": "フレームワーク", "description": "静的ファイル生成、ミドルウェア、App Routerルートハンドラー。" },
+        { "label": "WooCommerce", "badge": "プラグイン", "description": "WordPress & WooCommerceプラグイン。ゼロコンフィグ、WooCommerce優先。" },
+        { "label": "Shopify", "badge": "アプリ", "description": "Shopify埋め込みアプリ。ネイティブメタフィールド、App Proxy、多言語対応。" }
+      ]
+    },
+    "finalCta": {
+      "label": "始める",
+      "title": "仕様を実装する準備はできていますか？",
+      "description": "現在のコンプライアンススコアを確認し、完全な技術リファレンスを読むか、パッケージを選択してください。",
+      "checkSite": "サイトを確認",
+      "fullSpec": "完全な仕様",
+      "choosePackage": "パッケージを選択"
+    }
+  },
   "metadata": {
     "home": {
       "title": "GEO AI — AI検索最適化",

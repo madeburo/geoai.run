@@ -23,10 +23,12 @@ export const docsNavigation: DocNavSection[] = [
     title: "GEO Specification",
     items: [
       { title: "Overview", href: "/docs/specification" },
-      { title: "llms.txt", href: "/docs/concepts/llms-txt" },
-      { title: "AI Metadata", href: "/docs/concepts/ai-metadata" },
-      { title: "Crawler Rules", href: "/docs/concepts/crawler-rules" },
-      { title: "Structured Signals", href: "/docs/concepts/structured-signals" },
+      { title: "llms.txt", href: "/docs/specification/llms-txt" },
+      { title: "AI Metadata", href: "/docs/specification/ai-metadata" },
+      { title: "Crawler Rules", href: "/docs/specification/crawler-rules" },
+      { title: "Structured Signals", href: "/docs/specification/structured-signals" },
+      { title: "Scoring", href: "/docs/specification/scoring" },
+      { title: "Recommendations", href: "/docs/specification/recommendations" },
     ],
   },
   {

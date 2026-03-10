@@ -53,7 +53,7 @@ export function Spec() {
         <ScrollReveal delay={0.35}>
           <div className="mt-12 text-center sm:mt-14">
             <a
-              href="/docs"
+              href="/specification"
               className="text-sm font-medium text-muted-foreground underline underline-offset-4 transition-colors hover:text-foreground"
             >
               {t("readSpec")}

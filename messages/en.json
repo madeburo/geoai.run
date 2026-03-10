@@ -166,6 +166,82 @@
     "reject": "Reject",
     "settings": "Cookie settings"
   },
+  "specificationPage": {
+    "badge": "GEO AI",
+    "title": "GEO Specification",
+    "subtitle": "The canonical implementation model for AI Search Optimization — four layers that define what it means for a site to be visible to AI search engines.",
+    "cta": {
+      "readSpec": "Read the full spec",
+      "checkSite": "Check your site"
+    },
+    "why": {
+      "items": [
+        { "title": "AI engines read differently", "body": "ChatGPT, Claude, Gemini, and Perplexity don't rank keywords. They ingest structured content — and ignore sites that don't provide it." },
+        { "title": "No standard existed", "body": "GEO Specification defines the exact signals AI crawlers expect: file formats, tag selectors, directive syntax, and schema types." },
+        { "title": "Compliance is measurable", "body": "The Analyzer evaluates every layer against the spec and produces a 0–100 score with actionable recommendations." }
+      ]
+    },
+    "layers": {
+      "label": "The four implementation layers",
+      "title": "What GEO Specification defines",
+      "readSpec": "Read spec",
+      "items": [
+        { "title": "llms.txt", "description": "A plain-text file at your site root that gives AI models a structured map of your content — what you do, what pages exist, and how to navigate them." },
+        { "title": "AI Metadata", "description": "Critical and supplemental HTML meta tags — title, description, Open Graph, Twitter Card — that AI crawlers read to understand page identity and context." },
+        { "title": "Crawler Rules", "description": "Explicit allow directives in robots.txt for all major AI crawlers: GPTBot, ClaudeBot, PerplexityBot, Google-Extended, and seven others." },
+        { "title": "Structured Signals", "description": "JSON-LD schema markup (WebSite, Product, Article) that gives AI engines machine-readable facts about your content, products, and organization." }
+      ]
+    },
+    "analyzer": {
+      "label": "Analyzer",
+      "title": "How the Analyzer uses the specification",
+      "checkSite": "Check your site",
+      "items": [
+        { "title": "Checks llms.txt", "description": "Verifies presence, content-type, and informative content at the site root." },
+        { "title": "Validates metadata", "description": "Confirms all four critical tags are present and non-empty." },
+        { "title": "Inspects crawler rules", "description": "Parses robots.txt and classifies each of the 10 known AI crawlers." },
+        { "title": "Evaluates structured signals", "description": "Detects JSON-LD blocks, microdata, RDFa, and sitemap fallback." }
+      ]
+    },
+    "scoring": {
+      "label": "Scoring model",
+      "title": "Every layer contributes 25%",
+      "description": "The Analyzer evaluates each layer independently and assigns a status. The four category scores are averaged into a single 0–100 readiness score.",
+      "scoringModel": "Scoring model",
+      "recommendations": "Recommendations",
+      "formula": "score = round((llmsTxt + aiMetadata + crawlerRules + structuredSignals) / 4)"
+    },
+    "geoReady": {
+      "label": "Definition",
+      "title": "What does \"GEO-ready\" mean?",
+      "description": "A site is GEO-ready when all four specification layers are implemented and passing the Analyzer. Each layer contributes equally to the overall score.",
+      "items": [
+        "llms.txt present, accessible, and informative",
+        "All four critical metadata tags present",
+        "robots.txt allows majority of AI crawlers",
+        "At least one valid JSON-LD block present"
+      ]
+    },
+    "packages": {
+      "label": "Implementations",
+      "title": "GEO AI packages implement this spec",
+      "description": "Every package generates spec-compliant output. Pick the one that fits your stack.",
+      "items": [
+        { "label": "Core", "badge": "Universal", "description": "TypeScript engine. Zero dependencies. Works with any Node.js framework." },
+        { "label": "Next.js", "badge": "Framework", "description": "Static file generation, middleware, and App Router route handler." },
+        { "label": "WooCommerce", "badge": "Plugin", "description": "WordPress & WooCommerce plugin. Zero-config, WooCommerce-first." },
+        { "label": "Shopify", "badge": "App", "description": "Shopify embedded app. Native metafields, App Proxy, multilingual." }
+      ]
+    },
+    "finalCta": {
+      "label": "Get started",
+      "title": "Ready to implement the spec?",
+      "description": "Check your current compliance score, read the full technical reference, or pick a package and start generating spec-compliant output today.",
+      "checkSite": "Check your site",
+      "fullSpec": "Full specification",
+      "choosePackage": "Choose a package"
+    }
+  },
   "metadata": {
     "home": {
       "title": "GEO AI — AI Search Optimization",
