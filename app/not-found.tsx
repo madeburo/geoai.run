@@ -20,8 +20,8 @@ export default function NotFound() {
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[700px] rounded-full bg-glow/5 blur-[120px]" />
       </div>
 
-      {/* Badge */}
-      <Link href="/" className="mb-8 inline-flex items-center">
+      {/* Logo */}
+      <Link href="/" className="mb-14 inline-flex items-center">
         <Image
           src="/geo-ai.svg"
           alt="GEO AI"
@@ -31,22 +31,24 @@ export default function NotFound() {
         />
       </Link>
 
-      {/* Error block */}
-      <div className="mb-2 text-[80px] font-bold leading-none tracking-tight text-foreground sm:text-[112px]">
+      {/* 404 */}
+      <div className="mb-6 text-[80px] font-bold leading-none tracking-tight text-foreground sm:text-[112px]">
         404
       </div>
 
-      <h1 className="mb-3 text-xl font-semibold tracking-tight sm:text-2xl">
+      {/* Heading */}
+      <h1 className="mb-4 text-xl font-semibold tracking-tight sm:text-2xl">
         Page not found
       </h1>
 
-      <p className="mb-8 max-w-sm text-sm text-muted-foreground sm:text-base">
+      {/* Description */}
+      <p className="mb-10 max-w-sm text-sm text-muted-foreground sm:text-base">
         The page you&apos;re looking for doesn&apos;t exist or may have moved.
-        Return to the homepage, analyze a website, or explore the docs.
+        Return home, open the analyzer, or continue in the docs.
       </p>
 
-      {/* Primary CTAs */}
-      <div className="mb-10 flex flex-wrap items-center justify-center gap-3">
+      {/* CTAs */}
+      <div className="mb-16 flex flex-wrap items-center justify-center gap-3">
         <Link href="/">
           <Button variant="default" className="rounded-full px-5">
             Go home
@@ -57,25 +59,29 @@ export default function NotFound() {
             Open analyzer
           </Button>
         </Link>
-        <a href="#" rel="noopener noreferrer">
+        <Link href="/docs">
           <Button variant="ghost" className="rounded-full px-5 text-muted-foreground">
             Read docs
           </Button>
-        </a>
+        </Link>
       </div>
 
       {/* Quick links */}
-      <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
-        <span className="text-xs text-muted-foreground/60">Popular destinations</span>
-        {QUICK_LINKS.map((link) => (
-          <Link
-            key={link.label}
-            href={link.href}
-            className="text-xs text-muted-foreground transition-colors hover:text-foreground"
-          >
-            {link.label}
-          </Link>
-        ))}
+      <div className="flex flex-col items-center gap-3">
+        <span className="text-[11px] font-semibold uppercase tracking-widest text-muted-foreground/40">
+          Popular destinations
+        </span>
+        <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+          {QUICK_LINKS.map((link) => (
+            <Link
+              key={link.label}
+              href={link.href}
+              className="text-xs text-muted-foreground/60 transition-colors hover:text-foreground"
+            >
+              {link.label}
+            </Link>
+          ))}
+        </div>
       </div>
     </div>
   );

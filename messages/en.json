@@ -9,7 +9,8 @@
     "closeMenu": "Close menu",
     "changeLanguage": "Change language",
     "switchToLight": "Switch to light mode",
-    "switchToDark": "Switch to dark mode"
+    "switchToDark": "Switch to dark mode",
+    "contact": "Contact"
   },
   "hero": {
     "title": "GEO AI",
@@ -176,9 +177,18 @@
     },
     "why": {
       "items": [
-        { "title": "AI engines read differently", "body": "ChatGPT, Claude, Gemini, and Perplexity don't rank keywords. They ingest structured content — and ignore sites that don't provide it." },
-        { "title": "No standard existed", "body": "GEO Specification defines the exact signals AI crawlers expect: file formats, tag selectors, directive syntax, and schema types." },
-        { "title": "Compliance is measurable", "body": "The Analyzer evaluates every layer against the spec and produces a 0–100 score with actionable recommendations." }
+        {
+          "title": "AI engines read differently",
+          "body": "ChatGPT, Claude, Gemini, and Perplexity don't rank keywords. They ingest structured content — and ignore sites that don't provide it."
+        },
+        {
+          "title": "No standard existed",
+          "body": "GEO Specification defines the exact signals AI crawlers expect: file formats, tag selectors, directive syntax, and schema types."
+        },
+        {
+          "title": "Compliance is measurable",
+          "body": "The Analyzer evaluates every layer against the spec and produces a 0–100 score with actionable recommendations."
+        }
       ]
     },
     "layers": {
@@ -186,10 +196,22 @@
       "title": "What GEO Specification defines",
       "readSpec": "Read spec",
       "items": [
-        { "title": "llms.txt", "description": "A plain-text file at your site root that gives AI models a structured map of your content — what you do, what pages exist, and how to navigate them." },
-        { "title": "AI Metadata", "description": "Critical and supplemental HTML meta tags — title, description, Open Graph, Twitter Card — that AI crawlers read to understand page identity and context." },
-        { "title": "Crawler Rules", "description": "Explicit allow directives in robots.txt for all major AI crawlers: GPTBot, ClaudeBot, PerplexityBot, Google-Extended, and seven others." },
-        { "title": "Structured Signals", "description": "JSON-LD schema markup (WebSite, Product, Article) that gives AI engines machine-readable facts about your content, products, and organization." }
+        {
+          "title": "llms.txt",
+          "description": "A plain-text file at your site root that gives AI models a structured map of your content — what you do, what pages exist, and how to navigate them."
+        },
+        {
+          "title": "AI Metadata",
+          "description": "Critical and supplemental HTML meta tags — title, description, Open Graph, Twitter Card — that AI crawlers read to understand page identity and context."
+        },
+        {
+          "title": "Crawler Rules",
+          "description": "Explicit allow directives in robots.txt for all major AI crawlers: GPTBot, ClaudeBot, PerplexityBot, Google-Extended, and seven others."
+        },
+        {
+          "title": "Structured Signals",
+          "description": "JSON-LD schema markup (WebSite, Product, Article) that gives AI engines machine-readable facts about your content, products, and organization."
+        }
       ]
     },
     "analyzer": {
@@ -197,10 +219,22 @@
       "title": "How the Analyzer uses the specification",
       "checkSite": "Check your site",
       "items": [
-        { "title": "Checks llms.txt", "description": "Verifies presence, content-type, and informative content at the site root." },
-        { "title": "Validates metadata", "description": "Confirms all four critical tags are present and non-empty." },
-        { "title": "Inspects crawler rules", "description": "Parses robots.txt and classifies each of the 10 known AI crawlers." },
-        { "title": "Evaluates structured signals", "description": "Detects JSON-LD blocks, microdata, RDFa, and sitemap fallback." }
+        {
+          "title": "Checks llms.txt",
+          "description": "Verifies presence, content-type, and informative content at the site root."
+        },
+        {
+          "title": "Validates metadata",
+          "description": "Confirms all four critical tags are present and non-empty."
+        },
+        {
+          "title": "Inspects crawler rules",
+          "description": "Parses robots.txt and classifies each of the 10 known AI crawlers."
+        },
+        {
+          "title": "Evaluates structured signals",
+          "description": "Detects JSON-LD blocks, microdata, RDFa, and sitemap fallback."
+        }
       ]
     },
     "scoring": {
@@ -227,10 +261,26 @@
       "title": "GEO AI packages implement this spec",
       "description": "Every package generates spec-compliant output. Pick the one that fits your stack.",
       "items": [
-        { "label": "Core", "badge": "Universal", "description": "TypeScript engine. Zero dependencies. Works with any Node.js framework." },
-        { "label": "Next.js", "badge": "Framework", "description": "Static file generation, middleware, and App Router route handler." },
-        { "label": "WooCommerce", "badge": "Plugin", "description": "WordPress & WooCommerce plugin. Zero-config, WooCommerce-first." },
-        { "label": "Shopify", "badge": "App", "description": "Shopify embedded app. Native metafields, App Proxy, multilingual." }
+        {
+          "label": "Core",
+          "badge": "Universal",
+          "description": "TypeScript engine. Zero dependencies. Works with any Node.js framework."
+        },
+        {
+          "label": "Next.js",
+          "badge": "Framework",
+          "description": "Static file generation, middleware, and App Router route handler."
+        },
+        {
+          "label": "WooCommerce",
+          "badge": "Plugin",
+          "description": "WordPress & WooCommerce plugin. Zero-config, WooCommerce-first."
+        },
+        {
+          "label": "Shopify",
+          "badge": "App",
+          "description": "Shopify embedded app. Native metafields, App Proxy, multilingual."
+        }
       ]
     },
     "finalCta": {
@@ -250,6 +300,41 @@
     "analyze": {
       "title": "AI Search Analyzer — GEO AI",
       "description": "Check how visible your website is to AI search engines like ChatGPT, Claude, Gemini, and Perplexity."
+    },
+    "contact": {
+      "title": "Contact — GEO AI",
+      "description": "Questions, partnerships, open-source collaboration, or ecosystem ideas — get in touch."
     }
+  },
+  "contactPage": {
+    "badge": "Get in touch",
+    "title": "Contact",
+    "description": "Questions, partnerships, open-source collaboration, or ecosystem ideas — get in touch.",
+    "blocks": [
+      {
+        "title": "General questions",
+        "description": "Anything about GEO AI, how it works, or where it’s headed.",
+        "action": "Email us"
+      },
+      {
+        "title": "Open-source contributions",
+        "description": "Bug reports, PRs, feature ideas — all welcome on GitHub.",
+        "action": "Open GitHub"
+      },
+      {
+        "title": "Partnerships & integrations",
+        "description": "Building on top of GEO AI or want to integrate with your platform.",
+        "action": "Discuss an integration"
+      },
+      {
+        "title": "Ecosystem ideas",
+        "description": "New packages, platform support, or community initiatives.",
+        "action": "Suggest an idea"
+      }
+    ],
+    "directLinks": "Direct links",
+    "openGithub": "Open GitHub",
+    "emailUs": "Email us",
+    "viewDocs": "View docs"
   }
 }

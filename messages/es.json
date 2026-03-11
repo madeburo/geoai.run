@@ -4,6 +4,7 @@
     "github": "GitHub",
     "documentation": "Documentación",
     "specification": "Especificación",
+    "contact": "Contacto",
     "skipToContent": "Ir al contenido",
     "openMenu": "Abrir menú",
     "closeMenu": "Cerrar menú",
@@ -96,6 +97,37 @@
   "footer": {
     "tagline": "Optimización de búsqueda IA",
     "copyright": "© 2026 GEO AI · Código abierto · Licencia GPL-2.0"
+  },
+  "contactPage": {
+    "badge": "Ponerse en contacto",
+    "title": "Contacto",
+    "description": "Preguntas, asociaciones, colaboración open-source o ideas para el ecosistema — escríbenos.",
+    "blocks": [
+      {
+        "title": "Preguntas generales",
+        "description": "Todo sobre GEO AI — cómo funciona y hacia dónde va.",
+        "action": "Escribirnos"
+      },
+      {
+        "title": "Contribuciones open-source",
+        "description": "Bugs, PRs, ideas de funciones — todo bienvenido en GitHub.",
+        "action": "Abrir GitHub"
+      },
+      {
+        "title": "Asociaciones e integraciones",
+        "description": "¿Construyes sobre GEO AI o quieres integrarlo en tu plataforma?",
+        "action": "Hablar de una integración"
+      },
+      {
+        "title": "Ideas para el ecosistema",
+        "description": "Nuevos paquetes, soporte de plataformas o iniciativas comunitarias.",
+        "action": "Sugerir una idea"
+      }
+    ],
+    "directLinks": "Enlaces directos",
+    "openGithub": "Abrir GitHub",
+    "emailUs": "Escribirnos",
+    "viewDocs": "Documentación"
   },
   "analyze": {
     "title": "Analizador de búsqueda IA",
@@ -226,6 +258,10 @@
     "analyze": {
       "title": "Analizador de búsqueda IA — GEO AI",
       "description": "Comprueba la visibilidad de tu sitio web en motores de búsqueda IA como ChatGPT, Claude, Gemini y Perplexity."
+    },
+    "contact": {
+      "title": "Contacto — GEO AI",
+      "description": "Preguntas, asociaciones, colaboración open-source o ideas para el ecosistema — escríbenos."
     }
   }
 }

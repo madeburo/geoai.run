@@ -4,6 +4,22 @@ All notable changes to GEO AI are documented in this file.
 
 Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [0.2.2] — 2026-03-11
+
+Contact page and 404 spacing polish.
+
+### Added
+
+- `app/contact/page.tsx` — `/contact` page
+
+### Changed
+
+- `components/navbar.tsx` — GitHub removed from desktop and mobile nav; Contact page added
+- `components/footer.tsx` — GitHub removed from footer links; Contact added
+- `components/docs/mobile-nav.tsx` — docs drawer fixed on mobile: `z-index` raised to `z-60`, drawer now starts at `top-[57px]` (below navbar) instead of `top-0`, padding restored; navigation items were previously hidden behind the navbar
+
+---
+
 ## [0.2.1] — 2026-03-11
 
 GEO Specification as a top-level product pillar: standalone overview page, full docs section.

@@ -15,7 +15,7 @@ const NAV_LINKS_CONFIG = [
   { key: "analyzer", href: "/analyze", external: false },
   { key: "documentation", href: "/docs", external: false },
   { key: "specification", href: "/specification", external: false },
-  { key: "github", href: "https://github.com/madeburo/GEO-AI", external: true },
+  { key: "contact", href: "/contact", external: false },
 ];
 
 function ThemeToggle() {
@@ -266,7 +266,7 @@ export function Navbar() {
 
   const navLinks = NAV_LINKS_CONFIG.map((link) => ({
     ...link,
-    label: t(link.key as "analyzer" | "github" | "documentation" | "specification"),
+    label: t(link.key as "analyzer" | "github" | "documentation" | "specification" | "contact"),
   }));
 
   return (

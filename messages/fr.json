@@ -4,6 +4,7 @@
     "github": "GitHub",
     "documentation": "Documentation",
     "specification": "Spécification",
+    "contact": "Contact",
     "skipToContent": "Aller au contenu",
     "openMenu": "Ouvrir le menu",
     "closeMenu": "Fermer le menu",
@@ -96,6 +97,37 @@
   "footer": {
     "tagline": "Optimisation pour la recherche IA",
     "copyright": "© 2026 GEO AI · Open Source · Licence GPL-2.0"
+  },
+  "contactPage": {
+    "badge": "Nous contacter",
+    "title": "Contact",
+    "description": "Questions, partenariats, collaboration open-source ou idées pour l'écosystème — contactez-nous.",
+    "blocks": [
+      {
+        "title": "Questions générales",
+        "description": "Tout sur GEO AI — comment ça marche et où ça va.",
+        "action": "Nous écrire"
+      },
+      {
+        "title": "Contributions open-source",
+        "description": "Bugs, PR, idées de fonctionnalités — tout est bienvenu sur GitHub.",
+        "action": "Ouvrir GitHub"
+      },
+      {
+        "title": "Partenariats & intégrations",
+        "description": "Vous construisez sur GEO AI ou souhaitez l'intégrer à votre plateforme.",
+        "action": "Discuter d'une intégration"
+      },
+      {
+        "title": "Idées pour l'écosystème",
+        "description": "Nouveaux packages, support de plateformes ou initiatives communautaires.",
+        "action": "Proposer une idée"
+      }
+    ],
+    "directLinks": "Liens directs",
+    "openGithub": "Ouvrir GitHub",
+    "emailUs": "Nous écrire",
+    "viewDocs": "Documentation"
   },
   "analyze": {
     "title": "Analyseur de visibilité IA",
@@ -226,6 +258,10 @@
     "analyze": {
       "title": "Analyseur de recherche IA — GEO AI",
       "description": "Vérifiez la visibilité de votre site web auprès des moteurs de recherche IA comme ChatGPT, Claude, Gemini et Perplexity."
+    },
+    "contact": {
+      "title": "Contact — GEO AI",
+      "description": "Questions, partenariats, collaboration open-source ou idées pour l'écosystème — contactez-nous."
     }
   }
 }

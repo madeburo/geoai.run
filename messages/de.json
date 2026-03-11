@@ -4,6 +4,7 @@
     "github": "GitHub",
     "documentation": "Dokumentation",
     "specification": "Spezifikation",
+    "contact": "Kontakt",
     "skipToContent": "Zum Inhalt springen",
     "openMenu": "Menü öffnen",
     "closeMenu": "Menü schließen",
@@ -96,6 +97,37 @@
   "footer": {
     "tagline": "KI-Suchoptimierung",
     "copyright": "© 2026 GEO AI · Open Source · GPL-2.0-Lizenz"
+  },
+  "contactPage": {
+    "badge": "Kontakt aufnehmen",
+    "title": "Kontakt",
+    "description": "Fragen, Partnerschaften, Open-Source-Zusammenarbeit oder Ökosystem-Ideen — meld dich.",
+    "blocks": [
+      {
+        "title": "Allgemeine Fragen",
+        "description": "Alles über GEO AI — wie es funktioniert und wohin es geht.",
+        "action": "E-Mail schreiben"
+      },
+      {
+        "title": "Open-Source-Beiträge",
+        "description": "Bugs, PRs, Feature-Ideen — alles willkommen auf GitHub.",
+        "action": "GitHub öffnen"
+      },
+      {
+        "title": "Partnerschaften & Integrationen",
+        "description": "Du baust auf GEO AI auf oder möchtest es in deine Plattform integrieren.",
+        "action": "Integration besprechen"
+      },
+      {
+        "title": "Ökosystem-Ideen",
+        "description": "Neue Pakete, Plattform-Support oder Community-Initiativen.",
+        "action": "Idee vorschlagen"
+      }
+    ],
+    "directLinks": "Direkte Links",
+    "openGithub": "GitHub öffnen",
+    "emailUs": "E-Mail schreiben",
+    "viewDocs": "Dokumentation"
   },
   "analyze": {
     "title": "KI-Sichtbarkeits-Analyzer",
@@ -226,6 +258,10 @@
     "analyze": {
       "title": "KI-Sichtbarkeits-Analyzer — GEO AI",
       "description": "Prüfen Sie die Sichtbarkeit Ihrer Website für ChatGPT, Claude, Gemini und Perplexity."
+    },
+    "contact": {
+      "title": "Kontakt — GEO AI",
+      "description": "Fragen, Partnerschaften, Open-Source-Zusammenarbeit oder Ökosystem-Ideen — meld dich."
     }
   }
 }

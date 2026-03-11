@@ -4,6 +4,7 @@
     "github": "GitHub",
     "documentation": "文档",
     "specification": "规范",
+    "contact": "联系我们",
     "skipToContent": "跳转到内容",
     "openMenu": "打开菜单",
     "closeMenu": "关闭菜单",
@@ -96,6 +97,37 @@
   "footer": {
     "tagline": "AI搜索优化",
     "copyright": "© 2026 GEO AI · 开源 · GPL-2.0许可证"
+  },
+  "contactPage": {
+    "badge": "联系我们",
+    "title": "联系",
+    "description": "问题、合作、开源协作或生态系统想法 — 随时联系我们。",
+    "blocks": [
+      {
+        "title": "一般问题",
+        "description": "关于GEO AI的一切 — 工作原理和发展方向。",
+        "action": "发送邮件"
+      },
+      {
+        "title": "开源贡献",
+        "description": "Bug报告、PR、功能想法 — GitHub上欢迎一切。",
+        "action": "打开GitHub"
+      },
+      {
+        "title": "合作与集成",
+        "description": "基于GEO AI构建或希望与您的平台集成。",
+        "action": "讨论集成方案"
+      },
+      {
+        "title": "生态系统想法",
+        "description": "新包、平台支持或社区活动。",
+        "action": "提出想法"
+      }
+    ],
+    "directLinks": "直接链接",
+    "openGithub": "打开GitHub",
+    "emailUs": "发送邮件",
+    "viewDocs": "查看文档"
   },
   "analyze": {
     "title": "AI搜索分析器",
@@ -226,6 +258,10 @@
     "analyze": {
       "title": "AI搜索分析器 — GEO AI",
       "description": "检查您的网站在ChatGPT、Claude、Gemini和Perplexity等AI搜索引擎中的可见性。"
+    },
+    "contact": {
+      "title": "联系我们 — GEO AI",
+      "description": "问题、合作、开源协作或生态系统想法 — 随时联系我们。"
     }
   }
 }

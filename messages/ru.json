@@ -4,6 +4,7 @@
     "github": "GitHub",
     "documentation": "Документация",
     "specification": "Спецификация",
+    "contact": "Контакты",
     "skipToContent": "Перейти к содержимому",
     "openMenu": "Открыть меню",
     "closeMenu": "Закрыть меню",
@@ -96,6 +97,37 @@
   "footer": {
     "tagline": "Оптимизация под AI-поиск",
     "copyright": "© 2026 GEO AI · Open Source · GPL-2.0"
+  },
+  "contactPage": {
+    "badge": "Связаться",
+    "title": "Контакты",
+    "description": "Вопросы, партнёрство, open-source сотрудничество или идеи для экосистемы — напишите нам.",
+    "blocks": [
+      {
+        "title": "Общие вопросы",
+        "description": "Всё о GEO AI — как работает, куда движется.",
+        "action": "Написать нам"
+      },
+      {
+        "title": "Open-source вклад",
+        "description": "Баги, PR, идеи — всё приветствуется на GitHub.",
+        "action": "Открыть GitHub"
+      },
+      {
+        "title": "Партнёрство и интеграции",
+        "description": "Строите на основе GEO AI или хотите интегрировать с вашей платформой.",
+        "action": "Обсудить интеграцию"
+      },
+      {
+        "title": "Идеи для экосистемы",
+        "description": "Новые пакеты, поддержка платформ, инициативы сообщества.",
+        "action": "Предложить идею"
+      }
+    ],
+    "directLinks": "Прямые ссылки",
+    "openGithub": "Открыть GitHub",
+    "emailUs": "Написать нам",
+    "viewDocs": "Документация"
   },
   "analyze": {
     "title": "Анализатор AI-видимости",
@@ -226,6 +258,10 @@
     "analyze": {
       "title": "Анализатор AI-видимости — GEO AI",
       "description": "Проверьте видимость вашего сайта для ChatGPT, Claude, Gemini и Perplexity."
+    },
+    "contact": {
+      "title": "Контакты — GEO AI",
+      "description": "Вопросы, партнёрство, open-source сотрудничество или идеи для экосистемы — напишите нам."
     }
   }
 }

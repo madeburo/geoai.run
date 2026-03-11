@@ -22,7 +22,7 @@ export function MobileDocNav() {
       {/* Backdrop */}
       {open && (
         <div
-          className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm lg:hidden"
+          className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm lg:hidden"
           onClick={() => setOpen(false)}
         />
       )}
@@ -30,7 +30,7 @@ export function MobileDocNav() {
       {/* Drawer */}
       <div
         className={cn(
-          "fixed inset-y-0 left-0 z-50 w-72 overflow-y-auto bg-background border-r border-border/60 p-6 transition-transform duration-300 lg:hidden",
+          "fixed top-[57px] bottom-0 left-0 z-60 w-72 overflow-y-auto bg-background border-r border-border/60 p-6 transition-transform duration-300 lg:hidden",
           open ? "translate-x-0" : "-translate-x-full"
         )}
       >

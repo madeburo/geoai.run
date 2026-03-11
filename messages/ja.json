@@ -4,6 +4,7 @@
     "github": "GitHub",
     "documentation": "ドキュメント",
     "specification": "仕様",
+    "contact": "お問い合わせ",
     "skipToContent": "コンテンツへスキップ",
     "openMenu": "メニューを開く",
     "closeMenu": "メニューを閉じる",
@@ -96,6 +97,37 @@
   "footer": {
     "tagline": "AI検索最適化",
     "copyright": "© 2026 GEO AI · オープンソース · GPL-2.0ライセンス"
+  },
+  "contactPage": {
+    "badge": "お問い合わせ",
+    "title": "コンタクト",
+    "description": "ご質問、パートナーシップ、オープンソース協力、エコシステムのアイデアなど、お気軽にご連絡ください。",
+    "blocks": [
+      {
+        "title": "一般的なご質問",
+        "description": "GEO AIについて、仕組みや今後の方向性など何でもどうぞ。",
+        "action": "メールを送る"
+      },
+      {
+        "title": "オープンソースへの貢献",
+        "description": "バグ報告、PR、機能アイデア — GitHubで歓迎します。",
+        "action": "GitHubを開く"
+      },
+      {
+        "title": "パートナーシップ・統合",
+        "description": "GEO AIを基盤に構築したい、またはプラットフォームに統合したい方へ。",
+        "action": "統合について相談する"
+      },
+      {
+        "title": "エコシステムのアイデア",
+        "description": "新しいパッケージ、プラットフォームサポート、コミュニティ活動など。",
+        "action": "アイデアを提案する"
+      }
+    ],
+    "directLinks": "直接リンク",
+    "openGithub": "GitHubを開く",
+    "emailUs": "メールを送る",
+    "viewDocs": "ドキュメント"
   },
   "analyze": {
     "title": "AI検索アナライザー",
@@ -226,6 +258,10 @@
     "analyze": {
       "title": "AI検索アナライザー — GEO AI",
       "description": "ChatGPT、Claude、Gemini、PerplexityなどのAI検索エンジンに対するサイトの可視性を確認します。"
+    },
+    "contact": {
+      "title": "コンタクト — GEO AI",
+      "description": "ご質問、パートナーシップ、オープンソース協力、エコシステムのアイデアなど、お気軽にご連絡ください。"
     }
   }
 }
