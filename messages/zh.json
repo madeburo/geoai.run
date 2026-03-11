@@ -1,6 +1,7 @@
 {
   "nav": {
     "analyzer": "分析器",
+    "cli": "CLI",
     "github": "GitHub",
     "documentation": "文档",
     "specification": "规范",
@@ -87,6 +88,10 @@
       "shopify": {
         "title": "GEO AI Shopify",
         "description": "用于AI可见性的Shopify应用"
+      },
+      "cli": {
+        "title": "GEO AI CLI",
+        "description": "适用于任何Node.js项目的命令行工具"
       }
     }
   },
@@ -249,6 +254,51 @@
       "fullSpec": "完整规范",
       "choosePackage": "选择软件包"
     }
+  },
+  "cliPage": {
+    "badge": "GEO AI CLI",
+    "title": "从命令行生成GEO输出",
+    "description": "为任何Node.js项目生成llms.txt和llms-full.txt — 框架无关、构建时生成、零运行时开销。",
+    "subDescription": "适合不想使用框架集成的开发者。支持Express、Fastify、Remix、静态站点生成器或任何自定义构建流程。",
+    "readDocs": "阅读CLI文档",
+    "viewOnGithub": "在GitHub上查看",
+    "installTitle": "开始",
+    "installHeading": "几秒内安装并运行",
+    "quickstartComment1": "# 创建geo-ai.config.ts",
+    "quickstartComment2": "# 将llms.txt + llms-full.txt写入./public",
+    "quickstartComment3": "# 验证输出",
+    "commandsTitle": "命令",
+    "commandsHeading": "四个命令，完整覆盖",
+    "capabilities": [
+      { "title": "geo-ai init", "description": "创建一个带类型的geo-ai.config.ts启动文件。安全运行 — 如果配置已存在则不会覆盖。" },
+      { "title": "geo-ai generate", "description": "读取您的配置并将llms.txt和llms-full.txt写入./public（或自定义--out路径）。" },
+      { "title": "geo-ai validate", "description": "检查llms.txt和llms-full.txt是否存在且内容有效。支持本地文件或通过--url的远程URL。" },
+      { "title": "geo-ai inspect", "description": "预览您的配置：站点信息、爬虫规则、资源部分及项目数量。可选择获取远程llms文件。" }
+    ],
+    "configTitle": "配置",
+    "configHeading": "一个配置文件",
+    "configDescription": "CLI从项目根目录读取geo-ai.config.ts。搜索顺序：.ts → .js → .json。必填字段：siteName、siteUrl、provider。",
+    "whyTitle": "为什么选择CLI",
+    "whyHeading": "框架无关，构建时生成",
+    "whyItems": [
+      { "title": "任何Node.js项目", "body": "支持Express、Fastify、Hono、Remix或任何静态站点生成器 — 不仅限于Next.js。" },
+      { "title": "构建时输出", "body": "在部署前生成llms.txt。静态文件直接提供，无运行时开销。" },
+      { "title": "CI/CD友好", "body": "验证失败时退出码为1。将geo-ai validate加入任何流水线以捕获回归。" }
+    ],
+    "ecosystemTitle": "生态系统",
+    "ecosystemHeading": "GEO AI的一部分",
+    "ecosystemDescription": "CLI由geo-ai-core驱动，生成符合规范的输出 — 与分析器检查的文件相同。",
+    "ecosystemLinks": [
+      { "label": "GEO AI Core", "description": "驱动CLI的TypeScript引擎" },
+      { "label": "GEO AI Next", "description": "支持静态生成的Next.js集成" },
+      { "label": "分析器", "description": "检查您网站的AI可见性评分" },
+      { "label": "GEO Specification", "description": "CLI实现的标准" }
+    ],
+    "ctaTitle": "文档",
+    "ctaHeading": "所需的一切都已记录在案",
+    "ctaItems": ["带标志的四个命令", "配置文件参考", "验证退出码", "调试模式", "要求"],
+    "cliDocs": "CLI文档",
+    "exploreDocs": "浏览所有文档"
   },
   "metadata": {
     "home": {

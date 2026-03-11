@@ -103,8 +103,8 @@ export const DOC_PAGES: Record<string, DocPage> = {
     content: "analyzer/recommendations",
   },
   "integrations/cli": {
-    title: "CLI",
-    description: "The geo-ai-generate command-line tool.",
+    title: "GEO AI CLI",
+    description: "Generate and validate llms.txt / llms-full.txt from the command line. Works with any Node.js project.",
     content: "integrations/cli",
   },
   "integrations/nestjs": {

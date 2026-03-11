@@ -1,6 +1,7 @@
 {
   "nav": {
     "analyzer": "분석기",
+    "cli": "CLI",
     "github": "GitHub",
     "documentation": "문서",
     "specification": "사양",
@@ -87,6 +88,10 @@
       "shopify": {
         "title": "GEO AI Shopify",
         "description": "AI 가시성을 위한 Shopify 앱"
+      },
+      "cli": {
+        "title": "GEO AI CLI",
+        "description": "모든 Node.js 프로젝트를 위한 커맨드라인 도구"
       }
     }
   },
@@ -249,6 +254,51 @@
       "fullSpec": "전체 사양",
       "choosePackage": "패키지 선택"
     }
+  },
+  "cliPage": {
+    "badge": "GEO AI CLI",
+    "title": "커맨드라인에서 GEO 출력 생성",
+    "description": "모든 Node.js 프로젝트를 위한 llms.txt와 llms-full.txt 생성 — 프레임워크 독립적, 빌드 타임, 런타임 오버헤드 없음.",
+    "subDescription": "프레임워크 통합 없이 GEO AI 출력을 원하는 개발자를 위한 도구. Express, Fastify, Remix, 정적 사이트 생성기 또는 커스텀 빌드 파이프라인과 함께 동작합니다.",
+    "readDocs": "CLI 문서 읽기",
+    "viewOnGithub": "GitHub에서 보기",
+    "installTitle": "시작하기",
+    "installHeading": "몇 초 만에 설치하고 실행",
+    "quickstartComment1": "# geo-ai.config.ts 생성",
+    "quickstartComment2": "# llms.txt + llms-full.txt를 ./public에 작성",
+    "quickstartComment3": "# 출력 검증",
+    "commandsTitle": "명령어",
+    "commandsHeading": "네 가지 명령어, 완전한 커버리지",
+    "capabilities": [
+      { "title": "geo-ai init", "description": "타입이 지정된 geo-ai.config.ts 스타터 파일을 생성합니다. 기존 설정이 있으면 덮어쓰지 않아 안전하게 실행할 수 있습니다." },
+      { "title": "geo-ai generate", "description": "설정을 읽고 llms.txt와 llms-full.txt를 ./public(또는 커스텀 --out 경로)에 작성합니다." },
+      { "title": "geo-ai validate", "description": "llms.txt와 llms-full.txt가 존재하고 유효한 콘텐츠를 가지는지 확인합니다. 로컬 파일 또는 --url을 통한 원격 URL에서 동작합니다." },
+      { "title": "geo-ai inspect", "description": "설정 미리보기: 사이트 정보, 크롤러 규칙, 리소스 섹션. 선택적으로 원격 llms 파일을 가져옵니다." }
+    ],
+    "configTitle": "설정",
+    "configHeading": "하나의 설정 파일",
+    "configDescription": "CLI는 프로젝트 루트에서 geo-ai.config.ts를 읽습니다. 검색 순서: .ts → .js → .json. 필수 필드: siteName, siteUrl, provider.",
+    "whyTitle": "CLI를 사용하는 이유",
+    "whyHeading": "프레임워크 독립적, 빌드 타임 생성",
+    "whyItems": [
+      { "title": "모든 Node.js 프로젝트", "body": "Express, Fastify, Hono, Remix 또는 정적 사이트 생성기와 함께 동작 — Next.js만이 아닙니다." },
+      { "title": "빌드 타임 출력", "body": "배포 전에 llms.txt를 생성합니다. 정적 파일은 런타임 오버헤드 없이 직접 제공됩니다." },
+      { "title": "CI/CD 친화적", "body": "검증 실패 시 exit code 1. geo-ai validate를 파이프라인에 추가하여 회귀를 감지하세요." }
+    ],
+    "ecosystemTitle": "에코시스템",
+    "ecosystemHeading": "GEO AI의 일부",
+    "ecosystemDescription": "CLI는 geo-ai-core로 구동되며 사양 준수 출력을 생성합니다 — 분석기가 확인하는 것과 동일한 파일입니다.",
+    "ecosystemLinks": [
+      { "label": "GEO AI Core", "description": "CLI를 구동하는 TypeScript 엔진" },
+      { "label": "GEO AI Next", "description": "정적 생성을 지원하는 Next.js 통합" },
+      { "label": "분석기", "description": "사이트의 AI 가시성 점수 확인" },
+      { "label": "GEO Specification", "description": "CLI가 구현하는 표준" }
+    ],
+    "ctaTitle": "문서",
+    "ctaHeading": "필요한 모든 것이 문서화되어 있습니다",
+    "ctaItems": ["플래그가 있는 네 가지 명령어", "설정 파일 참조", "검증 종료 코드", "디버그 모드", "요구 사항"],
+    "cliDocs": "CLI 문서",
+    "exploreDocs": "모든 문서 탐색"
   },
   "metadata": {
     "home": {

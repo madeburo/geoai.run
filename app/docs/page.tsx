@@ -33,10 +33,10 @@ const startCards = [
     href: "/docs/analyzer",
   },
   {
-    icon: Package,
-    title: "Choose a Package",
-    description: "Pick the right integration for your stack.",
-    href: "/docs/getting-started/choose",
+    icon: Terminal,
+    title: "CLI",
+    description: "Generate and validate llms.txt from the command line.",
+    href: "/docs/integrations/cli",
   },
 ];
 
@@ -78,6 +78,7 @@ const packageCards = [
 const pathCards = [
   { label: "I want to analyze a site", href: "/docs/analyzer" },
   { label: "I want to generate GEO files", href: "/docs/getting-started" },
+  { label: "I use the CLI", href: "/docs/integrations/cli" },
   { label: "I use Next.js", href: "/docs/packages/next" },
   { label: "I use WordPress / WooCommerce", href: "/docs/packages/woo" },
   { label: "I use Shopify", href: "/docs/packages/shopify" },
@@ -205,9 +206,8 @@ export default function DocsHomePage() {
         <h2 className="mb-4 text-xs font-semibold uppercase tracking-widest text-muted-foreground/50">
           Coming next
         </h2>
-        <div className="grid gap-2 sm:grid-cols-3">
+        <div className="grid gap-2 sm:grid-cols-2">
           {[
-            { icon: Terminal, label: "CLI", href: "/docs/integrations/cli" },
             { icon: Layers, label: "NestJS", href: "/docs/integrations/nestjs" },
             { icon: Globe, label: "Laravel", href: "/docs/integrations/laravel" },
           ].map((item) => {

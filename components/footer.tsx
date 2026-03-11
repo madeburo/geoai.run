@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 
 const NAV_LINKS_CONFIG = [
   { key: "analyzer", href: "/analyze", external: false },
+  { key: "cli", href: "/cli", external: false },
   { key: "documentation", href: "/docs", external: false },
   { key: "specification", href: "/specification", external: false },
   { key: "contact", href: "/contact", external: false },
@@ -33,7 +34,7 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className="text-xs text-muted-foreground/80 transition-colors hover:text-foreground sm:text-sm"
               >
-                {tNav(link.key as "analyzer" | "github" | "documentation" | "specification" | "contact")}
+                {tNav(link.key as "analyzer" | "cli" | "github" | "documentation" | "specification" | "contact")}
               </a>
             ) : (
               <Link
@@ -41,7 +42,7 @@ export function Footer() {
                 href={link.href}
                 className="text-xs text-muted-foreground/80 transition-colors hover:text-foreground sm:text-sm"
               >
-                {tNav(link.key as "analyzer" | "github" | "documentation" | "specification" | "contact")}
+                {tNav(link.key as "analyzer" | "cli" | "github" | "documentation" | "specification" | "contact")}
               </Link>
             )
           )}

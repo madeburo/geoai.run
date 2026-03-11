@@ -49,9 +49,14 @@ export const docsNavigation: DocNavSection[] = [
     ],
   },
   {
+    title: "CLI",
+    items: [
+      { title: "GEO AI CLI", href: "/docs/integrations/cli" },
+    ],
+  },
+  {
     title: "Integrations",
     items: [
-      { title: "CLI", href: "/docs/integrations/cli" },
       { title: "NestJS", href: "/docs/integrations/nestjs", badge: "soon" },
       { title: "Laravel", href: "/docs/integrations/laravel", badge: "soon" },
     ],

@@ -1,6 +1,7 @@
 {
   "nav": {
     "analyzer": "アナライザー",
+    "cli": "CLI",
     "github": "GitHub",
     "documentation": "ドキュメント",
     "specification": "仕様",
@@ -87,6 +88,10 @@
       "shopify": {
         "title": "GEO AI Shopify",
         "description": "AI可視化のためのShopifyアプリ"
+      },
+      "cli": {
+        "title": "GEO AI CLI",
+        "description": "あらゆるNode.jsプロジェクト向けCLIツール"
       }
     }
   },
@@ -249,6 +254,51 @@
       "fullSpec": "完全な仕様",
       "choosePackage": "パッケージを選択"
     }
+  },
+  "cliPage": {
+    "badge": "GEO AI CLI",
+    "title": "コマンドラインからGEO出力を生成",
+    "description": "あらゆるNode.jsプロジェクト向けにllms.txtとllms-full.txtを生成 — フレームワーク非依存、ビルド時生成、ランタイムオーバーヘッドなし。",
+    "subDescription": "フレームワーク統合なしでGEO AI出力を使いたい開発者向け。Express、Fastify、Remix、静的サイトジェネレーター、カスタムビルドパイプラインで動作します。",
+    "readDocs": "CLIドキュメントを読む",
+    "viewOnGithub": "GitHubで見る",
+    "installTitle": "始める",
+    "installHeading": "数秒でインストールして実行",
+    "quickstartComment1": "# geo-ai.config.tsを作成",
+    "quickstartComment2": "# llms.txt + llms-full.txtを./publicに書き出す",
+    "quickstartComment3": "# 出力を検証",
+    "commandsTitle": "コマンド",
+    "commandsHeading": "4つのコマンドで完全カバー",
+    "capabilities": [
+      { "title": "geo-ai init", "description": "型付きgeo-ai.config.tsスターターファイルを作成します。既存の設定があっても上書きしないため安全に実行できます。" },
+      { "title": "geo-ai generate", "description": "設定を読み込み、llms.txtとllms-full.txtを./public（またはカスタム--outパス）に書き出します。" },
+      { "title": "geo-ai validate", "description": "llms.txtとllms-full.txtが存在し有効なコンテンツを持つか確認します。ローカルファイルまたは--url経由のリモートURLで動作します。" },
+      { "title": "geo-ai inspect", "description": "設定をプレビュー：サイト情報、クローラールール、リソースセクション。オプションでリモートllmsファイルを取得します。" }
+    ],
+    "configTitle": "設定",
+    "configHeading": "1つの設定ファイル",
+    "configDescription": "CLIはプロジェクトルートからgeo-ai.config.tsを読み込みます。検索順序：.ts → .js → .json。必須フィールド：siteName、siteUrl、provider。",
+    "whyTitle": "CLIを使う理由",
+    "whyHeading": "フレームワーク非依存、ビルド時生成",
+    "whyItems": [
+      { "title": "あらゆるNode.jsプロジェクト", "body": "Express、Fastify、Hono、Remix、静的サイトジェネレーターで動作 — Next.jsだけではありません。" },
+      { "title": "ビルド時出力", "body": "デプロイ前にllms.txtを生成。静的ファイルはランタイムオーバーヘッドなしで直接配信されます。" },
+      { "title": "CI/CDフレンドリー", "body": "検証失敗時にexit code 1。geo-ai validateをパイプラインに追加してリグレッションを検出。" }
+    ],
+    "ecosystemTitle": "エコシステム",
+    "ecosystemHeading": "GEO AIの一部",
+    "ecosystemDescription": "CLIはgeo-ai-coreで動作し、仕様準拠の出力を生成します — アナライザーが確認するのと同じファイルです。",
+    "ecosystemLinks": [
+      { "label": "GEO AI Core", "description": "CLIを動かすTypeScriptエンジン" },
+      { "label": "GEO AI Next", "description": "静的生成対応のNext.js統合" },
+      { "label": "アナライザー", "description": "サイトのAI可視性スコアを確認" },
+      { "label": "GEO Specification", "description": "CLIが実装する標準" }
+    ],
+    "ctaTitle": "ドキュメント",
+    "ctaHeading": "必要なものはすべてドキュメント化されています",
+    "ctaItems": ["フラグ付き4つのコマンド", "設定ファイルリファレンス", "検証終了コード", "デバッグモード", "要件"],
+    "cliDocs": "CLIドキュメント",
+    "exploreDocs": "すべてのドキュメントを見る"
   },
   "metadata": {
     "home": {

@@ -1,6 +1,7 @@
 {
   "nav": {
     "analyzer": "Analyzer",
+    "cli": "CLI",
     "github": "GitHub",
     "documentation": "Documentation",
     "specification": "Specification",
@@ -87,6 +88,10 @@
       "shopify": {
         "title": "GEO AI Shopify",
         "description": "Shopify app for AI visibility"
+      },
+      "cli": {
+        "title": "GEO AI CLI",
+        "description": "Command-line tool for any Node.js project"
       }
     }
   },
@@ -291,6 +296,51 @@
       "fullSpec": "Full specification",
       "choosePackage": "Choose a package"
     }
+  },
+  "cliPage": {
+    "badge": "GEO AI CLI",
+    "title": "GEO outputs from the command line",
+    "description": "Generate llms.txt and llms-full.txt for any Node.js project — framework-agnostic, build-time, zero runtime overhead.",
+    "subDescription": "For developers who want GEO AI outputs without a framework integration. Works with Express, Fastify, Remix, static site generators, or any custom build pipeline.",
+    "readDocs": "Read CLI docs",
+    "viewOnGithub": "View on GitHub",
+    "installTitle": "Get started",
+    "installHeading": "Install and run in seconds",
+    "quickstartComment1": "# Scaffold geo-ai.config.ts",
+    "quickstartComment2": "# Write llms.txt + llms-full.txt to ./public",
+    "quickstartComment3": "# Verify the output",
+    "commandsTitle": "Commands",
+    "commandsHeading": "Four commands, full coverage",
+    "capabilities": [
+      { "title": "geo-ai init", "description": "Scaffolds a typed geo-ai.config.ts starter file. Safe to run — exits without overwriting if a config already exists." },
+      { "title": "geo-ai generate", "description": "Reads your config and writes llms.txt and llms-full.txt to ./public (or a custom --out path). Supports --config flag for custom paths." },
+      { "title": "geo-ai validate", "description": "Checks that llms.txt and llms-full.txt are present and have valid content. Works on local files or remote URLs via --url." },
+      { "title": "geo-ai inspect", "description": "Previews your config: site info, crawler rules, resource sections with item counts. Optionally fetches remote llms files." }
+    ],
+    "configTitle": "Configuration",
+    "configHeading": "One config file",
+    "configDescription": "The CLI reads geo-ai.config.ts from your project root. Config discovery order: .ts → .js → .json. Required fields: siteName, siteUrl, provider.",
+    "whyTitle": "Why CLI",
+    "whyHeading": "Framework-agnostic, build-time generation",
+    "whyItems": [
+      { "title": "Any Node.js project", "body": "Works with Express, Fastify, Hono, Remix, or any static site generator — not just Next.js." },
+      { "title": "Build-time output", "body": "Generate llms.txt before deployment. Static files are served directly with no runtime overhead." },
+      { "title": "CI/CD friendly", "body": "Exit code 1 on validation failure. Drop geo-ai validate into any pipeline to catch regressions." }
+    ],
+    "ecosystemTitle": "Ecosystem",
+    "ecosystemHeading": "Part of GEO AI",
+    "ecosystemDescription": "The CLI is powered by geo-ai-core and generates spec-compliant output — the same files the Analyzer checks and the Specification defines.",
+    "ecosystemLinks": [
+      { "label": "GEO AI Core", "description": "The TypeScript engine powering the CLI" },
+      { "label": "GEO AI Next", "description": "Next.js integration with static generation" },
+      { "label": "Analyzer", "description": "Check your site's AI visibility score" },
+      { "label": "GEO Specification", "description": "The standard the CLI implements" }
+    ],
+    "ctaTitle": "Documentation",
+    "ctaHeading": "Everything you need is documented",
+    "ctaItems": ["All four commands with flags", "Config file reference", "Validation exit codes", "Debug mode", "Requirements"],
+    "cliDocs": "CLI documentation",
+    "exploreDocs": "Explore all docs"
   },
   "metadata": {
     "home": {

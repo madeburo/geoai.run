@@ -1,6 +1,7 @@
 {
   "nav": {
     "analyzer": "Analyseur",
+    "cli": "CLI",
     "github": "GitHub",
     "documentation": "Documentation",
     "specification": "Spécification",
@@ -87,6 +88,10 @@
       "shopify": {
         "title": "GEO AI Shopify",
         "description": "Application Shopify pour la visibilité IA"
+      },
+      "cli": {
+        "title": "GEO AI CLI",
+        "description": "Outil en ligne de commande pour tout projet Node.js"
       }
     }
   },
@@ -249,6 +254,51 @@
       "fullSpec": "Spécification complète",
       "choosePackage": "Choisir un package"
     }
+  },
+  "cliPage": {
+    "badge": "GEO AI CLI",
+    "title": "Sorties GEO depuis la ligne de commande",
+    "description": "Générez llms.txt et llms-full.txt pour n'importe quel projet Node.js — agnostique au framework, à la compilation, sans overhead en runtime.",
+    "subDescription": "Pour les développeurs qui veulent les sorties GEO AI sans intégration de framework. Fonctionne avec Express, Fastify, Remix, les générateurs de sites statiques ou tout pipeline de build.",
+    "readDocs": "Lire la doc CLI",
+    "viewOnGithub": "Voir sur GitHub",
+    "installTitle": "Commencer",
+    "installHeading": "Installez et lancez en quelques secondes",
+    "quickstartComment1": "# Créer geo-ai.config.ts",
+    "quickstartComment2": "# Écrire llms.txt + llms-full.txt dans ./public",
+    "quickstartComment3": "# Vérifier la sortie",
+    "commandsTitle": "Commandes",
+    "commandsHeading": "Quatre commandes, couverture complète",
+    "capabilities": [
+      { "title": "geo-ai init", "description": "Crée un fichier geo-ai.config.ts typé. Sûr à exécuter — ne remplace pas une configuration existante." },
+      { "title": "geo-ai generate", "description": "Lit votre configuration et écrit llms.txt et llms-full.txt dans ./public (ou un chemin --out personnalisé)." },
+      { "title": "geo-ai validate", "description": "Vérifie que llms.txt et llms-full.txt sont présents et ont un contenu valide. Fonctionne en local ou via --url." },
+      { "title": "geo-ai inspect", "description": "Prévisualise votre configuration : infos du site, règles des crawlers, sections de ressources. Récupère optionnellement des fichiers llms distants." }
+    ],
+    "configTitle": "Configuration",
+    "configHeading": "Un seul fichier de configuration",
+    "configDescription": "Le CLI lit geo-ai.config.ts depuis la racine du projet. Ordre de recherche : .ts → .js → .json. Champs requis : siteName, siteUrl, provider.",
+    "whyTitle": "Pourquoi le CLI",
+    "whyHeading": "Agnostique au framework, génération à la compilation",
+    "whyItems": [
+      { "title": "Tout projet Node.js", "body": "Fonctionne avec Express, Fastify, Hono, Remix ou tout générateur de sites statiques — pas seulement Next.js." },
+      { "title": "Sortie à la compilation", "body": "Générez llms.txt avant le déploiement. Les fichiers statiques sont servis directement sans overhead en runtime." },
+      { "title": "Compatible CI/CD", "body": "Exit code 1 en cas d'échec de validation. Ajoutez geo-ai validate dans n'importe quel pipeline." }
+    ],
+    "ecosystemTitle": "Écosystème",
+    "ecosystemHeading": "Partie de GEO AI",
+    "ecosystemDescription": "Le CLI est propulsé par geo-ai-core et génère des sorties conformes à la spécification — les mêmes fichiers que l'Analyseur vérifie.",
+    "ecosystemLinks": [
+      { "label": "GEO AI Core", "description": "Le moteur TypeScript qui propulse le CLI" },
+      { "label": "GEO AI Next", "description": "Intégration Next.js avec génération statique" },
+      { "label": "Analyseur", "description": "Vérifiez le score de visibilité IA de votre site" },
+      { "label": "GEO Specification", "description": "Le standard qu'implémente le CLI" }
+    ],
+    "ctaTitle": "Documentation",
+    "ctaHeading": "Tout ce dont vous avez besoin est documenté",
+    "ctaItems": ["Les quatre commandes avec leurs flags", "Référence du fichier de configuration", "Codes de sortie de validation", "Mode debug", "Prérequis"],
+    "cliDocs": "Documentation CLI",
+    "exploreDocs": "Explorer toute la doc"
   },
   "metadata": {
     "home": {

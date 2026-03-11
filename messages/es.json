@@ -1,6 +1,7 @@
 {
   "nav": {
     "analyzer": "Analizador",
+    "cli": "CLI",
     "github": "GitHub",
     "documentation": "Documentación",
     "specification": "Especificación",
@@ -87,6 +88,10 @@
       "shopify": {
         "title": "GEO AI Shopify",
         "description": "Aplicación Shopify para visibilidad IA"
+      },
+      "cli": {
+        "title": "GEO AI CLI",
+        "description": "Herramienta de línea de comandos para cualquier proyecto Node.js"
       }
     }
   },
@@ -249,6 +254,51 @@
       "fullSpec": "Especificación completa",
       "choosePackage": "Elegir paquete"
     }
+  },
+  "cliPage": {
+    "badge": "GEO AI CLI",
+    "title": "Salidas GEO desde la línea de comandos",
+    "description": "Genera llms.txt y llms-full.txt para cualquier proyecto Node.js — agnóstico al framework, en tiempo de build, sin overhead en runtime.",
+    "subDescription": "Para desarrolladores que quieren las salidas de GEO AI sin una integración de framework. Funciona con Express, Fastify, Remix, generadores de sitios estáticos o cualquier pipeline de build.",
+    "readDocs": "Leer docs del CLI",
+    "viewOnGithub": "Ver en GitHub",
+    "installTitle": "Comenzar",
+    "installHeading": "Instala y ejecuta en segundos",
+    "quickstartComment1": "# Crear geo-ai.config.ts",
+    "quickstartComment2": "# Escribir llms.txt + llms-full.txt en ./public",
+    "quickstartComment3": "# Verificar la salida",
+    "commandsTitle": "Comandos",
+    "commandsHeading": "Cuatro comandos, cobertura completa",
+    "capabilities": [
+      { "title": "geo-ai init", "description": "Crea un archivo geo-ai.config.ts tipado. Seguro de ejecutar — no sobreescribe si ya existe una configuración." },
+      { "title": "geo-ai generate", "description": "Lee tu configuración y escribe llms.txt y llms-full.txt en ./public (o una ruta --out personalizada)." },
+      { "title": "geo-ai validate", "description": "Verifica que llms.txt y llms-full.txt existan y tengan contenido válido. Funciona en local o con --url." },
+      { "title": "geo-ai inspect", "description": "Previsualiza tu configuración: info del sitio, reglas de rastreo, secciones de recursos. Opcionalmente obtiene archivos llms remotos." }
+    ],
+    "configTitle": "Configuración",
+    "configHeading": "Un archivo de configuración",
+    "configDescription": "El CLI lee geo-ai.config.ts desde la raíz del proyecto. Orden de búsqueda: .ts → .js → .json. Campos requeridos: siteName, siteUrl, provider.",
+    "whyTitle": "Por qué CLI",
+    "whyHeading": "Agnóstico al framework, generación en build-time",
+    "whyItems": [
+      { "title": "Cualquier proyecto Node.js", "body": "Funciona con Express, Fastify, Hono, Remix o cualquier generador de sitios estáticos — no solo Next.js." },
+      { "title": "Salida en build-time", "body": "Genera llms.txt antes del despliegue. Los archivos estáticos se sirven directamente sin overhead en runtime." },
+      { "title": "Compatible con CI/CD", "body": "Exit code 1 en fallo de validación. Añade geo-ai validate a cualquier pipeline." }
+    ],
+    "ecosystemTitle": "Ecosistema",
+    "ecosystemHeading": "Parte de GEO AI",
+    "ecosystemDescription": "El CLI está impulsado por geo-ai-core y genera salidas conformes a la especificación — los mismos archivos que verifica el Analizador.",
+    "ecosystemLinks": [
+      { "label": "GEO AI Core", "description": "El motor TypeScript que impulsa el CLI" },
+      { "label": "GEO AI Next", "description": "Integración Next.js con generación estática" },
+      { "label": "Analizador", "description": "Verifica la puntuación de visibilidad IA de tu sitio" },
+      { "label": "GEO Specification", "description": "El estándar que implementa el CLI" }
+    ],
+    "ctaTitle": "Documentación",
+    "ctaHeading": "Todo lo que necesitas está documentado",
+    "ctaItems": ["Los cuatro comandos con flags", "Referencia del archivo de configuración", "Códigos de salida de validación", "Modo debug", "Requisitos"],
+    "cliDocs": "Documentación del CLI",
+    "exploreDocs": "Explorar todos los docs"
   },
   "metadata": {
     "home": {

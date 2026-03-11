@@ -13,6 +13,7 @@ import { LOCALES, LOCALE_META } from "@/lib/locale-utils";
 
 const NAV_LINKS_CONFIG = [
   { key: "analyzer", href: "/analyze", external: false },
+  { key: "cli", href: "/cli", external: false },
   { key: "documentation", href: "/docs", external: false },
   { key: "specification", href: "/specification", external: false },
   { key: "contact", href: "/contact", external: false },
@@ -266,7 +267,7 @@ export function Navbar() {
 
   const navLinks = NAV_LINKS_CONFIG.map((link) => ({
     ...link,
-    label: t(link.key as "analyzer" | "github" | "documentation" | "specification" | "contact"),
+    label: t(link.key as "analyzer" | "cli" | "github" | "documentation" | "specification" | "contact"),
   }));
 
   return (

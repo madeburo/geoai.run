@@ -4,6 +4,23 @@ All notable changes to GEO AI are documented in this file.
 
 Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [0.2.3] — 2026-03-11
+
+Animated CLI terminal preview on `/cli` hero and page.
+
+### Added
+
+- `components/cli-terminal-preview.tsx` — animated terminal card: types each command letter-by-letter (`npx geo-ai init`, `npx geo-ai generate`, `npx geo-ai validate`), pauses, shows output lines (`✓ Created geo-ai.config.ts`, etc.), then loops; respects `useReducedMotion` (renders all lines statically when motion is reduced)
+- `components/cli-preview-section.tsx` — page section embedding the terminal preview with text and CTA; placed after the GEO Specification block on the homepage
+
+### Changed
+
+- `app/cli/page.tsx` — hero redesigned from single-column to two-column layout (text left, animated terminal right); all hardcoded strings replaced with `useTranslations("cliPage")`
+- `app/page.tsx` — `<CliPreviewSection />` inserted between `<Spec />` and `<Ecosystem />`
+- `messages/en.json` and all 8 locale files (de, es, fr, ja, ko, pt, ru, zh) — `cliPage` namespace added with full translations for the `/cli` page: hero, install section, four commands, config section, why-CLI cards, ecosystem links, and CTA
+
+---
+
 ## [0.2.2] — 2026-03-11
 
 Contact page and 404 spacing polish.
