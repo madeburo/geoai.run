@@ -496,29 +496,31 @@ export default function AnalyzePage() {
             <p className="mb-4 text-center text-xs text-muted-foreground/60">
               {t("generateDescription")}
             </p>
-            <div className="flex flex-col gap-2 sm:flex-row">
-              <a
-                href="/docs"
-                className="group flex h-9 flex-1 items-center justify-center gap-2 rounded-lg border border-glow/30 bg-glow/8 px-4 text-xs font-medium text-foreground/80 backdrop-blur-sm transition-all hover:border-glow/50 hover:bg-glow/15 hover:text-foreground dark:border-glow/20 dark:bg-glow/5 dark:text-white/70 dark:hover:text-white"
-              >
-                <BookOpen className="h-3.5 w-3.5 shrink-0 text-glow" />
-                {t("readDocs")}
-              </a>
-              <a
-                href="https://github.com/madeburo/GEO-AI"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex h-9 flex-1 items-center justify-center gap-2 rounded-lg border border-border/50 bg-surface/40 px-4 text-xs font-medium text-muted-foreground backdrop-blur-sm transition-all hover:border-border hover:bg-surface/80 hover:text-foreground dark:border-white/8 dark:bg-white/3 dark:hover:border-white/15 dark:hover:text-white"
-              >
-                <GithubIcon className="h-3.5 w-3.5 shrink-0" />
-                {t("viewOnGithub")}
-              </a>
+            <div className="flex flex-col gap-2">
+              <div className="flex gap-2">
+                <a
+                  href="/docs"
+                  className="group flex h-9 flex-1 items-center justify-center gap-2 rounded-lg border border-glow/30 bg-glow/8 px-4 text-xs font-medium text-foreground/80 backdrop-blur-sm transition-all hover:border-glow/50 hover:bg-glow/15 hover:text-foreground dark:border-glow/20 dark:bg-glow/5 dark:text-white/70 dark:hover:text-white"
+                >
+                  <BookOpen className="h-3.5 w-3.5 shrink-0 text-glow" />
+                  {t("readDocs")}
+                </a>
+                <a
+                  href="https://github.com/madeburo/GEO-AI"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex h-9 flex-1 items-center justify-center gap-2 rounded-lg border border-border/50 bg-surface/40 px-4 text-xs font-medium text-muted-foreground backdrop-blur-sm transition-all hover:border-border hover:bg-surface/80 hover:text-foreground dark:border-white/8 dark:bg-white/3 dark:hover:border-white/15 dark:hover:text-white"
+                >
+                  <GithubIcon className="h-3.5 w-3.5 shrink-0" />
+                  {t("viewOnGithub")}
+                </a>
+              </div>
               <button
                 onClick={handleCopy}
                 aria-label="Copy install command"
-                className="group flex h-9 flex-1 items-center justify-center gap-2 rounded-lg border border-border/50 bg-surface/40 px-4 font-mono text-xs text-muted-foreground backdrop-blur-sm transition-all hover:border-border hover:bg-surface/80 hover:text-foreground dark:border-white/8 dark:bg-white/3 dark:hover:border-white/15 dark:hover:text-white"
+                className="group flex h-9 w-full items-center justify-between gap-2 rounded-lg border border-border/50 bg-surface/40 px-4 font-mono text-xs text-muted-foreground backdrop-blur-sm transition-all hover:border-border hover:bg-surface/80 hover:text-foreground dark:border-white/8 dark:bg-white/3 dark:hover:border-white/15 dark:hover:text-white"
               >
-                <span className="truncate">npm install geo-ai-core</span>
+                <span>npm install geo-ai-core</span>
                 {copied ? (
                   <Check className="h-3 w-3 shrink-0 text-glow" />
                 ) : (

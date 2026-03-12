@@ -26,7 +26,7 @@ export function HowItWorks() {
           <div className="mx-auto mb-16 h-px w-12 bg-glow/40 sm:mb-20" />
         </ScrollReveal>
 
-        <div className="relative -mx-4 flex gap-4 overflow-x-auto scrollbar-hide px-4 pb-4 sm:-mx-6 sm:gap-6 sm:px-6 md:mx-0 md:grid md:grid-cols-2 md:gap-6 md:overflow-visible md:px-0 md:pb-0 lg:grid-cols-4 lg:gap-5">
+        <div className="relative -mx-4 flex gap-4 overflow-x-auto scrollbar-hide px-4 pb-4 sm:-mx-6 sm:gap-6 sm:px-6 md:mx-0 md:grid md:auto-rows-fr md:grid-cols-2 md:gap-6 md:overflow-visible md:px-0 md:pb-0 lg:grid-cols-4 lg:gap-5">
           {/* Connecting line */}
           <div
             className="pointer-events-none absolute top-[52px] right-8 left-8 hidden h-px lg:block"
@@ -36,8 +36,8 @@ export function HowItWorks() {
           </div>
 
           {STEP_KEYS.map((key, i) => (
-            <ScrollReveal key={key} delay={i * 0.1} className="w-[260px] shrink-0 md:w-auto md:shrink">
-              <div className="group relative flex flex-col items-center rounded-2xl border border-border/60 bg-card p-6 text-center shadow-sm transition-all hover:border-border hover:shadow-md dark:border-white/8 dark:bg-white/4 dark:hover:border-white/14 dark:hover:bg-white/6">
+            <ScrollReveal key={key} delay={i * 0.1} className="w-[260px] shrink-0 md:w-auto md:shrink md:h-full">
+              <div className="group relative flex h-full flex-col items-center rounded-2xl border border-border/60 bg-card p-6 text-center shadow-sm transition-all hover:border-border hover:shadow-md dark:border-white/8 dark:bg-white/4 dark:hover:border-white/14 dark:hover:bg-white/6">
                 {/* Step number */}
                 <span className="mb-4 text-[10px] font-semibold tracking-[0.2em] text-muted-foreground/60 uppercase">
                   {t("step", { number: i + 1 })}

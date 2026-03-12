@@ -1,36 +1,45 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import { Menu, X } from "lucide-react";
 import { DocSidebar } from "./doc-sidebar";
 import { cn } from "@/lib/utils";
 
 export function MobileDocNav() {
   const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
-  return (
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
+  const drawer = (
     <>
-      <button
-        onClick={() => setOpen(true)}
-        className="flex items-center gap-2 rounded-md border border-border/60 px-3 py-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground lg:hidden"
-        aria-label="Open navigation"
-      >
-        <Menu className="size-4" />
-        <span>Menu</span>
-      </button>
-
       {/* Backdrop */}
-      {open && (
-        <div
-          className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm lg:hidden"
-          onClick={() => setOpen(false)}
-        />
-      )}
+      <div
+        className={cn(
+          "fixed inset-0 z-50 bg-black/60 transition-opacity duration-300 lg:hidden",
+          open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        )}
+        onClick={() => setOpen(false)}
+      />
 
       {/* Drawer */}
       <div
         className={cn(
-          "fixed top-[57px] bottom-0 left-0 z-60 w-72 overflow-y-auto bg-background border-r border-border/60 p-6 transition-transform duration-300 lg:hidden",
+          "fixed top-0 bottom-0 left-0 z-60 w-72 overflow-y-auto bg-background border-r border-border/60 p-6 transition-transform duration-300 lg:hidden",
           open ? "translate-x-0" : "-translate-x-full"
         )}
       >
@@ -46,6 +55,21 @@ export function MobileDocNav() {
         </div>
         <DocSidebar onNavigate={() => setOpen(false)} />
       </div>
+    </>
+  );
+
+  return (
+    <>
+      <button
+        onClick={() => setOpen(true)}
+        className="flex items-center gap-2 rounded-md border border-border/60 px-3 py-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground lg:hidden"
+        aria-label="Open navigation"
+      >
+        <Menu className="size-4" />
+        <span>Menu</span>
+      </button>
+
+      {mounted && createPortal(drawer, document.body)}
     </>
   );
 }

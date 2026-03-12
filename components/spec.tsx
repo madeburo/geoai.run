@@ -32,10 +32,10 @@ export function Spec() {
           </div>
         </ScrollReveal>
 
-        <div className="-mx-4 flex gap-4 overflow-x-auto scrollbar-hide px-4 pb-4 sm:-mx-6 sm:gap-5 sm:px-6 md:mx-0 md:grid md:grid-cols-2 md:overflow-visible md:px-0 md:pb-0">
+        <div className="-mx-4 flex gap-4 overflow-x-auto scrollbar-hide px-4 pb-4 sm:-mx-6 sm:gap-5 sm:px-6 md:mx-0 md:grid md:auto-rows-fr md:grid-cols-2 md:overflow-visible md:px-0 md:pb-0">
           {SPEC_KEYS.map((key, i) => (
-            <ScrollReveal key={key} delay={i * 0.08} className="w-[280px] shrink-0 md:w-auto md:shrink">
-              <div className="group flex gap-4 rounded-xl border border-border/60 bg-card p-5 shadow-sm transition-all hover:border-border hover:shadow-md sm:p-6 dark:border-white/8 dark:bg-white/4 dark:hover:border-white/14 dark:hover:bg-white/6">
+            <ScrollReveal key={key} delay={i * 0.08} className="w-[280px] shrink-0 md:w-auto md:shrink md:h-full">
+              <div className="group flex h-full gap-4 rounded-xl border border-border/60 bg-card p-5 shadow-sm transition-all hover:border-border hover:shadow-md sm:p-6 dark:border-white/8 dark:bg-white/4 dark:hover:border-white/14 dark:hover:bg-white/6">
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-border/60 bg-background shadow-sm dark:border-white/10 dark:bg-white/6">
                   <span className="text-foreground/60 transition-colors group-hover:text-glow">{SPEC_ICONS[i]}</span>
                 </div>

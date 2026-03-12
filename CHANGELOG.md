@@ -4,6 +4,21 @@ All notable changes to GEO AI are documented in this file.
 
 Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [0.2.4] — 2026-03-12
+
+Mobile UI fixes
+
+### Fixed
+
+- `components/docs/mobile-nav.tsx` — docs drawer now renders via `createPortal` into `document.body`, bypassing the sticky nav bar's `backdrop-filter` stacking context that was clipping the drawer; drawer covers full screen height, backdrop and scroll-lock work correctly
+- `app/analyze/page.tsx` — secondary action buttons restructured: "Read docs" and "View on GitHub" in one row, `npm install geo-ai-core` as a full-width row below — prevents text wrapping and unequal button heights on mobile
+
+### Changed
+
+- `components/cli-preview-section.tsx` — section heading now uses `t("title")` from `cliPage` translations
+
+---
+
 ## [0.2.3] — 2026-03-11
 
 Animated CLI terminal preview on `/cli` hero and page.

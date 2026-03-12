@@ -2,10 +2,13 @@
 
 import Link from "next/link";
 import { Terminal, ArrowRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { CliTerminalPreview } from "@/components/cli-terminal-preview";
 
 export function CliPreviewSection() {
+  const t = useTranslations("cliPage");
+
   return (
     <section className="relative w-full px-4 py-16 sm:px-6 md:py-20 lg:py-24">
       <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 h-px w-2/3 max-w-xl glow-line opacity-20" />
@@ -25,7 +28,7 @@ export function CliPreviewSection() {
             </div>
 
             <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
-              GEO outputs from<br className="hidden sm:block" /> the command line
+              {t("title")}
             </h2>
 
             <p className="mb-8 text-sm leading-relaxed text-muted-foreground sm:text-base">
