@@ -7,6 +7,7 @@ import {
   Box, Layers, Globe, ShoppingBag,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { motion } from "framer-motion";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 
@@ -92,14 +93,18 @@ export default function SpecificationPage() {
         <section className="w-full px-4 py-10 sm:px-6 sm:py-12">
           <div className="mx-auto max-w-5xl">
             <div className="grid gap-4 sm:grid-cols-3">
-              {whyItems.map((item) => (
-                <div
+              {whyItems.map((item, i) => (
+                <motion.div
                   key={item.title}
-                  className="rounded-xl border border-border bg-card p-6 dark:border-white/12 dark:bg-white/5 sm:p-7"
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.35, delay: i * 0.08 }}
+                  className="group rounded-xl border border-border/60 bg-card p-6 transition-all hover:border-border hover:shadow-md dark:border-white/8 dark:bg-white/4 dark:hover:border-white/14 dark:hover:bg-white/6 sm:p-7"
                 >
                   <p className="mb-2.5 text-sm font-bold tracking-tight text-foreground">{item.title}</p>
                   <p className="text-xs leading-relaxed text-muted-foreground sm:text-sm">{item.body}</p>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -213,14 +218,18 @@ export default function SpecificationPage() {
                   </div>
                 </div>
                 <div className="flex flex-col justify-center gap-2">
-                  {SCORE_STATUSES.map(({ label, score, color }) => (
-                    <div
+                  {SCORE_STATUSES.map(({ label, score, color }, i) => (
+                    <motion.div
                       key={label}
-                      className="flex items-center justify-between rounded-lg border border-border/40 bg-background/60 px-4 py-2.5 dark:border-white/6 dark:bg-white/3"
+                      initial={{ opacity: 0, x: 16 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.3, delay: i * 0.07 }}
+                      className="group flex items-center justify-between rounded-lg border border-border/40 bg-background/60 px-4 py-2.5 transition-all hover:border-border hover:shadow-md dark:border-white/6 dark:bg-white/3 dark:hover:border-white/14 dark:hover:bg-white/6 cursor-default"
                     >
-                      <code className={`font-mono text-xs font-semibold ${color}`}>{label}</code>
-                      <span className="text-xs text-muted-foreground/60">{score} pts</span>
-                    </div>
+                      <code className={`font-mono text-xs font-semibold transition-colors ${color}`}>{label}</code>
+                      <span className="text-xs text-muted-foreground/60 transition-colors group-hover:text-muted-foreground">{score} pts</span>
+                    </motion.div>
                   ))}
                   <p className="mt-2 text-center text-xs text-muted-foreground/40">
                     {t("scoring.formula")}

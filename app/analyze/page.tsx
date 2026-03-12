@@ -150,13 +150,14 @@ export default function AnalyzePage() {
     }
   }, [t]);
 
-  // Auto-run if url param is present on mount
+  // Auto-run if url param is present on mount — paramUrl is stable (from searchParams)
   useEffect(() => {
     if (paramUrl && isValidUrl(paramUrl)) {
       runAnalysis(paramUrl);
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    // runAnalysis is stable (useCallback with [t]), paramUrl comes from URL on mount
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [paramUrl]);
 
   function handleCopy() {
     navigator.clipboard.writeText("npm install geo-ai-core");

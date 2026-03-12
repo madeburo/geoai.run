@@ -11,7 +11,12 @@ export default function Error({
   reset: () => void;
 }) {
   useEffect(() => {
-    console.error(error);
+    // Log digest only in production to avoid leaking stack traces
+    if (process.env.NODE_ENV === "development") {
+      console.error(error);
+    } else if (error.digest) {
+      console.error("Error digest:", error.digest);
+    }
   }, [error]);
 
   return (

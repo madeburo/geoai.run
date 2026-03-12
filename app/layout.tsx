@@ -112,7 +112,10 @@ export default async function RootLayout({
         <meta name="llms-full" content="https://www.geoai.run/llms-full.txt" />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{
+            // Escape </script> sequences to prevent XSS via JSON-LD injection
+            __html: JSON.stringify(jsonLd).replace(/<\/script>/gi, "<\\/script>"),
+          }}
         />
       </head>
       <body className="antialiased">

@@ -4,6 +4,23 @@ All notable changes to GEO AI are documented in this file.
 
 Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [0.2.5] — 2026-03-12
+
+Security hardening, bug fixes.
+
+### Security
+
+- `lib/analyzer/fetch-html.ts` — SSRF protection: blocks requests to private/internal IP ranges, IPv6 loopback and link-local, non-http(s) schemes, and post-redirect internal address resolution
+- `app/api/locale/route.ts` — `try/catch` around `request.json()` to handle malformed JSON bodies; strict runtime type check on `locale` field; `httpOnly: true` on locale cookie
+- `app/layout.tsx` — JSON-LD output escapes `</script>` sequences to prevent XSS injection via structured data
+- `next.config.ts` — added `Permissions-Policy` (camera, microphone, geolocation, interest-cohort disabled), `X-DNS-Prefetch-Control: on`, `form-action 'self'`, and `upgrade-insecure-requests` to CSP
+
+### Fixed
+
+- `app/analyze/page.tsx` — `useEffect` auto-run dependency corrected
+
+---
+
 ## [0.2.4] — 2026-03-12
 
 Mobile UI fixes

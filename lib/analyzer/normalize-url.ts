@@ -38,5 +38,20 @@ export function normalizeUrl(input: string): NormalizeResult {
   // Strip hash fragment
   parsed.hash = "";
 
+  // Block bare IP addresses — legitimate public sites use domain names.
+  // Private IP blocking is also enforced at fetch time, but rejecting here
+  // gives a cleaner error message to the user.
+  const isRawIp = /^(\d{1,3}\.){3}\d{1,3}$/.test(parsed.hostname) ||
+    parsed.hostname === "localhost" ||
+    parsed.hostname === "::1";
+  if (isRawIp) {
+    return { ok: false, error: "IP addresses are not supported — please enter a domain name" };
+  }
+
+  // Require at least one dot in the hostname (e.g. "example.com")
+  if (!parsed.hostname.includes(".")) {
+    return { ok: false, error: `Invalid hostname: "${parsed.hostname}"` };
+  }
+
   return { ok: true, url: parsed };
 }

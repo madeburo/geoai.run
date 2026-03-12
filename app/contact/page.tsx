@@ -1,7 +1,15 @@
 "use client";
 
 import Link from "next/link";
-import { Github, Twitter, Mail, ArrowRight, MessageSquare, GitPullRequest, Handshake, Lightbulb } from "lucide-react";
+import { Github, Mail, ArrowRight, MessageSquare, GitPullRequest, Handshake, Lightbulb } from "lucide-react";
+
+function XIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor" className={className}>
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622Zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+    </svg>
+  );
+}
 import { useTranslations } from "next-intl";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
@@ -44,13 +52,13 @@ export default function ContactPage() {
 
         {/* Blocks */}
         <section className="w-full px-4 py-8 sm:px-6 sm:py-10">
-          <div className="mx-auto max-w-4xl grid gap-4 sm:grid-cols-2">
+          <div className="mx-auto max-w-4xl grid gap-4 sm:grid-cols-2 sm:items-stretch">
             {blocks.map((block, i) => {
               const Icon = BLOCK_ICONS[i];
               const { href, external } = BLOCK_HREFS[i];
               return (
-                <ScrollReveal key={block.title} delay={i * 0.08}>
-                  <div className="group relative flex flex-col gap-4 rounded-2xl border border-border/60 bg-card p-6 transition-all hover:border-border hover:shadow-md dark:border-white/8 dark:bg-white/4 dark:hover:border-white/14 dark:hover:bg-white/6">
+                <ScrollReveal key={block.title} delay={i * 0.08} className="h-full">
+                  <div className="group relative flex h-full flex-col gap-4 rounded-2xl border border-border/60 bg-card p-6 transition-all hover:border-border hover:shadow-md dark:border-white/8 dark:bg-white/4 dark:hover:border-white/14 dark:hover:bg-white/6">
                     <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-border/60 bg-background dark:border-white/10 dark:bg-white/6">
                       <Icon className="size-5 text-foreground/60 transition-colors group-hover:text-glow" />
                     </div>
@@ -96,7 +104,7 @@ export default function ContactPage() {
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
                       >
-                        <Twitter className="size-4" /> X / social
+                        <XIcon className="size-4" /> X / social
                       </a>
                       <a
                         href="mailto:hi@geoai.run"

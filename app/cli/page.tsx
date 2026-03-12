@@ -215,12 +215,12 @@ export default function CliPage() {
               </h2>
             </ScrollReveal>
 
-            <div className="grid gap-4 sm:grid-cols-2">
+            <div className="grid gap-4 sm:grid-cols-2 sm:items-stretch">
               {capabilities.map((cap, i) => {
                 const Icon = cap.icon;
                 return (
-                  <ScrollReveal key={cap.title} delay={i * 0.07}>
-                    <div className="group flex gap-4 rounded-xl border border-border/60 bg-card p-5 shadow-sm transition-all hover:border-glow/30 hover:bg-card/80 hover:shadow-md dark:border-white/10 dark:bg-white/4 dark:hover:border-glow/25 dark:hover:bg-white/6">
+                  <ScrollReveal key={cap.title} delay={i * 0.07} className="h-full">
+                    <div className="group flex h-full gap-4 rounded-xl border border-border/60 bg-card p-5 shadow-sm transition-all hover:border-glow/30 hover:bg-card/80 hover:shadow-md dark:border-white/10 dark:bg-white/4 dark:hover:border-glow/25 dark:hover:bg-white/6">
                       <div className="flex size-10 shrink-0 items-center justify-center rounded-lg border border-border/60 bg-background shadow-sm dark:border-white/12 dark:bg-white/6">
                         <Icon className="size-4 text-foreground/50 transition-colors group-hover:text-glow" />
                       </div>
@@ -308,10 +308,10 @@ export default {
               </h2>
             </ScrollReveal>
 
-            <div className="grid gap-4 sm:grid-cols-3">
+            <div className="grid gap-4 sm:grid-cols-3 sm:items-stretch">
               {whyItems.map((item, i) => (
-                <ScrollReveal key={item.title} delay={i * 0.07}>
-                  <div className="rounded-xl border border-border/60 bg-card p-5 shadow-sm dark:border-white/8 dark:bg-white/4">
+                <ScrollReveal key={item.title} delay={i * 0.07} className="h-full">
+                  <div className="group flex h-full flex-col rounded-xl border border-border/60 bg-card p-5 shadow-sm transition-all hover:border-border hover:shadow-md dark:border-white/8 dark:bg-white/4 dark:hover:border-white/14 dark:hover:bg-white/6">
                     <p className="mb-2 text-sm font-semibold text-foreground">{item.title}</p>
                     <p className="text-xs leading-relaxed text-muted-foreground/80">{item.body}</p>
                   </div>
