@@ -104,14 +104,14 @@
     "copyright": "© 2026 GEO AI · Open Source · GPL-2.0-Lizenz"
   },
   "contactPage": {
-    "badge": "Kontakt aufnehmen",
+    "badge": "Kontakt",
     "title": "Kontakt",
-    "description": "Fragen, Partnerschaften, Open-Source-Zusammenarbeit oder Ökosystem-Ideen — meld dich.",
+    "description": "Fragen, Partnerschaften, Open-Source-Zusammenarbeit oder Ökosystem-Ideen — schreiben Sie uns.",
     "blocks": [
       {
         "title": "Allgemeine Fragen",
         "description": "Alles über GEO AI — wie es funktioniert und wohin es geht.",
-        "action": "E-Mail schreiben"
+        "action": "Schreiben"
       },
       {
         "title": "Open-Source-Beiträge",
@@ -120,7 +120,7 @@
       },
       {
         "title": "Partnerschaften & Integrationen",
-        "description": "Du baust auf GEO AI auf oder möchtest es in deine Plattform integrieren.",
+        "description": "Sie bauen auf GEO AI auf oder möchten es in Ihre Plattform integrieren.",
         "action": "Integration besprechen"
       },
       {
@@ -131,7 +131,7 @@
     ],
     "directLinks": "Direkte Links",
     "openGithub": "GitHub öffnen",
-    "emailUs": "E-Mail schreiben",
+    "emailUs": "Schreiben",
     "viewDocs": "Dokumentation"
   },
   "analyze": {
@@ -238,7 +238,7 @@
     "packages": {
       "label": "Implementierungen",
       "title": "GEO AI Pakete setzen die Spezifikation um",
-      "description": "Jedes Paket generiert spezifikationskonformen Output. Wählen Sie passend zu Ihrem Stack.",
+      "description": "Jedes Paket generiert spezifikationskonforme Dateien. Wählen Sie passend zu Ihrem Stack.",
       "items": [
         { "label": "Core", "badge": "Universal", "description": "TypeScript-Engine. Zero Dependencies. Jedes Node.js-Framework." },
         { "label": "Next.js", "badge": "Framework", "description": "Statische Generierung, Middleware und Route Handler für App Router." },
@@ -257,37 +257,37 @@
   },
   "cliPage": {
     "badge": "GEO AI CLI",
-    "title": "GEO-Ausgaben aus der Kommandozeile",
-    "description": "Generieren Sie llms.txt und llms-full.txt für jedes Node.js-Projekt — framework-agnostisch, zur Build-Zeit, ohne Runtime-Overhead.",
-    "subDescription": "Für Entwickler, die GEO AI ohne Framework-Integration nutzen möchten. Funktioniert mit Express, Fastify, Remix, Static-Site-Generatoren oder beliebigen Build-Pipelines.",
+    "title": "GEO AI aus der Kommandozeile",
+    "description": "Generieren Sie llms.txt und llms-full.txt für jedes Node.js-Projekt — framework-unabhängig, zur Build-Zeit, ohne Runtime-Overhead.",
+    "subDescription": "Für Entwickler, die GEO-Dateien ohne Framework-Integration brauchen. Funktioniert mit Express, Fastify, Remix, Static-Site-Generatoren oder beliebigen Build-Pipelines.",
     "readDocs": "CLI-Dokumentation",
     "viewOnGithub": "Auf GitHub ansehen",
     "installTitle": "Loslegen",
-    "installHeading": "In Sekunden installiert",
+    "installHeading": "In einer Minute installiert",
     "quickstartComment1": "# geo-ai.config.ts erstellen",
     "quickstartComment2": "# llms.txt + llms-full.txt nach ./public schreiben",
-    "quickstartComment3": "# Ausgabe prüfen",
+    "quickstartComment3": "# Ergebnis prüfen",
     "commandsTitle": "Befehle",
-    "commandsHeading": "Vier Befehle, volle Abdeckung",
+    "commandsHeading": "Vier Befehle — alles abgedeckt",
     "capabilities": [
-      { "title": "geo-ai init", "description": "Erstellt eine typisierte geo-ai.config.ts-Startdatei. Sicher ausführbar — überschreibt keine vorhandene Konfiguration." },
+      { "title": "geo-ai init", "description": "Erstellt eine typisierte geo-ai.config.ts-Startdatei. Sicher — überschreibt keine vorhandene Konfiguration." },
       { "title": "geo-ai generate", "description": "Liest Ihre Konfiguration und schreibt llms.txt und llms-full.txt nach ./public (oder einen benutzerdefinierten --out-Pfad)." },
       { "title": "geo-ai validate", "description": "Prüft, ob llms.txt und llms-full.txt vorhanden sind und gültigen Inhalt haben. Funktioniert lokal oder per --url." },
-      { "title": "geo-ai inspect", "description": "Zeigt Ihre Konfiguration: Site-Infos, Crawler-Regeln, Ressourcen-Sektionen mit Anzahl. Optional mit Remote-llms-Dateien." }
+      { "title": "geo-ai inspect", "description": "Zeigt Ihre Konfiguration: Site-Infos, Crawler-Regeln, Ressourcen-Sektionen. Kann auch Remote-llms-Dateien laden." }
     ],
     "configTitle": "Konfiguration",
     "configHeading": "Eine Konfigurationsdatei",
     "configDescription": "Die CLI liest geo-ai.config.ts aus dem Projektstamm. Suchreihenfolge: .ts → .js → .json. Pflichtfelder: siteName, siteUrl, provider.",
     "whyTitle": "Warum CLI",
-    "whyHeading": "Framework-agnostisch, Build-Zeit-Generierung",
+    "whyHeading": "Framework-unabhängig, Generierung zur Build-Zeit",
     "whyItems": [
       { "title": "Jedes Node.js-Projekt", "body": "Funktioniert mit Express, Fastify, Hono, Remix oder beliebigen Static-Site-Generatoren — nicht nur Next.js." },
-      { "title": "Build-Zeit-Ausgabe", "body": "Generieren Sie llms.txt vor dem Deployment. Statische Dateien werden direkt ohne Runtime-Overhead ausgeliefert." },
-      { "title": "CI/CD-freundlich", "body": "Exit-Code 1 bei Validierungsfehler. Fügen Sie geo-ai validate in jede Pipeline ein." }
+      { "title": "Generierung zur Build-Zeit", "body": "Erstellen Sie llms.txt vor dem Deployment. Statische Dateien werden direkt ohne Runtime-Overhead ausgeliefert." },
+      { "title": "CI/CD-ready", "body": "Exit-Code 1 bei Validierungsfehler. Fügen Sie geo-ai validate in jede Pipeline ein." }
     ],
     "ecosystemTitle": "Ökosystem",
     "ecosystemHeading": "Teil von GEO AI",
-    "ecosystemDescription": "Die CLI wird von geo-ai-core angetrieben und erzeugt spezifikationskonforme Ausgaben — dieselben Dateien, die der Analyzer prüft.",
+    "ecosystemDescription": "Die CLI wird von geo-ai-core angetrieben und erzeugt spezifikationskonforme Dateien — dieselben, die der Analyzer prüft.",
     "ecosystemLinks": [
       { "label": "GEO AI Core", "description": "Die TypeScript-Engine hinter der CLI" },
       { "label": "GEO AI Next", "description": "Next.js-Integration mit statischer Generierung" },
@@ -295,10 +295,10 @@
       { "label": "GEO Specification", "description": "Der Standard, den die CLI implementiert" }
     ],
     "ctaTitle": "Dokumentation",
-    "ctaHeading": "Alles ist dokumentiert",
+    "ctaHeading": "Vollständig dokumentiert",
     "ctaItems": ["Alle vier Befehle mit Flags", "Konfigurationsreferenz", "Validierungs-Exit-Codes", "Debug-Modus", "Anforderungen"],
     "cliDocs": "CLI-Dokumentation",
-    "exploreDocs": "Alle Docs erkunden"
+    "exploreDocs": "Alle Docs"
   },
   "metadata": {
     "home": {
@@ -311,7 +311,7 @@
     },
     "contact": {
       "title": "Kontakt — GEO AI",
-      "description": "Fragen, Partnerschaften, Open-Source-Zusammenarbeit oder Ökosystem-Ideen — meld dich."
+      "description": "Fragen, Partnerschaften, Open-Source-Zusammenarbeit oder Ökosystem-Ideen — schreiben Sie uns."
     }
   }
 }

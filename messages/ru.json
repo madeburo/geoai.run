@@ -111,7 +111,7 @@
       {
         "title": "Общие вопросы",
         "description": "Всё о GEO AI — как работает, куда движется.",
-        "action": "Написать нам"
+        "action": "Написать"
       },
       {
         "title": "Open-source вклад",
@@ -120,7 +120,7 @@
       },
       {
         "title": "Партнёрство и интеграции",
-        "description": "Строите на основе GEO AI или хотите интегрировать с вашей платформой.",
+        "description": "Строите на основе GEO AI или хотите интегрировать в свою платформу.",
         "action": "Обсудить интеграцию"
       },
       {
@@ -131,7 +131,7 @@
     ],
     "directLinks": "Прямые ссылки",
     "openGithub": "Открыть GitHub",
-    "emailUs": "Написать нам",
+    "emailUs": "Написать",
     "viewDocs": "Документация"
   },
   "analyze": {
@@ -238,7 +238,7 @@
     "packages": {
       "label": "Реализации",
       "title": "Пакеты GEO AI реализуют спецификацию",
-      "description": "Каждый пакет генерирует вывод по спецификации. Выберите под ваш стек.",
+      "description": "Каждый пакет генерирует файлы по спецификации. Выберите под ваш стек.",
       "items": [
         { "label": "Core", "badge": "Универсальный", "description": "TypeScript-движок. Zero dependencies. Любой Node.js-фреймворк." },
         { "label": "Next.js", "badge": "Фреймворк", "description": "Статическая генерация, middleware и route handler для App Router." },
@@ -257,23 +257,23 @@
   },
   "cliPage": {
     "badge": "GEO AI CLI",
-    "title": "GEO-вывод из командной строки",
+    "title": "GEO AI из командной строки",
     "description": "Генерируйте llms.txt и llms-full.txt для любого Node.js-проекта — без привязки к фреймворку, на этапе сборки, без runtime-оверхеда.",
-    "subDescription": "Для разработчиков, которым нужны GEO AI-файлы без интеграции с фреймворком. Работает с Express, Fastify, Remix, статическими генераторами и любым build-пайплайном.",
+    "subDescription": "Для разработчиков, которым нужны GEO-файлы без фреймворк-интеграции. Работает с Express, Fastify, Remix, статическими генераторами и любым build-пайплайном.",
     "readDocs": "Документация CLI",
     "viewOnGithub": "Смотреть на GitHub",
     "installTitle": "Начать",
-    "installHeading": "Установка и запуск за секунды",
+    "installHeading": "Установка за минуту",
     "quickstartComment1": "# Создать geo-ai.config.ts",
     "quickstartComment2": "# Записать llms.txt + llms-full.txt в ./public",
-    "quickstartComment3": "# Проверить вывод",
+    "quickstartComment3": "# Проверить результат",
     "commandsTitle": "Команды",
     "commandsHeading": "Четыре команды — полное покрытие",
     "capabilities": [
-      { "title": "geo-ai init", "description": "Создаёт типизированный стартовый файл geo-ai.config.ts. Безопасно запускать — не перезаписывает существующую конфигурацию." },
+      { "title": "geo-ai init", "description": "Создаёт типизированный стартовый файл geo-ai.config.ts. Безопасно — не перезаписывает существующую конфигурацию." },
       { "title": "geo-ai generate", "description": "Читает конфигурацию и записывает llms.txt и llms-full.txt в ./public (или по пути --out)." },
-      { "title": "geo-ai validate", "description": "Проверяет наличие и корректность llms.txt и llms-full.txt. Работает с локальными файлами или удалёнными URL через --url." },
-      { "title": "geo-ai inspect", "description": "Предпросмотр конфигурации: информация о сайте, правила краулеров, секции ресурсов. Опционально загружает удалённые llms-файлы." }
+      { "title": "geo-ai validate", "description": "Проверяет наличие и корректность llms.txt и llms-full.txt. Работает локально или по URL через --url." },
+      { "title": "geo-ai inspect", "description": "Показывает конфигурацию: информация о сайте, правила краулеров, секции ресурсов. Может загружать удалённые llms-файлы." }
     ],
     "configTitle": "Конфигурация",
     "configHeading": "Один файл конфигурации",
@@ -282,12 +282,12 @@
     "whyHeading": "Без привязки к фреймворку, генерация при сборке",
     "whyItems": [
       { "title": "Любой Node.js-проект", "body": "Работает с Express, Fastify, Hono, Remix и любыми статическими генераторами — не только с Next.js." },
-      { "title": "Вывод при сборке", "body": "Генерируйте llms.txt до деплоя. Статические файлы отдаются напрямую без runtime-оверхеда." },
-      { "title": "Совместимость с CI/CD", "body": "Exit code 1 при ошибке валидации. Добавьте geo-ai validate в любой пайплайн." }
+      { "title": "Генерация при сборке", "body": "Создавайте llms.txt до деплоя. Статические файлы отдаются напрямую без runtime-оверхеда." },
+      { "title": "Готово к CI/CD", "body": "Exit code 1 при ошибке валидации. Добавьте geo-ai validate в любой пайплайн." }
     ],
     "ecosystemTitle": "Экосистема",
     "ecosystemHeading": "Часть GEO AI",
-    "ecosystemDescription": "CLI работает на geo-ai-core и генерирует вывод по спецификации — те же файлы, которые проверяет Анализатор.",
+    "ecosystemDescription": "CLI работает на geo-ai-core и генерирует файлы по спецификации — те же файлы, которые проверяет Анализатор.",
     "ecosystemLinks": [
       { "label": "GEO AI Core", "description": "TypeScript-движок, на котором работает CLI" },
       { "label": "GEO AI Next", "description": "Интеграция с Next.js и статической генерацией" },
@@ -298,7 +298,7 @@
     "ctaHeading": "Всё задокументировано",
     "ctaItems": ["Все четыре команды с флагами", "Справочник по конфигурации", "Коды выхода валидации", "Режим отладки", "Требования"],
     "cliDocs": "Документация CLI",
-    "exploreDocs": "Все документы"
+    "exploreDocs": "Вся документация"
   },
   "metadata": {
     "home": {
