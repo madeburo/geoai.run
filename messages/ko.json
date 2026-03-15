@@ -297,6 +297,7 @@
     "ctaTitle": "문서",
     "ctaHeading": "필요한 모든 것이 문서화되어 있습니다",
     "ctaItems": ["플래그가 있는 네 가지 명령어", "설정 파일 참조", "검증 종료 코드", "디버그 모드", "요구 사항"],
+    "exploreCli": "CLI 살펴보기",
     "cliDocs": "CLI 문서",
     "exploreDocs": "모든 문서 탐색"
   },

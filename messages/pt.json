@@ -297,6 +297,7 @@
     "ctaTitle": "Documentação",
     "ctaHeading": "Tudo que você precisa está documentado",
     "ctaItems": ["Os quatro comandos com flags", "Referência do arquivo de configuração", "Códigos de saída de validação", "Modo debug", "Requisitos"],
+    "exploreCli": "Explorar o CLI",
     "cliDocs": "Documentação do CLI",
     "exploreDocs": "Explorar toda a documentação"
   },

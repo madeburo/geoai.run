@@ -32,14 +32,14 @@ export function CliPreviewSection() {
             </h2>
 
             <p className="mb-8 text-sm leading-relaxed text-muted-foreground sm:text-base">
-              Generate <code className="rounded px-1.5 py-0.5 font-mono text-[0.875em] bg-white/6 border border-white/8">llms.txt</code> and <code className="rounded px-1.5 py-0.5 font-mono text-[0.875em] bg-white/6 border border-white/8">llms-full.txt</code> for any Node.js project — framework-agnostic, build-time, zero runtime overhead.
+              {t("description")}
             </p>
 
             <Link
               href="/cli"
               className="inline-flex items-center gap-2 rounded-lg border border-border/60 bg-white/4 px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:border-border hover:bg-white/6"
             >
-              Explore the CLI
+              {t("exploreCli")}
               <ArrowRight className="size-4" />
             </Link>
           </ScrollReveal>

@@ -297,6 +297,7 @@
     "ctaTitle": "文档",
     "ctaHeading": "所需的一切都已记录在案",
     "ctaItems": ["带标志的四个命令", "配置文件参考", "验证退出码", "调试模式", "要求"],
+    "exploreCli": "探索CLI",
     "cliDocs": "CLI文档",
     "exploreDocs": "浏览所有文档"
   },

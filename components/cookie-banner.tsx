@@ -10,18 +10,19 @@ type ConsentValue = "accepted" | "rejected" | null;
 
 function loadClarity(id: string) {
   if (typeof window === "undefined" || !id) return;
-  if ((window as unknown as Record<string, unknown>)["clarity"]) return;
+  // Check if the script tag is already in the DOM (not just the queue function)
+  if (document.querySelector(`script[src*="clarity.ms/tag/${id}"]`)) return;
+
+  // Init clarity queue first, before the script loads
+  const w = window as unknown as Record<string, unknown>;
+  w["clarity"] = w["clarity"] || function (...args: unknown[]) {
+    ((w["clarity"] as { q?: unknown[] }).q = (w["clarity"] as { q?: unknown[] }).q || []).push(args);
+  };
 
   const script = document.createElement("script");
   script.async = true;
   script.src = `https://www.clarity.ms/tag/${id}`;
   document.head.appendChild(script);
-
-  // Init clarity queue
-  const w = window as unknown as Record<string, unknown>;
-  w["clarity"] = w["clarity"] || function (...args: unknown[]) {
-    ((w["clarity"] as { q?: unknown[] }).q = (w["clarity"] as { q?: unknown[] }).q || []).push(args);
-  };
 }
 
 export function CookieBanner({ clarityId }: { clarityId: string }) {
@@ -33,9 +34,13 @@ export function CookieBanner({ clarityId }: { clarityId: string }) {
   useEffect(() => {
     const stored = (localStorage.getItem(STORAGE_KEY) as ConsentValue) ?? null;
     setConsent(stored);
-    if (stored === "accepted") {
-      loadClarity(clarityId);
-    } else if (stored === null) {
+    if (stored === "rejected") {
+      // User explicitly rejected — don't load
+      return;
+    }
+    // Load Clarity for accepted users and for new visitors seeing the banner
+    loadClarity(clarityId);
+    if (stored === null) {
       setVisible(true);
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
